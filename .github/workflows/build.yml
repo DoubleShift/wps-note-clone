@@ -101,8 +101,13 @@ jobs:
       - name: Build Android APK
         run: pnpm tauri android build --target aarch64
 
-      - name: Sign APK with debug key
+      - name: Generate debug keystore and sign
         run: |
+          mkdir -p ~/.android
+          keytool -genkey -v -keystore ~/.android/debug.keystore \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 \
+            -validity 10000 -dname "CN=Android Debug,O=Android,C=US" \
+            -storepass android -keypass android
           APKSIGNER=$(find /usr/local/lib/android/sdk/build-tools -name apksigner | head -1)
           echo "Using apksigner: $APKSIGNER"
           $APKSIGNER sign --ks ~/.android/debug.keystore \
