@@ -22,6 +22,7 @@ pub struct NotionBlock {
     pub content: serde_json::Value,
 }
 
+#[derive(Clone)]
 pub struct NotionClient {
     client: Client,
     config: NotionConfig,

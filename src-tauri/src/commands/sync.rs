@@ -34,8 +34,11 @@ pub fn notion_get_config(db: State<Database>) -> IpcResponse<NotionConfig> {
 
 #[tauri::command]
 pub async fn notion_verify(sync: State<'_, SyncEngine>) -> Result<String, String> {
-    let guard = sync.client.lock().unwrap();
-    let client = match guard.as_ref() {
+    let client = {
+        let guard = sync.client.lock().unwrap();
+        guard.as_ref().cloned()
+    };
+    let client = match client {
         Some(c) => c,
         None => return Err("Notion not configured".to_string()),
     };
@@ -44,11 +47,17 @@ pub async fn notion_verify(sync: State<'_, SyncEngine>) -> Result<String, String
 
 #[tauri::command]
 pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngine>) -> Result<i64, String> {
-    let guard = sync.client.lock().unwrap();
-    let client = match guard.as_ref() {
-        Some(c) => c,
-        None => return Err("Notion not configured".to_string()),
-    };
+    // Get the Notion config from DB first (no lock needed)
+    let token = db.get_setting("notion_token").ok().flatten().unwrap_or_default();
+    let database_id = db.get_setting("notion_database_id").ok().flatten();
+    let config = NotionConfig { token, database_id };
+
+    if config.token.is_empty() {
+        return Err("Notion not configured".to_string());
+    }
+
+    // Build a temporary client (no lock needed)
+    let client = NotionClient::new(config);
 
     let params = NoteListParams {
         group_id: None, is_deleted: Some(false), search: None,
@@ -60,10 +69,10 @@ pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngi
     let mut synced = 0i64;
     for note in &notes {
         let result = if note.is_synced {
-            let notion_id_opt = db.get_setting(&format!("notion_page_{}", note.id))
+            let notion_id = db.get_setting(&format!("notion_page_{}", note.id))
                 .ok().flatten();
-            match notion_id_opt {
-                Some(notion_id) => client.update_page(&notion_id, &note.title, &note.content_preview).await,
+            match notion_id {
+                Some(id) => client.update_page(&id, &note.title, &note.content_preview).await,
                 None => continue,
             }
         } else {
