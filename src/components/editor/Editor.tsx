@@ -7,7 +7,7 @@ import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
-import { CodeHighlightPlugin } from "@lexical/react/LexicalCodeHighlightPlugin";
+import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
 import { ListItemNode, ListNode } from "@lexical/list";
 import { LinkNode } from "@lexical/link";
 import { CodeHighlightNode, CodeNode } from "@lexical/code";
@@ -164,13 +164,13 @@ export function Editor({ initialJson, onChange, placeholder = "开始写笔记..
                 {placeholder}
               </div>
             }
+            ErrorBoundary={LexicalErrorBoundary}
           />
           <OnChangePlugin onChange={handleChange} />
           <HistoryPlugin />
           <AutoFocusPlugin />
           <ListPlugin />
           <LinkPlugin />
-          <CodeHighlightPlugin />
         </LexicalComposer>
       </div>
     </div>
@@ -190,10 +190,9 @@ export function ReadOnlyEditor({ json }: { json: string }) {
   return (
     <div className="p-4">
       <LexicalComposer initialConfig={initialConfig}>
-        <RichTextPlugin contentEditable={<ContentEditable className="editor-input text-text dark:text-text-dark text-base leading-relaxed" />} />
+        <RichTextPlugin contentEditable={<ContentEditable className="editor-input text-text dark:text-text-dark text-base leading-relaxed" />} ErrorBoundary={LexicalErrorBoundary} />
         <ListPlugin />
         <LinkPlugin />
-        <CodeHighlightPlugin />
       </LexicalComposer>
     </div>
   );

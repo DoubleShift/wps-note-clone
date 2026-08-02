@@ -1,0 +1,51 @@
+﻿2026-08-02T00:08:14.4857674Z ##[group]Run pnpm install --no-frozen-lockfile
+2026-08-02T00:08:14.4858089Z [36;1mpnpm install --no-frozen-lockfile[0m
+2026-08-02T00:08:14.4907416Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:08:14.4907693Z env:
+2026-08-02T00:08:14.4907897Z   CARGO_TERM_COLOR: always
+2026-08-02T00:08:14.4908137Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:08:14.4908366Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:08:14.4908667Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:08:14.4908968Z ##[endgroup]
+2026-08-02T00:08:14.9068063Z [WARN] The "pnpm" field in package.json is no longer read by pnpm. The following keys were ignored: "pnpm.onlyBuiltDependencies". See https://pnpm.io/settings for the new home of each setting.
+2026-08-02T00:08:15.0167968Z ? Verifying lockfile against supply-chain policies (207 entries)...
+2026-08-02T00:08:15.0262531Z Lockfile is up to date, resolution step is skipped
+2026-08-02T00:08:15.1251753Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T00:08:15.1444086Z Packages: +126
+2026-08-02T00:08:15.1445290Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-08-02T00:08:15.9119038Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-08-02T00:08:15.9121243Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T00:08:15.9122580Z   Virtual store is at:             node_modules/.pnpm
+2026-08-02T00:08:16.1302606Z Progress: resolved 126, reused 0, downloaded 82, added 4
+2026-08-02T00:08:16.7905304Z Progress: resolved 126, reused 0, downloaded 126, added 126, done
+2026-08-02T00:08:17.6167221Z ✓ Lockfile passes supply-chain policies (207 entries in 2.5s)
+2026-08-02T00:08:17.6661731Z 
+2026-08-02T00:08:17.6662382Z dependencies:
+2026-08-02T00:08:17.6662766Z + @lexical/code 0.49.0
+2026-08-02T00:08:17.6663068Z + @lexical/history 0.49.0
+2026-08-02T00:08:17.6663334Z + @lexical/link 0.49.0
+2026-08-02T00:08:17.6663574Z + @lexical/list 0.49.0
+2026-08-02T00:08:17.6663809Z + @lexical/react 0.49.0
+2026-08-02T00:08:17.6664108Z + @lexical/rich-text 0.49.0
+2026-08-02T00:08:17.6664384Z + @tailwindcss/vite 4.3.3
+2026-08-02T00:08:17.6664685Z + @tanstack/react-virtual 3.14.9
+2026-08-02T00:08:17.6664985Z + @tauri-apps/api 2.11.1
+2026-08-02T00:08:17.6665284Z + @tauri-apps/plugin-opener 2.5.4
+2026-08-02T00:08:17.6665550Z + lexical 0.49.0
+2026-08-02T00:08:17.6665760Z + react 19.2.8
+2026-08-02T00:08:17.6665979Z + react-dom 19.2.8
+2026-08-02T00:08:17.6666203Z + tailwindcss 4.3.3
+2026-08-02T00:08:17.6666423Z + zustand 5.0.14
+2026-08-02T00:08:17.6666553Z 
+2026-08-02T00:08:17.6666648Z devDependencies:
+2026-08-02T00:08:17.6666881Z + @tauri-apps/cli 2.11.4
+2026-08-02T00:08:17.6667138Z + @types/react 19.2.18
+2026-08-02T00:08:17.6667378Z + @types/react-dom 19.2.4
+2026-08-02T00:08:17.6667640Z + @vitejs/plugin-react 4.7.0
+2026-08-02T00:08:17.6667904Z + typescript 5.8.3
+2026-08-02T00:08:17.6668115Z + vite 7.3.6
+2026-08-02T00:08:17.6668230Z 
+2026-08-02T00:08:17.6939515Z [ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: esbuild@0.28.1
+2026-08-02T00:08:17.6940014Z 
+2026-08-02T00:08:17.6940587Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-08-02T00:08:17.7673378Z ##[error]Process completed with exit code 1.

@@ -55,6 +55,24 @@ export interface NoteListParams {
   offset?: number;
 }
 
+// === IPC Request Types ===
+
+export interface CreateNoteRequest {
+  title: string;
+  content_json: string;
+  content_preview: string;
+  group_id?: string | null;
+  note_type?: string;
+}
+
+export interface UpdateNoteRequest {
+  id: string;
+  title?: string;
+  content_json?: string;
+  content_preview?: string;
+  group_id?: string | null;
+}
+
 // === Settings Keys ===
 
 export const SETTINGS = {
