@@ -34,16 +34,6 @@ pub fn notion_get_config(db: State<Database>) -> IpcResponse<NotionConfig> {
 
 #[tauri::command]
 pub async fn notion_verify(sync: State<'_, SyncEngine>) -> Result<String, String> {
-    let client = {
-        let guard = sync.client.lock().unwrap();
-        guard.as_ref().map(|c| {
-            NotionClient::new(NotionConfig {
-                token: String::new(), // placeholder, we just need to verify
-                database_id: None,
-            })
-        })
-    };
-    // Rebuild client from settings
     let guard = sync.client.lock().unwrap();
     let client = match guard.as_ref() {
         Some(c) => c,
@@ -54,15 +44,6 @@ pub async fn notion_verify(sync: State<'_, SyncEngine>) -> Result<String, String
 
 #[tauri::command]
 pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngine>) -> Result<i64, String> {
-    let client = {
-        let guard = sync.client.lock().unwrap();
-        guard.as_ref().map(|c| {
-            NotionClient::new(NotionConfig {
-                token: String::new(),
-                database_id: None,
-            })
-        })
-    };
     let guard = sync.client.lock().unwrap();
     let client = match guard.as_ref() {
         Some(c) => c,
@@ -78,37 +59,26 @@ pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngi
 
     let mut synced = 0i64;
     for note in &notes {
-        if note.is_synced {
-            if let Some(notion_id) = get_notion_page_id(db, &note.id) {
-                match client.update_page(&notion_id, &note.title, &note.content_preview).await {
-                    Ok(()) => {
-                        mark_synced(db, &note.id);
-                        synced += 1;
-                    }
-                    Err(_) => continue,
-                }
+        let result = if note.is_synced {
+            let notion_id_opt = db.get_setting(&format!("notion_page_{}", note.id))
+                .ok().flatten();
+            match notion_id_opt {
+                Some(notion_id) => client.update_page(&notion_id, &note.title, &note.content_preview).await,
+                None => continue,
             }
         } else {
             match client.create_page(&note.title, &note.content_preview).await {
                 Ok(page) => {
                     db.set_setting(&format!("notion_page_{}", note.id), &page.id).ok();
-                    mark_synced(db, &note.id);
-                    synced += 1;
+                    Ok(())
                 }
-                Err(_) => continue,
+                Err(e) => Err(e),
             }
+        };
+        if result.is_ok() {
+            db.set_setting(&format!("notion_synced_{}", note.id), "true").ok();
+            synced += 1;
         }
     }
     Ok(synced)
-}
-
-fn get_notion_page_id(db: &Database, note_id: &str) -> Option<String> {
-    db.get_setting(&format!("notion_page_{}", note_id)).ok().flatten()
-}
-
-fn mark_synced(db: &Database, note_id: &str) {
-    let now = chrono::Utc::now().to_rfc3339();
-    db.set_setting(&format!("notion_synced_at_{}", note_id), &now).ok();
-    // We need to update the note's is_synced flag
-    // Since we can't access the connection directly, we use a setting
 }
