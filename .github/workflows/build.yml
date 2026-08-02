@@ -103,7 +103,9 @@ jobs:
 
       - name: Sign APK with debug key
         run: |
-          apksigner sign --ks ~/.android/debug.keystore \
+          APKSIGNER=$(find /usr/local/lib/android/sdk/build-tools -name apksigner | head -1)
+          echo "Using apksigner: $APKSIGNER"
+          $APKSIGNER sign --ks ~/.android/debug.keystore \
             --ks-key-alias androiddebugkey \
             --ks-pass pass:android \
             --key-pass pass:android \
