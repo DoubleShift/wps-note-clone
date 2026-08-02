@@ -1,5 +1,5 @@
-mod image;
-mod sync;
+pub mod image;
+pub mod sync;
 
 pub use image::*;
 pub use sync::*;

@@ -47,7 +47,7 @@ pub fn delete_note_images(app: AppHandle, note_id: String) -> IpcResponse<bool> 
 fn compress_image(data: &[u8], output_path: &PathBuf) -> Result<(), String> {
     let img = image::load_from_memory(data).map_err(|e| format!("Failed to load image: {}", e))?;
     // Resize if too large (max 1920px)
-    let (w, h) = img.dimensions();
+    let (w, h) = (img.width(), img.height());
     let max_dim = 1920u32;
     let img = if w > max_dim || h > max_dim {
         let ratio = max_dim as f64 / w.max(h) as f64;

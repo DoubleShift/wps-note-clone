@@ -5,7 +5,7 @@ mod notion;
 
 use db::Database;
 use commands::sync::SyncEngine;
-use std::path::PathBuf;
+use tauri::Manager;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -15,18 +15,23 @@ pub fn run() {
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_notification::init())
         .setup(|app| {
-            let app_dir: PathBuf = app.path().app_data_dir().expect("failed to get app data dir");
+            let app_handle = app.handle();
+            let app_dir = app_handle.path().app_data_dir().expect("failed to get app data dir");
             std::fs::create_dir_all(&app_dir).ok();
             let db_path = app_dir.join("wps_note.db");
             let database = Database::new(db_path.to_str().unwrap())
                 .expect("failed to initialize database");
-            app.manage(database);
+            app_handle.manage(database);
 
-            // Init sync engine
             let sync_engine = SyncEngine::new();
             // Load existing config
-            // (config will be loaded when needed)
-            app.manage(sync_engine);
+            let token = database.get_setting("notion_token").ok().flatten();
+            let db_id = database.get_setting("notion_database_id").ok().flatten();
+            if let Some(token) = token {
+                let config = notion::NotionConfig { token, database_id: db_id };
+                *sync_engine.client.lock().unwrap() = Some(notion::NotionClient::new(config));
+            }
+            app_handle.manage(sync_engine);
 
             Ok(())
         })
@@ -50,14 +55,14 @@ pub fn run() {
             commands::set_setting,
             commands::get_all_settings,
             // Images
-            commands::save_image,
-            commands::get_image_path,
-            commands::delete_note_images,
+            commands::image::save_image,
+            commands::image::get_image_path,
+            commands::image::delete_note_images,
             // Notion Sync
-            commands::notion_configure,
-            commands::notion_get_config,
-            commands::notion_verify,
-            commands::notion_sync_notes,
+            commands::sync::notion_configure,
+            commands::sync::notion_get_config,
+            commands::sync::notion_verify,
+            commands::sync::notion_sync_notes,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
