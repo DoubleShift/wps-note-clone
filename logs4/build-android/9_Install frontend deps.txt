@@ -1,0 +1,55 @@
+﻿2026-08-02T00:12:44.8064355Z ##[group]Run pnpm approve-builds esbuild && pnpm install --no-frozen-lockfile
+2026-08-02T00:12:44.8065143Z [36;1mpnpm approve-builds esbuild && pnpm install --no-frozen-lockfile[0m
+2026-08-02T00:12:44.8109535Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:12:44.8109776Z env:
+2026-08-02T00:12:44.8109962Z   CARGO_TERM_COLOR: always
+2026-08-02T00:12:44.8110192Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:12:44.8110409Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:12:44.8110696Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:12:44.8111102Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T00:12:44.8111592Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T00:12:44.8112003Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T00:12:44.8112302Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T00:12:44.8112570Z ##[endgroup]
+2026-08-02T00:12:45.2584824Z There are no packages awaiting approval
+2026-08-02T00:12:45.9043664Z ? Verifying lockfile against supply-chain policies (207 entries)...
+2026-08-02T00:12:45.9189431Z Lockfile is up to date, resolution step is skipped
+2026-08-02T00:12:46.0565348Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T00:12:46.0863957Z Packages: +126
+2026-08-02T00:12:46.0865197Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-08-02T00:12:47.0241661Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-08-02T00:12:47.0265428Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T00:12:47.0294826Z   Virtual store is at:             node_modules/.pnpm
+2026-08-02T00:12:47.0685178Z Progress: resolved 126, reused 0, downloaded 63, added 4
+2026-08-02T00:12:47.9596984Z Progress: resolved 126, reused 0, downloaded 126, added 126, done
+2026-08-02T00:12:48.5912326Z ✓ Lockfile passes supply-chain policies (207 entries in 2.6s)
+2026-08-02T00:12:48.6468640Z 
+2026-08-02T00:12:48.6469303Z dependencies:
+2026-08-02T00:12:48.6469866Z + @lexical/code 0.49.0
+2026-08-02T00:12:48.6470375Z + @lexical/history 0.49.0
+2026-08-02T00:12:48.6470887Z + @lexical/link 0.49.0
+2026-08-02T00:12:48.6471367Z + @lexical/list 0.49.0
+2026-08-02T00:12:48.6471843Z + @lexical/react 0.49.0
+2026-08-02T00:12:48.6472344Z + @lexical/rich-text 0.49.0
+2026-08-02T00:12:48.6472835Z + @tailwindcss/vite 4.3.3
+2026-08-02T00:12:48.6473408Z + @tanstack/react-virtual 3.14.9
+2026-08-02T00:12:48.6474339Z + @tauri-apps/api 2.11.1
+2026-08-02T00:12:48.6474952Z + @tauri-apps/plugin-opener 2.5.4
+2026-08-02T00:12:48.6475442Z + lexical 0.49.0
+2026-08-02T00:12:48.6475807Z + react 19.2.8
+2026-08-02T00:12:48.6476204Z + react-dom 19.2.8
+2026-08-02T00:12:48.6476612Z + tailwindcss 4.3.3
+2026-08-02T00:12:48.6476976Z + zustand 5.0.14
+2026-08-02T00:12:48.6477198Z 
+2026-08-02T00:12:48.6477381Z devDependencies:
+2026-08-02T00:12:48.6477849Z + @tauri-apps/cli 2.11.4
+2026-08-02T00:12:48.6478307Z + @types/react 19.2.18
+2026-08-02T00:12:48.6478793Z + @types/react-dom 19.2.4
+2026-08-02T00:12:48.6479344Z + @vitejs/plugin-react 4.7.0
+2026-08-02T00:12:48.6479871Z + typescript 5.8.3
+2026-08-02T00:12:48.6480253Z + vite 7.3.6
+2026-08-02T00:12:48.6480471Z 
+2026-08-02T00:12:48.6817703Z [ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: esbuild@0.28.1
+2026-08-02T00:12:48.6818120Z 
+2026-08-02T00:12:48.6818604Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-08-02T00:12:48.7730297Z ##[error]Process completed with exit code 1.
