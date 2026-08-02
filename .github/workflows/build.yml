@@ -101,6 +101,20 @@ jobs:
       - name: Build Android APK
         run: pnpm tauri android build --target aarch64
 
+      - name: Sign APK with debug key
+        run: |
+          apksigner sign --ks ~/.android/debug.keystore \
+            --ks-key-alias androiddebugkey \
+            --ks-pass pass:android \
+            --key-pass pass:android \
+            src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: wps-note-clone-android
+          path: src-tauri/gen/android/app/build/outputs/apk/
+
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
