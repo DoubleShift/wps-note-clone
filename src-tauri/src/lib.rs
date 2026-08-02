@@ -21,12 +21,14 @@ pub fn run() {
             let db_path = app_dir.join("wps_note.db");
             let database = Database::new(db_path.to_str().unwrap())
                 .expect("failed to initialize database");
+
+            // Load config before moving database
+            let token = database.get_setting("notion_token").ok().flatten();
+            let db_id = database.get_setting("notion_database_id").ok().flatten();
+
             app_handle.manage(database);
 
             let sync_engine = SyncEngine::new();
-            // Load existing config
-            let token = database.get_setting("notion_token").ok().flatten();
-            let db_id = database.get_setting("notion_database_id").ok().flatten();
             if let Some(token) = token {
                 let config = notion::NotionConfig { token, database_id: db_id };
                 *sync_engine.client.lock().unwrap() = Some(notion::NotionClient::new(config));
