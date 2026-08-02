@@ -25,3 +25,5 @@ dist-ssr
 "*.zip"  
 "logs/"  
 "jobs.json"  
+"build3/"  
+"build3.zip"  
