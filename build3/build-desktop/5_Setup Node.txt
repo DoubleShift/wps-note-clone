@@ -1,0 +1,26 @@
+﻿2026-08-02T00:07:50.7332408Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T00:07:50.7337613Z ##[group]Run actions/setup-node@v4
+2026-08-02T00:07:50.7338773Z with:
+2026-08-02T00:07:50.7339630Z   node-version: 22
+2026-08-02T00:07:50.7340723Z   cache: pnpm
+2026-08-02T00:07:50.7341623Z   always-auth: false
+2026-08-02T00:07:50.7342570Z   check-latest: false
+2026-08-02T00:07:50.7351579Z   token: ***
+2026-08-02T00:07:50.7352451Z env:
+2026-08-02T00:07:50.7353274Z   CARGO_TERM_COLOR: always
+2026-08-02T00:07:50.7354279Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:07:50.7355253Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:07:50.7356532Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:07:50.7357833Z ##[endgroup]
+2026-08-02T00:07:50.8846625Z Found in cache @ /opt/hostedtoolcache/node/22.23.1/x64
+2026-08-02T00:07:50.8852137Z (node:2348) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T00:07:50.8856274Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T00:07:50.8859687Z ##[group]Environment details
+2026-08-02T00:07:51.2633030Z node: v22.23.1
+2026-08-02T00:07:51.2634463Z npm: 10.9.8
+2026-08-02T00:07:51.2635497Z yarn: 1.22.22
+2026-08-02T00:07:51.2637564Z ##[endgroup]
+2026-08-02T00:07:51.2691165Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-08-02T00:07:51.8768959Z [WARN] The "pnpm" field in package.json is no longer read by pnpm. The following keys were ignored: "pnpm.onlyBuiltDependencies". See https://pnpm.io/settings for the new home of each setting.
+2026-08-02T00:07:51.8841689Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T00:07:51.9812379Z pnpm cache is not found

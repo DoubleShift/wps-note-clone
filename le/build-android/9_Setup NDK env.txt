@@ -1,0 +1,19 @@
+﻿2026-08-02T04:07:50.2923521Z ##[group]Run NDK_PATH="/usr/local/lib/android/sdk/ndk/29.0.14206865"
+2026-08-02T04:07:50.2924016Z [36;1mNDK_PATH="/usr/local/lib/android/sdk/ndk/29.0.14206865"[0m
+2026-08-02T04:07:50.2924415Z [36;1mTOOLCHAIN="$NDK_PATH/toolchains/llvm/prebuilt/linux-x86_64/bin"[0m
+2026-08-02T04:07:50.2924766Z [36;1mecho "$TOOLCHAIN" >> $GITHUB_PATH[0m
+2026-08-02T04:07:50.2925188Z [36;1mecho "CC_aarch64_linux_android=$TOOLCHAIN/aarch64-linux-android21-clang" >> $GITHUB_ENV[0m
+2026-08-02T04:07:50.2925906Z [36;1mecho "AR_aarch64_linux_android=$TOOLCHAIN/llvm-ar" >> $GITHUB_ENV[0m
+2026-08-02T04:07:50.2926450Z [36;1mecho "CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER=$TOOLCHAIN/aarch64-linux-android21-clang" >> $GITHUB_ENV[0m
+2026-08-02T04:07:50.2927023Z [36;1mecho "RANLIB_aarch64_linux_android=$TOOLCHAIN/llvm-ranlib" >> $GITHUB_ENV[0m
+2026-08-02T04:07:50.2953597Z shell: /usr/bin/bash -e {0}
+2026-08-02T04:07:50.2953861Z env:
+2026-08-02T04:07:50.2954068Z   CARGO_TERM_COLOR: always
+2026-08-02T04:07:50.2954306Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:07:50.2954603Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:07:50.2954894Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:07:50.2955532Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:07:50.2956082Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:07:50.2956479Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T04:07:50.2956772Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T04:07:50.2957053Z ##[endgroup]

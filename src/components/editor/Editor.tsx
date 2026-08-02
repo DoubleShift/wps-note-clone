@@ -1,5 +1,5 @@
-import { useEffect, useRef, useCallback } from "react";
-import { createEditor, type EditorState } from "lexical";
+import { useEffect, useRef } from "react";
+import { type EditorState, FORMAT_TEXT_COMMAND, FORMAT_ELEMENT_COMMAND } from "lexical";
 import { LexicalComposer } from "@lexical/react/LexicalComposer";
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { ContentEditable } from "@lexical/react/LexicalContentEditable";
@@ -7,15 +7,18 @@ import { HistoryPlugin } from "@lexical/react/LexicalHistoryPlugin";
 import { AutoFocusPlugin } from "@lexical/react/LexicalAutoFocusPlugin";
 import { ListPlugin } from "@lexical/react/LexicalListPlugin";
 import { LinkPlugin } from "@lexical/react/LexicalLinkPlugin";
-import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
 import { ListItemNode, ListNode } from "@lexical/list";
 import { LinkNode } from "@lexical/link";
 import { CodeHighlightNode, CodeNode } from "@lexical/code";
 import { HeadingNode, QuoteNode } from "@lexical/rich-text";
 import { OnChangePlugin } from "@lexical/react/LexicalOnChangePlugin";
+import { LexicalErrorBoundary } from "@lexical/react/LexicalErrorBoundary";
 import { useLexicalComposerContext } from "@lexical/react/LexicalComposerContext";
-import { $insertNodes, $getSelection, $isRangeSelection } from "lexical";
 import { $createParagraphNode, $createTextNode } from "lexical";
+import { $insertNodes, $getSelection, $isRangeSelection } from "lexical";
+import { INSERT_ORDERED_LIST_COMMAND, INSERT_UNORDERED_LIST_COMMAND } from "@lexical/list";
+import { $createHeadingNode, $createQuoteNode } from "@lexical/rich-text";
+import { $setBlocksType } from "@lexical/selection";
 
 interface EditorProps {
   initialJson?: string;
@@ -38,8 +41,38 @@ const theme = {
 
 const onError = (error: any) => console.error(error);
 
-function Toolbar() {
+function ToolbarPlugin() {
+  const [editor] = useLexicalComposerContext();
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const format = (tag: string) => {
+    editor.update(() => {
+      const selection = $getSelection();
+      if (!$isRangeSelection(selection)) return;
+
+      switch (tag) {
+        case "bold": editor.dispatchCommand(FORMAT_TEXT_COMMAND, "bold"); break;
+        case "italic": editor.dispatchCommand(FORMAT_TEXT_COMMAND, "italic"); break;
+        case "underline": editor.dispatchCommand(FORMAT_TEXT_COMMAND, "underline"); break;
+        case "strikethrough": editor.dispatchCommand(FORMAT_TEXT_COMMAND, "strikethrough"); break;
+        case "h1": $setBlocksType(selection, () => $createHeadingNode("h1")); break;
+        case "h2": $setBlocksType(selection, () => $createHeadingNode("h2")); break;
+        case "h3": $setBlocksType(selection, () => $createHeadingNode("h3")); break;
+        case "bullet": editor.dispatchCommand(INSERT_UNORDERED_LIST_COMMAND, undefined); break;
+        case "number": editor.dispatchCommand(INSERT_ORDERED_LIST_COMMAND, undefined); break;
+        case "quote": $setBlocksType(selection, () => $createQuoteNode()); break;
+        case "code":
+          const text = selection.getTextContent();
+          if (text) {
+            const codeNode = $createParagraphNode();
+            codeNode.append($createTextNode("```\n" + text + "\n```"));
+            selection.insertNodes([codeNode]);
+          }
+          break;
+      }
+    });
+  };
+
   return (
     <div className="flex items-center gap-1 p-2 border-b border-border dark:border-border-dark flex-wrap">
       {[
@@ -52,7 +85,7 @@ function Toolbar() {
           key={action}
           title={title}
           className="w-7 h-7 flex items-center justify-center rounded hover:bg-card dark:hover:bg-card-dark text-sm font-medium text-text dark:text-text-dark"
-          onClick={() => document.dispatchEvent(new CustomEvent("lexical-format", { detail: action }))}
+          onClick={() => format(action)}
         >
           {label}
         </button>
@@ -67,7 +100,7 @@ function Toolbar() {
           key={action}
           title={title}
           className="px-2 h-7 flex items-center justify-center rounded hover:bg-card dark:hover:bg-card-dark text-xs font-medium text-text dark:text-text-dark"
-          onClick={() => document.dispatchEvent(new CustomEvent("lexical-format", { detail: action }))}
+          onClick={() => format(action)}
         >
           {label}
         </button>
@@ -83,7 +116,7 @@ function Toolbar() {
           key={action}
           title={title}
           className="w-7 h-7 flex items-center justify-center rounded hover:bg-card dark:hover:bg-card-dark text-sm text-text dark:text-text-dark"
-          onClick={() => document.dispatchEvent(new CustomEvent("lexical-format", { detail: action }))}
+          onClick={() => format(action)}
         >
           {label}
         </button>
@@ -96,18 +129,21 @@ function Toolbar() {
       >
         🖼
       </button>
-      <input
-        ref={fileInputRef}
-        type="file"
-        accept="image/*"
-        className="hidden"
+      <input ref={fileInputRef} type="file" accept="image/*" className="hidden"
         onChange={(e) => {
           const file = e.target.files?.[0];
           if (file) {
             const reader = new FileReader();
             reader.onload = (ev) => {
               const dataUrl = ev.target?.result as string;
-              document.dispatchEvent(new CustomEvent("lexical-insert-image", { detail: dataUrl }));
+              editor.update(() => {
+                const p = $createParagraphNode();
+                const img = document.createElement("img");
+                img.src = dataUrl;
+                img.style.maxWidth = "100%";
+                p.append($createTextNode("[图片]"));
+                $insertNodes([p]);
+              });
             };
             reader.readAsDataURL(file);
           }
@@ -121,7 +157,6 @@ function Toolbar() {
 function extractPreview(json: string): string {
   try {
     const parsed = JSON.parse(json);
-    // Walk the tree to extract text
     const texts: string[] = [];
     function walk(node: any) {
       if (node.text) texts.push(node.text);
@@ -129,9 +164,7 @@ function extractPreview(json: string): string {
     }
     if (parsed.root?.children) parsed.root.children.forEach(walk);
     return texts.join(" ").slice(0, 200);
-  } catch {
-    return "";
-  }
+  } catch { return ""; }
 }
 
 export function Editor({ initialJson, onChange, placeholder = "开始写笔记...", readOnly = false }: EditorProps) {
@@ -140,7 +173,6 @@ export function Editor({ initialJson, onChange, placeholder = "开始写笔记..
     theme,
     onError,
     nodes: [HeadingNode, QuoteNode, ListNode, ListItemNode, LinkNode, CodeNode, CodeHighlightNode],
-    editorState: initialJson ? undefined : undefined,
     editable: !readOnly,
   };
 
@@ -152,18 +184,12 @@ export function Editor({ initialJson, onChange, placeholder = "开始写笔记..
 
   return (
     <div className="editor-container flex flex-col h-full">
-      {!readOnly && <Toolbar />}
-      <div className="flex-1 overflow-y-auto p-4">
+      {!readOnly && (
         <LexicalComposer initialConfig={initialConfig}>
+          <ToolbarPlugin />
           <RichTextPlugin
-            contentEditable={
-              <ContentEditable className="editor-input text-text dark:text-text-dark text-base leading-relaxed min-h-[300px]" />
-            }
-            placeholder={
-              <div className="absolute top-4 left-4 text-text-secondary pointer-events-none">
-                {placeholder}
-              </div>
-            }
+            contentEditable={<ContentEditable className="editor-input text-text dark:text-text-dark text-base leading-relaxed min-h-[300px]" />}
+            placeholder={<div className="absolute top-4 left-4 text-text-hint dark:text-text-hint-dark pointer-events-none">{placeholder}</div>}
             ErrorBoundary={LexicalErrorBoundary}
           />
           <OnChangePlugin onChange={handleChange} />
@@ -172,7 +198,14 @@ export function Editor({ initialJson, onChange, placeholder = "开始写笔记..
           <ListPlugin />
           <LinkPlugin />
         </LexicalComposer>
-      </div>
+      )}
+      {readOnly && initialJson && (
+        <LexicalComposer initialConfig={{ ...initialConfig, editorState: initialJson }}>
+          <RichTextPlugin contentEditable={<ContentEditable className="editor-input text-text dark:text-text-dark text-base leading-relaxed" />} ErrorBoundary={LexicalErrorBoundary} />
+          <ListPlugin />
+          <LinkPlugin />
+        </LexicalComposer>
+      )}
     </div>
   );
 }

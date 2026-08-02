@@ -1,0 +1,8 @@
+﻿2026-08-02T01:24:53.2755665Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T01:24:53.2756588Z Post job cleanup.
+2026-08-02T01:24:53.3694263Z (node:17409) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T01:24:53.3694952Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T01:24:53.3853472Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/wps-note-clone/wps-note-clone --files-from manifest.txt --use-compress-program zstdmt
+2026-08-02T01:24:53.8652876Z (node:17409) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T01:24:54.5302869Z Sent 35321564 of 35321564 (100.0%), 50.1 MBs/sec
+2026-08-02T01:24:54.6562691Z Cache saved with the key: node-cache-Linux-x64-pnpm-784896dd967f0d10af75a02f01ae0d85009bf46e4acefa2f92396b36e9421104

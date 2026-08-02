@@ -1,0 +1,50 @@
+﻿2026-08-02T01:41:41.3365115Z ##[group]Run pnpm install --no-frozen-lockfile --ignore-scripts && pnpm rebuild esbuild
+2026-08-02T01:41:41.3365784Z [36;1mpnpm install --no-frozen-lockfile --ignore-scripts && pnpm rebuild esbuild[0m
+2026-08-02T01:41:41.3410836Z shell: /usr/bin/bash -e {0}
+2026-08-02T01:41:41.3411097Z env:
+2026-08-02T01:41:41.3411296Z   CARGO_TERM_COLOR: always
+2026-08-02T01:41:41.3411551Z   CARGO_INCREMENTAL: 0
+2026-08-02T01:41:41.3411782Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T01:41:41.3412086Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T01:41:41.3412527Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T01:41:41.3413018Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T01:41:41.3413421Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T01:41:41.3413719Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T01:41:41.3414000Z ##[endgroup]
+2026-08-02T01:41:41.8742075Z ? Verifying lockfile against supply-chain policies (207 entries)...
+2026-08-02T01:41:41.8841165Z Lockfile is up to date, resolution step is skipped
+2026-08-02T01:41:41.9889813Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T01:41:42.0230393Z Packages: +126
+2026-08-02T01:41:42.0260500Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-08-02T01:41:42.5135287Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-08-02T01:41:42.5136978Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T01:41:42.5138353Z   Virtual store is at:             node_modules/.pnpm
+2026-08-02T01:41:42.9046793Z Progress: resolved 126, reused 126, downloaded 0, added 126, done
+2026-08-02T01:41:43.5020859Z 
+2026-08-02T01:41:43.5021636Z dependencies:
+2026-08-02T01:41:43.5022374Z + @lexical/code 0.49.0
+2026-08-02T01:41:43.5023051Z + @lexical/history 0.49.0
+2026-08-02T01:41:43.5023712Z + @lexical/link 0.49.0
+2026-08-02T01:41:43.5024370Z + @lexical/list 0.49.0
+2026-08-02T01:41:43.5025008Z + @lexical/react 0.49.0
+2026-08-02T01:41:43.5025565Z + @lexical/rich-text 0.49.0
+2026-08-02T01:41:43.5026115Z + @tailwindcss/vite 4.3.3
+2026-08-02T01:41:43.5026910Z + @tanstack/react-virtual 3.14.9
+2026-08-02T01:41:43.5027309Z + @tauri-apps/api 2.11.1
+2026-08-02T01:41:43.5027916Z + @tauri-apps/plugin-opener 2.5.4
+2026-08-02T01:41:43.5028462Z + lexical 0.49.0
+2026-08-02T01:41:43.5044893Z + react 19.2.8
+2026-08-02T01:41:43.5045803Z + react-dom 19.2.8
+2026-08-02T01:41:43.5048707Z + tailwindcss 4.3.3
+2026-08-02T01:41:43.5049503Z + zustand 5.0.14
+2026-08-02T01:41:43.5049822Z 
+2026-08-02T01:41:43.5050077Z devDependencies:
+2026-08-02T01:41:43.5050593Z + @tauri-apps/cli 2.11.4
+2026-08-02T01:41:43.5051115Z + @types/react 19.2.18
+2026-08-02T01:41:43.5051609Z + @types/react-dom 19.2.4
+2026-08-02T01:41:43.5052132Z + @vitejs/plugin-react 4.7.0
+2026-08-02T01:41:43.5052619Z + typescript 5.8.3
+2026-08-02T01:41:43.5052993Z + vite 7.3.6
+2026-08-02T01:41:43.5053198Z 
+2026-08-02T01:41:44.1057311Z ✓ Lockfile passes supply-chain policies (207 entries in 2.2s)
+2026-08-02T01:41:44.1303257Z Done in 2.7s using pnpm v11.18.0

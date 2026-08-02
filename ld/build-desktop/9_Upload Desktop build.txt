@@ -1,0 +1,55 @@
+﻿2026-08-02T04:01:28.9814996Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T04:01:28.9816660Z ##[group]Run actions/upload-artifact@v4
+2026-08-02T04:01:28.9816960Z with:
+2026-08-02T04:01:28.9817166Z   name: wps-note-clone-desktop
+2026-08-02T04:01:28.9817455Z   path: src-tauri/target/release/bundle/
+2026-08-02T04:01:28.9817735Z   if-no-files-found: warn
+2026-08-02T04:01:28.9817975Z   compression-level: 6
+2026-08-02T04:01:28.9818187Z   overwrite: false
+2026-08-02T04:01:28.9818404Z   include-hidden-files: false
+2026-08-02T04:01:28.9818631Z env:
+2026-08-02T04:01:28.9818814Z   CARGO_TERM_COLOR: always
+2026-08-02T04:01:28.9819034Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:01:28.9819255Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:01:28.9819547Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:01:28.9819877Z ##[endgroup]
+2026-08-02T04:01:29.1621139Z (node:28082) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T04:01:29.1622065Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T04:01:29.2653705Z With the provided path, there will be 270 files uploaded
+2026-08-02T04:01:29.2655113Z Artifact name is valid!
+2026-08-02T04:01:29.2655893Z Root directory input is valid!
+2026-08-02T04:01:29.6252797Z Beginning upload of artifact content to blob storage
+2026-08-02T04:01:30.2803299Z (node:28082) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T04:01:31.2801098Z Uploaded bytes 8388608
+2026-08-02T04:01:32.0701727Z Uploaded bytes 16777216
+2026-08-02T04:01:32.2330926Z Uploaded bytes 25165824
+2026-08-02T04:01:32.8873872Z Uploaded bytes 33554432
+2026-08-02T04:01:33.5474583Z Uploaded bytes 41943040
+2026-08-02T04:01:34.2146477Z Uploaded bytes 50331648
+2026-08-02T04:01:34.9927514Z Uploaded bytes 58720256
+2026-08-02T04:01:35.6267209Z Uploaded bytes 67108864
+2026-08-02T04:01:36.2832670Z Uploaded bytes 75497472
+2026-08-02T04:01:36.8544741Z Uploaded bytes 83886080
+2026-08-02T04:01:37.4459939Z Uploaded bytes 92274688
+2026-08-02T04:01:37.9928943Z Uploaded bytes 100663296
+2026-08-02T04:01:38.3522954Z Uploaded bytes 109051904
+2026-08-02T04:01:38.9181845Z Uploaded bytes 117440512
+2026-08-02T04:01:39.0507061Z Uploaded bytes 125829120
+2026-08-02T04:01:39.4076886Z Uploaded bytes 134217728
+2026-08-02T04:01:39.5953554Z Uploaded bytes 142606336
+2026-08-02T04:01:39.8033221Z Uploaded bytes 150994944
+2026-08-02T04:01:39.8596016Z Uploaded bytes 159383552
+2026-08-02T04:01:40.1775677Z Uploaded bytes 167772160
+2026-08-02T04:01:40.3581636Z Uploaded bytes 176160768
+2026-08-02T04:01:40.5731762Z Uploaded bytes 184549376
+2026-08-02T04:01:41.1688789Z Uploaded bytes 192937984
+2026-08-02T04:01:41.6282763Z Uploaded bytes 201326592
+2026-08-02T04:01:42.0919372Z Uploaded bytes 209715200
+2026-08-02T04:01:42.0995272Z Uploaded bytes 218103808
+2026-08-02T04:01:42.3710732Z Uploaded bytes 225766287
+2026-08-02T04:01:42.4512080Z Finished uploading artifact content to blob storage!
+2026-08-02T04:01:42.4515669Z SHA256 digest of uploaded artifact zip is c24eb6778a6788f6ac0656fcf0637df07d2eaf54a923cf843c89fcb767e4b16e
+2026-08-02T04:01:42.4517763Z Finalizing artifact upload
+2026-08-02T04:01:42.8309054Z Artifact wps-note-clone-desktop.zip successfully finalized. Artifact ID 8828152060
+2026-08-02T04:01:42.8310884Z Artifact wps-note-clone-desktop has been successfully uploaded! Final size is 225766287 bytes. Artifact ID is 8828152060
+2026-08-02T04:01:42.8317985Z Artifact download URL: https://github.com/DoubleShift/wps-note-clone/actions/runs/30731173033/artifacts/8828152060

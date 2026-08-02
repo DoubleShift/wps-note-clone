@@ -1,0 +1,23 @@
+﻿2026-08-02T03:46:44.7415098Z ##[group]Run pnpm tauri android init
+2026-08-02T03:46:44.7415651Z [36;1mpnpm tauri android init[0m
+2026-08-02T03:46:44.7469673Z shell: /usr/bin/bash -e {0}
+2026-08-02T03:46:44.7469964Z env:
+2026-08-02T03:46:44.7470185Z   CARGO_TERM_COLOR: always
+2026-08-02T03:46:44.7470439Z   CARGO_INCREMENTAL: 0
+2026-08-02T03:46:44.7470682Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T03:46:44.7470991Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T03:46:44.7471427Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:46:44.7471919Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:46:44.7472328Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T03:46:44.7472628Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T03:46:44.7473284Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:46:44.7474113Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T03:46:44.7475046Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:46:44.7475959Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T03:46:44.7476700Z ##[endgroup]
+2026-08-02T03:46:45.1817120Z $ tauri android init
+2026-08-02T03:46:47.3971612Z         Info Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T03:46:47.7064794Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri" relative to "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/wps_note_clone" is "../../../"
+2026-08-02T03:46:47.7067010Z Generating Android Studio project...
+2026-08-02T03:46:47.7103306Z victory: Project generated successfully!
+2026-08-02T03:46:47.7104281Z     Make cool apps! 🌻 🐕 🎉

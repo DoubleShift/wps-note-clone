@@ -1,0 +1,46 @@
+﻿2026-08-02T00:42:17.9653802Z ##[group]Run pnpm tauri android build --target aarch64
+2026-08-02T00:42:17.9654237Z [36;1mpnpm tauri android build --target aarch64[0m
+2026-08-02T00:42:17.9699622Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:42:17.9699892Z env:
+2026-08-02T00:42:17.9700082Z   CARGO_TERM_COLOR: always
+2026-08-02T00:42:17.9700325Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:42:17.9700556Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:42:17.9700871Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:42:17.9701288Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T00:42:17.9701778Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T00:42:17.9702187Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T00:42:17.9702785Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T00:42:17.9703068Z ##[endgroup]
+2026-08-02T00:42:18.4191498Z $ tauri android build --target aarch64
+2026-08-02T00:42:18.5195706Z         Info Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T00:42:18.5413219Z         Info Looking up installed tauri packages to check mismatched versions...
+2026-08-02T00:42:19.0728072Z      Running beforeBuildCommand `pnpm build`
+2026-08-02T00:42:19.5037761Z $ tsc && vite build
+2026-08-02T00:42:21.9804585Z [36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+2026-08-02T00:42:22.0490922Z transforming...
+2026-08-02T00:42:23.7220757Z [32m✓[39m 111 modules transformed.
+2026-08-02T00:42:23.9741786Z rendering chunks...
+2026-08-02T00:42:23.9828227Z computing gzip size...
+2026-08-02T00:42:24.0033513Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  0.46 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+2026-08-02T00:42:24.0035374Z [2mdist/[22m[2massets/[22m[35mindex-ECprLdeq.css  [39m[1m[2m 25.76 kB[22m[1m[22m[2m │ gzip:   5.59 kB[22m
+2026-08-02T00:42:24.0036809Z [2mdist/[22m[2massets/[22m[36mindex-JpTIDFhB.js   [39m[1m[33m560.19 kB[39m[22m[2m │ gzip: 175.05 kB[22m
+2026-08-02T00:42:24.0037681Z [33m
+2026-08-02T00:42:24.0038433Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-08-02T00:42:24.0039041Z - Using dynamic import() to code-split the application
+2026-08-02T00:42:24.0040252Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-08-02T00:42:24.0042090Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-08-02T00:42:24.0043235Z [32m✓ built in 2.00s[39m
+2026-08-02T00:42:24.4831160Z [1m[92m    Updating[0m crates.io index
+2026-08-02T00:42:24.6849152Z [1m[91merror[0m: failed to select a version for `tauri`.
+2026-08-02T00:42:24.6850063Z     ... required by package `wps-note-clone v0.1.0 (/home/runner/work/wps-note-clone/wps-note-clone/src-tauri)`
+2026-08-02T00:42:24.6852631Z versions that meet the requirements `^2` are: 2.11.5, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.3, 2.10.2, 2.10.1, 2.10.0, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.0, 2.6.2, 2.6.1, 2.6.0, 2.5.1, 2.5.0, 2.4.1, 2.4.0, 2.3.1, 2.3.0, 2.2.5, 2.2.4, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.1, 2.1.0, 2.0.6, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0
+2026-08-02T00:42:24.6853661Z 
+2026-08-02T00:42:24.6854252Z package `wps-note-clone` depends on `tauri` with feature `mobile` but `tauri` does not have that feature.
+2026-08-02T00:42:24.6857645Z help: available features: common-controls-v6, compression, config-json5, config-toml, custom-protocol, data-url, default, devtools, http-range, image, image-ico, image-png, isolation, linux-libxdo, macos-private-api, macos-proxy, native-tls, native-tls-vendored, objc-exception, process-relaunch-dangerous-allow-symlink-macos, protocol-asset, rustls-tls, specta, tauri-runtime-wry, test, tracing, tray-icon, unstable, uuid, webview-data-url, wry
+2026-08-02T00:42:24.6859813Z 
+2026-08-02T00:42:24.6859825Z 
+2026-08-02T00:42:24.6860212Z failed to select a version for `tauri` which could resolve this conflict
+2026-08-02T00:42:24.6907853Z failed to build Android app: `Failed to run `cargo build`: command ["cargo", "build", "--package", "wps-note-clone", "--manifest-path", "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/Cargo.toml", "--target", "aarch64-linux-android", "--features", "tauri/custom-protocol tauri/custom-protocol", "--lib", "--release"] exited with code 101
+2026-08-02T00:42:24.6912032Z        Error failed to build Android app: `Failed to run `cargo build`: command ["cargo", "build", "--package", "wps-note-clone", "--manifest-path", "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/Cargo.toml", "--target", "aarch64-linux-android", "--features", "tauri/custom-protocol tauri/custom-protocol", "--lib", "--release"] exited with code 101
+2026-08-02T00:42:24.7156056Z [ELIFECYCLE] Command failed with exit code 1.
+2026-08-02T00:42:24.7411904Z ##[error]Process completed with exit code 1.

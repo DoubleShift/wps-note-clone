@@ -1,0 +1,23 @@
+﻿2026-08-02T00:16:31.7220336Z ##[group]Run pnpm tauri build
+2026-08-02T00:16:31.7220663Z [36;1mpnpm tauri build[0m
+2026-08-02T00:16:31.7246408Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:16:31.7246774Z env:
+2026-08-02T00:16:31.7247014Z   CARGO_TERM_COLOR: always
+2026-08-02T00:16:31.7247280Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:16:31.7247571Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:16:31.7247911Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:16:31.7248267Z ##[endgroup]
+2026-08-02T00:16:32.1194979Z $ tauri build
+2026-08-02T00:16:33.5895239Z         Info Looking up installed tauri packages to check mismatched versions...
+2026-08-02T00:16:34.0500948Z      Running beforeBuildCommand `pnpm build`
+2026-08-02T00:16:34.4318127Z $ tsc && vite build
+2026-08-02T00:16:36.1252061Z ##[error]src/components/editor/Editor.tsx(10,37): error TS2307: Cannot find module '@lexical/react/LexicalCodeHighlightPlugin' or its corresponding type declarations.
+2026-08-02T00:16:36.1263159Z ##[error]src/components/editor/Editor.tsx(158,12): error TS2741: Property 'ErrorBoundary' is missing in type '{ contentEditable: Element; placeholder: Element; }' but required in type '{ contentEditable: Element; placeholder?: Element | ((isEditable: boolean) => Element | null) | null | undefined; ErrorBoundary: ErrorBoundaryType; }'.
+2026-08-02T00:16:36.1268118Z ##[error]src/components/editor/Editor.tsx(193,10): error TS2741: Property 'ErrorBoundary' is missing in type '{ contentEditable: Element; }' but required in type '{ contentEditable: Element; placeholder?: Element | ((isEditable: boolean) => Element | null) | null | undefined; ErrorBoundary: ErrorBoundaryType; }'.
+2026-08-02T00:16:36.1271006Z ##[error]src/lib/tauri.ts(2,53): error TS2305: Module '"../types"' has no exported member 'CreateNoteRequest'.
+2026-08-02T00:16:36.1272986Z ##[error]src/lib/tauri.ts(2,72): error TS2305: Module '"../types"' has no exported member 'UpdateNoteRequest'.
+2026-08-02T00:16:36.1519541Z [ELIFECYCLE] Command failed with exit code 2.
+2026-08-02T00:16:36.1733505Z beforeBuildCommand `pnpm build` failed with exit code 2
+2026-08-02T00:16:36.1734610Z        Error beforeBuildCommand `pnpm build` failed with exit code 2
+2026-08-02T00:16:36.1956981Z [ELIFECYCLE] Command failed with exit code 1.
+2026-08-02T00:16:36.2200891Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,41 @@
+﻿2026-08-02T00:42:38.0332316Z ##[group]Run pnpm tauri build
+2026-08-02T00:42:38.0332610Z [36;1mpnpm tauri build[0m
+2026-08-02T00:42:38.0360156Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:42:38.0360433Z env:
+2026-08-02T00:42:38.0360638Z   CARGO_TERM_COLOR: always
+2026-08-02T00:42:38.0360872Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:42:38.0361103Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:42:38.0361389Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:42:38.0361702Z ##[endgroup]
+2026-08-02T00:42:38.4435625Z $ tauri build
+2026-08-02T00:42:39.9091012Z         Info Looking up installed tauri packages to check mismatched versions...
+2026-08-02T00:42:40.3908619Z      Running beforeBuildCommand `pnpm build`
+2026-08-02T00:42:40.7863060Z $ tsc && vite build
+2026-08-02T00:42:43.0670545Z [36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+2026-08-02T00:42:43.1370037Z transforming...
+2026-08-02T00:42:44.8711405Z [32m✓[39m 111 modules transformed.
+2026-08-02T00:42:45.1281438Z rendering chunks...
+2026-08-02T00:42:45.1364207Z computing gzip size...
+2026-08-02T00:42:45.1585521Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  0.46 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+2026-08-02T00:42:45.1586483Z [33m
+2026-08-02T00:42:45.1587385Z [2mdist/[22m[2massets/[22m[35mindex-ECprLdeq.css  [39m[1m[2m 25.76 kB[22m[1m[22m[2m │ gzip:   5.59 kB[22m
+2026-08-02T00:42:45.1588466Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-08-02T00:42:45.1589299Z - Using dynamic import() to code-split the application
+2026-08-02T00:42:45.1590528Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-08-02T00:42:45.1591877Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-08-02T00:42:45.1600277Z [2mdist/[22m[2massets/[22m[36mindex-JpTIDFhB.js   [39m[1m[33m560.19 kB[39m[22m[2m │ gzip: 175.05 kB[22m
+2026-08-02T00:42:45.1601108Z [32m✓ built in 2.06s[39m
+2026-08-02T00:42:45.3961972Z [1m[92m    Updating[0m crates.io index
+2026-08-02T00:42:45.6554479Z [1m[91merror[0m: failed to select a version for `tauri`.
+2026-08-02T00:42:45.6556723Z     ... required by package `wps-note-clone v0.1.0 (/home/runner/work/wps-note-clone/wps-note-clone/src-tauri)`
+2026-08-02T00:42:45.6558985Z versions that meet the requirements `^2` are: 2.11.5, 2.11.4, 2.11.3, 2.11.2, 2.11.1, 2.11.0, 2.10.3, 2.10.2, 2.10.1, 2.10.0, 2.9.5, 2.9.4, 2.9.3, 2.9.2, 2.9.1, 2.9.0, 2.8.5, 2.8.4, 2.8.3, 2.8.2, 2.8.1, 2.8.0, 2.7.0, 2.6.2, 2.6.1, 2.6.0, 2.5.1, 2.5.0, 2.4.1, 2.4.0, 2.3.1, 2.3.0, 2.2.5, 2.2.4, 2.2.3, 2.2.2, 2.2.1, 2.2.0, 2.1.1, 2.1.0, 2.0.6, 2.0.5, 2.0.4, 2.0.3, 2.0.2, 2.0.1, 2.0.0
+2026-08-02T00:42:45.6560820Z 
+2026-08-02T00:42:45.6561582Z package `wps-note-clone` depends on `tauri` with feature `mobile` but `tauri` does not have that feature.
+2026-08-02T00:42:45.6565095Z help: available features: common-controls-v6, compression, config-json5, config-toml, custom-protocol, data-url, default, devtools, http-range, image, image-ico, image-png, isolation, linux-libxdo, macos-private-api, macos-proxy, native-tls, native-tls-vendored, objc-exception, process-relaunch-dangerous-allow-symlink-macos, protocol-asset, rustls-tls, specta, tauri-runtime-wry, test, tracing, tray-icon, unstable, uuid, webview-data-url, wry
+2026-08-02T00:42:45.6567545Z 
+2026-08-02T00:42:45.6567707Z 
+2026-08-02T00:42:45.6568124Z failed to select a version for `tauri` which could resolve this conflict
+2026-08-02T00:42:45.6592186Z failed to build app: failed to build app
+2026-08-02T00:42:45.6594051Z        Error failed to build app: failed to build app
+2026-08-02T00:42:45.6910778Z [ELIFECYCLE] Command failed with exit code 1.
+2026-08-02T00:42:45.7351344Z ##[error]Process completed with exit code 1.

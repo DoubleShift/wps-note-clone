@@ -1,0 +1,54 @@
+﻿2026-08-02T04:07:50.3029493Z ##[group]Run pnpm install --no-frozen-lockfile --ignore-scripts && pnpm rebuild esbuild
+2026-08-02T04:07:50.3030094Z [36;1mpnpm install --no-frozen-lockfile --ignore-scripts && pnpm rebuild esbuild[0m
+2026-08-02T04:07:50.3071240Z shell: /usr/bin/bash -e {0}
+2026-08-02T04:07:50.3071512Z env:
+2026-08-02T04:07:50.3071730Z   CARGO_TERM_COLOR: always
+2026-08-02T04:07:50.3071972Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:07:50.3072206Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:07:50.3072524Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:07:50.3072975Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:07:50.3073451Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:07:50.3073833Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T04:07:50.3074123Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T04:07:50.3074712Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:07:50.3075854Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T04:07:50.3076701Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:07:50.3077561Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T04:07:50.3078220Z ##[endgroup]
+2026-08-02T04:07:50.7443459Z ? Verifying lockfile against supply-chain policies (207 entries)...
+2026-08-02T04:07:50.7528716Z Lockfile is up to date, resolution step is skipped
+2026-08-02T04:07:50.8394261Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T04:07:50.8609697Z Packages: +126
+2026-08-02T04:07:50.8635558Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-08-02T04:07:51.2230882Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-08-02T04:07:51.2231765Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T04:07:51.2232561Z   Virtual store is at:             node_modules/.pnpm
+2026-08-02T04:07:51.4945688Z Progress: resolved 126, reused 126, downloaded 0, added 126, done
+2026-08-02T04:07:52.0896683Z 
+2026-08-02T04:07:52.0897338Z dependencies:
+2026-08-02T04:07:52.0897889Z + @lexical/code 0.49.0
+2026-08-02T04:07:52.0898333Z + @lexical/history 0.49.0
+2026-08-02T04:07:52.0898764Z + @lexical/link 0.49.0
+2026-08-02T04:07:52.0899149Z + @lexical/list 0.49.0
+2026-08-02T04:07:52.0899532Z + @lexical/react 0.49.0
+2026-08-02T04:07:52.0899886Z + @lexical/rich-text 0.49.0
+2026-08-02T04:07:52.0900215Z + @tailwindcss/vite 4.3.3
+2026-08-02T04:07:52.0900548Z + @tanstack/react-virtual 3.14.9
+2026-08-02T04:07:52.0901111Z + @tauri-apps/api 2.11.1
+2026-08-02T04:07:52.0901492Z + @tauri-apps/plugin-opener 2.5.4
+2026-08-02T04:07:52.0901919Z + lexical 0.49.0
+2026-08-02T04:07:52.0902233Z + react 19.2.8
+2026-08-02T04:07:52.0902590Z + react-dom 19.2.8
+2026-08-02T04:07:52.0902964Z + tailwindcss 4.3.3
+2026-08-02T04:07:52.0903321Z + zustand 5.0.14
+2026-08-02T04:07:52.0903514Z 
+2026-08-02T04:07:52.0903690Z devDependencies:
+2026-08-02T04:07:52.0904072Z + @tauri-apps/cli 2.11.4
+2026-08-02T04:07:52.0904482Z + @types/react 19.2.18
+2026-08-02T04:07:52.0904906Z + @types/react-dom 19.2.4
+2026-08-02T04:07:52.0905619Z + @vitejs/plugin-react 4.7.0
+2026-08-02T04:07:52.0906067Z + typescript 5.8.3
+2026-08-02T04:07:52.0906406Z + vite 7.3.6
+2026-08-02T04:07:52.0906601Z 
+2026-08-02T04:07:52.7231553Z ✓ Lockfile passes supply-chain policies (207 entries in 1.9s)
+2026-08-02T04:07:52.7484966Z Done in 2.4s using pnpm v11.18.0

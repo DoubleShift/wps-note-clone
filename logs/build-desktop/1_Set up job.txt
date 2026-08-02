@@ -1,0 +1,34 @@
+﻿2026-08-02T00:02:18.8939467Z Current runner version: '2.336.0'
+2026-08-02T00:02:18.8963457Z ##[group]Runner Image Provisioner
+2026-08-02T00:02:18.8964309Z Hosted Compute Agent
+2026-08-02T00:02:18.8964826Z Version: 20260707.563
+2026-08-02T00:02:18.8965644Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-08-02T00:02:18.8966273Z Build Date: 2026-07-07T19:33:50Z
+2026-08-02T00:02:18.8966850Z Worker ID: {1c6650f2-138c-4d04-b11a-f37c252f7986}
+2026-08-02T00:02:18.8967512Z Azure Region: southcentralus
+2026-08-02T00:02:18.8968037Z ##[endgroup]
+2026-08-02T00:02:18.8969456Z ##[group]Operating System
+2026-08-02T00:02:18.8970033Z Ubuntu
+2026-08-02T00:02:18.8970497Z 24.04.4
+2026-08-02T00:02:18.8970987Z LTS
+2026-08-02T00:02:18.8971446Z ##[endgroup]
+2026-08-02T00:02:18.8971934Z ##[group]Runner Image
+2026-08-02T00:02:18.8972503Z Image: ubuntu-24.04
+2026-08-02T00:02:18.8972997Z Version: 20260720.247.2
+2026-08-02T00:02:18.8973951Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-08-02T00:02:18.8975688Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-08-02T00:02:18.8976569Z ##[endgroup]
+2026-08-02T00:02:18.8977589Z ##[group]GITHUB_TOKEN Permissions
+2026-08-02T00:02:18.8979447Z Contents: read
+2026-08-02T00:02:18.8979989Z Metadata: read
+2026-08-02T00:02:18.8980522Z Packages: read
+2026-08-02T00:02:18.8981025Z ##[endgroup]
+2026-08-02T00:02:18.8982910Z Secret source: Actions
+2026-08-02T00:02:18.8984248Z Prepare workflow directory
+2026-08-02T00:02:18.9309342Z Prepare all required actions
+2026-08-02T00:02:18.9378395Z Getting action download info
+2026-08-02T00:02:19.2082680Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-08-02T00:02:19.8571618Z Download action repository 'dtolnay/rust-toolchain@stable' (SHA:4cda84d5c5c54efe2404f9d843567869ab1699d4)
+2026-08-02T00:02:20.0403362Z Download action repository 'pnpm/action-setup@v4' (SHA:b906affcce14559ad1aafd4ab0e942779e9f58b1)
+2026-08-02T00:02:20.6882255Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-08-02T00:02:20.9282307Z Complete job name: build-desktop

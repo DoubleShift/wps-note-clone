@@ -1,0 +1,1368 @@
+﻿2026-08-02T03:46:47.7361023Z ##[group]Run pnpm tauri android build --target aarch64
+2026-08-02T03:46:47.7361654Z [36;1mpnpm tauri android build --target aarch64[0m
+2026-08-02T03:46:47.7413191Z shell: /usr/bin/bash -e {0}
+2026-08-02T03:46:47.7413585Z env:
+2026-08-02T03:46:47.7414029Z   CARGO_TERM_COLOR: always
+2026-08-02T03:46:47.7414409Z   CARGO_INCREMENTAL: 0
+2026-08-02T03:46:47.7414795Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T03:46:47.7415347Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T03:46:47.7415900Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:46:47.7416744Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:46:47.7417290Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T03:46:47.7417769Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T03:46:47.7418667Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:46:47.7419785Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T03:46:47.7420825Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:46:47.7421903Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T03:46:47.7422617Z ##[endgroup]
+2026-08-02T03:46:48.1969179Z $ tauri android build --target aarch64
+2026-08-02T03:46:48.3360770Z         Info Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T03:46:48.3374024Z         Info Looking up installed tauri packages to check mismatched versions...
+2026-08-02T03:46:48.8625705Z      Running beforeBuildCommand `pnpm build`
+2026-08-02T03:46:49.2789367Z $ tsc && vite build
+2026-08-02T03:46:51.7655848Z [36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+2026-08-02T03:46:51.8374748Z transforming...
+2026-08-02T03:46:53.5010718Z [32m✓[39m 111 modules transformed.
+2026-08-02T03:46:53.7573725Z rendering chunks...
+2026-08-02T03:46:53.7665112Z computing gzip size...
+2026-08-02T03:46:53.7861611Z [2mdist/[22m[32mindex.html                 [39m[1m[2m  0.46 kB[22m[1m[22m[2m │ gzip:   0.30 kB[22m
+2026-08-02T03:46:53.7863688Z [2mdist/[22m[2massets/[22m[35mindex-ECprLdeq.css  [39m[1m[2m 25.76 kB[22m[1m[22m[2m │ gzip:   5.59 kB[22m
+2026-08-02T03:46:53.7865694Z [2mdist/[22m[2massets/[22m[36mindex-JpTIDFhB.js   [39m[1m[33m560.19 kB[39m[22m[2m │ gzip: 175.05 kB[22m
+2026-08-02T03:46:53.7867024Z [33m
+2026-08-02T03:46:53.7868161Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-08-02T03:46:53.7869280Z - Using dynamic import() to code-split the application
+2026-08-02T03:46:53.7870911Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-08-02T03:46:53.7872668Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.[39m
+2026-08-02T03:46:53.7873730Z [32m✓ built in 1.99s[39m
+2026-08-02T03:46:54.2861261Z [1m[92m    Updating[0m crates.io index
+2026-08-02T03:46:55.8822340Z [1m[92m     Locking[0m 590 packages to latest compatible versions
+2026-08-02T03:46:55.9029574Z [1m[92m      Adding[0m generic-array v0.14.7 [1m[33m(available: v0.14.9)[0m
+2026-08-02T03:46:55.9308354Z [1m[92m      Adding[0m reqwest v0.12.28 [1m[33m(available: v0.13.4)[0m
+2026-08-02T03:46:55.9381157Z [1m[92m      Adding[0m rusqlite v0.32.1 [1m[33m(available: v0.40.1)[0m
+2026-08-02T03:46:55.9835405Z [1m[92m      Adding[0m toml v0.8.2 [1m[33m(available: v0.8.23)[0m
+2026-08-02T03:46:55.9842475Z [1m[92m      Adding[0m toml_datetime v0.6.3 [1m[33m(available: v0.6.11)[0m
+2026-08-02T03:46:55.9854030Z [1m[92m      Adding[0m toml_edit v0.20.2 [1m[33m(available: v0.20.7)[0m
+2026-08-02T03:46:56.0462263Z [1m[92m Downloading[0m crates ...
+2026-08-02T03:46:56.2101198Z [1m[92m  Downloaded[0m adler2 v2.0.1
+2026-08-02T03:46:56.2376060Z [1m[92m  Downloaded[0m lebe v0.5.3
+2026-08-02T03:46:56.2478213Z [1m[92m  Downloaded[0m aligned-vec v0.6.4
+2026-08-02T03:46:56.2527747Z [1m[92m  Downloaded[0m endi v1.1.1
+2026-08-02T03:46:56.2557551Z [1m[92m  Downloaded[0m aligned v0.4.3
+2026-08-02T03:46:56.2564480Z [1m[92m  Downloaded[0m dunce v1.0.5
+2026-08-02T03:46:56.2597394Z [1m[92m  Downloaded[0m dirs v6.0.0
+2026-08-02T03:46:56.2609293Z [1m[92m  Downloaded[0m cpufeatures v0.2.17
+2026-08-02T03:46:56.2636238Z [1m[92m  Downloaded[0m libappindicator v0.9.0
+2026-08-02T03:46:56.2688134Z [1m[92m  Downloaded[0m libappindicator-sys v0.9.0
+2026-08-02T03:46:56.2689358Z [1m[92m  Downloaded[0m async-broadcast v0.7.2
+2026-08-02T03:46:56.2699022Z [1m[92m  Downloaded[0m dlopen2 v0.8.2
+2026-08-02T03:46:56.2736498Z [1m[92m  Downloaded[0m keyboard-types v0.7.0
+2026-08-02T03:46:56.2754550Z [1m[92m  Downloaded[0m mime v0.3.17
+2026-08-02T03:46:56.2769180Z [1m[92m  Downloaded[0m async-task v4.7.1
+2026-08-02T03:46:56.2796987Z [1m[92m  Downloaded[0m avif-serialize v0.8.9
+2026-08-02T03:46:56.2809219Z [1m[92m  Downloaded[0m crossbeam-utils v0.8.22
+2026-08-02T03:46:56.2842596Z [1m[92m  Downloaded[0m ahash v0.8.12
+2026-08-02T03:46:56.2869287Z [1m[92m  Downloaded[0m cargo_metadata v0.19.2
+2026-08-02T03:46:56.2888900Z [1m[92m  Downloaded[0m pastey v0.1.1
+2026-08-02T03:46:56.2907887Z [1m[92m  Downloaded[0m potential_utf v0.1.5
+2026-08-02T03:46:56.2920806Z [1m[92m  Downloaded[0m num_enum_derive v0.7.6
+2026-08-02T03:46:56.2934801Z [1m[92m  Downloaded[0m arg_enum_proc_macro v0.3.4
+2026-08-02T03:46:56.2947357Z [1m[92m  Downloaded[0m arrayvec v0.7.8
+2026-08-02T03:46:56.2970403Z [1m[92m  Downloaded[0m bitflags v2.13.1
+2026-08-02T03:46:56.3018618Z [1m[92m  Downloaded[0m crypto-common v0.1.7
+2026-08-02T03:46:56.3029324Z [1m[92m  Downloaded[0m cssparser v0.36.0
+2026-08-02T03:46:56.3055282Z [1m[92m  Downloaded[0m pango v0.18.3
+2026-08-02T03:46:56.3105031Z [1m[92m  Downloaded[0m lock_api v0.4.14
+2026-08-02T03:46:56.3119352Z [1m[92m  Downloaded[0m num-rational v0.4.2
+2026-08-02T03:46:56.3133141Z [1m[92m  Downloaded[0m dpi v0.1.2
+2026-08-02T03:46:56.3145698Z [1m[92m  Downloaded[0m as-slice v0.2.1
+2026-08-02T03:46:56.3156994Z [1m[92m  Downloaded[0m darling_macro v0.23.0
+2026-08-02T03:46:56.3163839Z [1m[92m  Downloaded[0m deranged v0.5.8
+2026-08-02T03:46:56.3180877Z [1m[92m  Downloaded[0m digest v0.10.7
+2026-08-02T03:46:56.3201336Z [1m[92m  Downloaded[0m alloc-no-stdlib v2.0.4
+2026-08-02T03:46:56.3219324Z [1m[92m  Downloaded[0m alloc-stdlib v0.2.4
+2026-08-02T03:46:56.3232076Z [1m[92m  Downloaded[0m cfg-if v1.0.4
+2026-08-02T03:46:56.3246554Z [1m[92m  Downloaded[0m ctor-proc-macro v0.0.7
+2026-08-02T03:46:56.3262992Z [1m[92m  Downloaded[0m dlopen2_derive v0.4.3
+2026-08-02T03:46:56.3280532Z [1m[92m  Downloaded[0m dtoa-short v0.3.5
+2026-08-02T03:46:56.3294053Z [1m[92m  Downloaded[0m async-executor v1.14.0
+2026-08-02T03:46:56.3327412Z [1m[92m  Downloaded[0m async-signal v0.2.14
+2026-08-02T03:46:56.3351942Z [1m[92m  Downloaded[0m async-trait v0.1.91
+2026-08-02T03:46:56.3430492Z [1m[92m  Downloaded[0m openssl-sys v0.9.117
+2026-08-02T03:46:56.3524347Z [1m[92m  Downloaded[0m android_system_properties v0.1.5
+2026-08-02T03:46:56.3541714Z [1m[92m  Downloaded[0m atomic-waker v1.1.2
+2026-08-02T03:46:56.3555533Z [1m[92m  Downloaded[0m block-buffer v0.10.4
+2026-08-02T03:46:56.3566728Z [1m[92m  Downloaded[0m cairo-sys-rs v0.18.2
+2026-08-02T03:46:56.3578447Z [1m[92m  Downloaded[0m color_quant v1.1.0
+2026-08-02T03:46:56.3589115Z [1m[92m  Downloaded[0m cssparser-macros v0.6.1
+2026-08-02T03:46:56.3596009Z [1m[92m  Downloaded[0m ctor v0.8.0
+2026-08-02T03:46:56.3608043Z [1m[92m  Downloaded[0m dyn-clone v1.0.20
+2026-08-02T03:46:56.3627674Z [1m[92m  Downloaded[0m bit_field v0.10.3
+2026-08-02T03:46:56.3641813Z [1m[92m  Downloaded[0m atk-sys v0.18.2
+2026-08-02T03:46:56.3659129Z [1m[92m  Downloaded[0m crossbeam-deque v0.8.7
+2026-08-02T03:46:56.3676773Z [1m[92m  Downloaded[0m displaydoc v0.2.7
+2026-08-02T03:46:56.3698403Z [1m[92m  Downloaded[0m dtoa v1.0.11
+2026-08-02T03:46:56.3714924Z [1m[92m  Downloaded[0m async-process v2.5.0
+2026-08-02T03:46:56.3734038Z [1m[92m  Downloaded[0m dtor-proc-macro v0.0.6
+2026-08-02T03:46:56.3743303Z [1m[92m  Downloaded[0m memoffset v0.9.1
+2026-08-02T03:46:56.3757520Z [1m[92m  Downloaded[0m async-recursion v1.1.1
+2026-08-02T03:46:56.3799807Z [1m[92m  Downloaded[0m base64 v0.22.1
+2026-08-02T03:46:56.3840527Z [1m[92m  Downloaded[0m cfg_aliases v0.2.2
+2026-08-02T03:46:56.3851342Z [1m[92m  Downloaded[0m cpufeatures v0.3.0
+2026-08-02T03:46:56.3868836Z [1m[92m  Downloaded[0m dirs-sys v0.5.0
+2026-08-02T03:46:56.3881948Z [1m[92m  Downloaded[0m dtor v0.3.0
+2026-08-02T03:46:56.3895760Z [1m[92m  Downloaded[0m option-ext v0.2.0
+2026-08-02T03:46:56.3904691Z [1m[92m  Downloaded[0m bit-set v0.8.0
+2026-08-02T03:46:56.3918719Z [1m[92m  Downloaded[0m byteorder-lite v0.1.0
+2026-08-02T03:46:56.3929958Z [1m[92m  Downloaded[0m cesu8 v1.1.0
+2026-08-02T03:46:56.3939218Z [1m[92m  Downloaded[0m unic-ucd-version v0.9.0
+2026-08-02T03:46:56.3949063Z [1m[92m  Downloaded[0m maybe-rayon v0.1.1
+2026-08-02T03:46:56.3960332Z [1m[92m  Downloaded[0m parking v2.2.1
+2026-08-02T03:46:56.3973915Z [1m[92m  Downloaded[0m num-conv v0.2.2
+2026-08-02T03:46:56.3984429Z [1m[92m  Downloaded[0m num-derive v0.4.2
+2026-08-02T03:46:56.4006637Z [1m[92m  Downloaded[0m proc-macro-crate v1.3.1
+2026-08-02T03:46:56.4017935Z [1m[92m  Downloaded[0m rand_pcg v0.10.2
+2026-08-02T03:46:56.4034327Z [1m[92m  Downloaded[0m unic-char-property v0.9.0
+2026-08-02T03:46:56.4047980Z [1m[92m  Downloaded[0m async-channel v2.5.0
+2026-08-02T03:46:56.4066017Z [1m[92m  Downloaded[0m darling v0.23.0
+2026-08-02T03:46:56.4128014Z [1m[92m  Downloaded[0m either v1.17.0
+2026-08-02T03:46:56.4144441Z [1m[92m  Downloaded[0m embed-resource v3.0.11
+2026-08-02T03:46:56.4163151Z [1m[92m  Downloaded[0m openssl-macros v0.1.1
+2026-08-02T03:46:56.4179039Z [1m[92m  Downloaded[0m async-lock v3.4.2
+2026-08-02T03:46:56.4202614Z [1m[92m  Downloaded[0m autocfg v1.5.1
+2026-08-02T03:46:56.4222532Z [1m[92m  Downloaded[0m blocking v1.6.2
+2026-08-02T03:46:56.4235499Z [1m[92m  Downloaded[0m cargo-platform v0.1.9
+2026-08-02T03:46:56.4248445Z [1m[92m  Downloaded[0m concurrent-queue v2.5.0
+2026-08-02T03:46:56.4266986Z [1m[92m  Downloaded[0m noop_proc_macro v0.3.0
+2026-08-02T03:46:56.4285158Z [1m[92m  Downloaded[0m quick-error v2.0.1
+2026-08-02T03:46:56.4298776Z [1m[92m  Downloaded[0m bit-vec v0.8.0
+2026-08-02T03:46:56.4316104Z [1m[92m  Downloaded[0m byteorder v1.5.0
+2026-08-02T03:46:56.4347744Z [1m[92m  Downloaded[0m loop9 v0.1.5
+2026-08-02T03:46:56.4355452Z [1m[92m  Downloaded[0m av1-grain v0.2.5
+2026-08-02T03:46:56.4381658Z [1m[92m  Downloaded[0m markup5ever v0.38.0
+2026-08-02T03:46:56.4393704Z [1m[92m  Downloaded[0m num-complex v0.4.6
+2026-08-02T03:46:56.4408991Z [1m[92m  Downloaded[0m profiling v1.0.18
+2026-08-02T03:46:56.4424689Z [1m[92m  Downloaded[0m profiling-procmacros v1.0.18
+2026-08-02T03:46:56.4432464Z [1m[92m  Downloaded[0m bs58 v0.5.1
+2026-08-02T03:46:56.4456795Z [1m[92m  Downloaded[0m paste v1.0.15
+2026-08-02T03:46:56.4490780Z [1m[92m  Downloaded[0m percent-encoding v2.3.2
+2026-08-02T03:46:56.4499834Z [1m[92m  Downloaded[0m phf_codegen v0.13.1
+2026-08-02T03:46:56.4509839Z [1m[92m  Downloaded[0m phf_generator v0.13.1
+2026-08-02T03:46:56.4522033Z [1m[92m  Downloaded[0m precomputed-hash v0.1.1
+2026-08-02T03:46:56.4528470Z [1m[92m  Downloaded[0m rand_core v0.9.5
+2026-08-02T03:46:56.4542134Z [1m[92m  Downloaded[0m tower-layer v0.3.3
+2026-08-02T03:46:56.4552015Z [1m[92m  Downloaded[0m webkit2gtk-sys v2.0.2
+2026-08-02T03:46:56.4566782Z [1m[92m  Downloaded[0m yoke-derive v0.8.2
+2026-08-02T03:46:56.4579334Z [1m[92m  Downloaded[0m anyhow v1.0.104
+2026-08-02T03:46:56.4620799Z [1m[92m  Downloaded[0m bitflags v1.3.2
+2026-08-02T03:46:56.4654546Z [1m[92m  Downloaded[0m cargo_toml v0.22.3
+2026-08-02T03:46:56.4668632Z [1m[92m  Downloaded[0m cfg-expr v0.15.8
+2026-08-02T03:46:56.4699562Z [1m[92m  Downloaded[0m chacha20 v0.10.1
+2026-08-02T03:46:56.4724432Z [1m[92m  Downloaded[0m cookie v0.18.1
+2026-08-02T03:46:56.4749868Z [1m[92m  Downloaded[0m crc32fast v1.5.0
+2026-08-02T03:46:56.4769491Z [1m[92m  Downloaded[0m crossbeam-epoch v0.9.20
+2026-08-02T03:46:56.4795589Z [1m[92m  Downloaded[0m field-offset v0.3.6
+2026-08-02T03:46:56.4807503Z [1m[92m  Downloaded[0m gdkx11 v0.18.2
+2026-08-02T03:46:56.4827967Z [1m[92m  Downloaded[0m lru-slab v0.1.2
+2026-08-02T03:46:56.4836818Z [1m[92m  Downloaded[0m new_debug_unreachable v1.0.6
+2026-08-02T03:46:56.4847704Z [1m[92m  Downloaded[0m phf_shared v0.13.1
+2026-08-02T03:46:56.4857433Z [1m[92m  Downloaded[0m proc-macro-crate v2.0.2
+2026-08-02T03:46:56.4870416Z [1m[92m  Downloaded[0m proc-macro-error-attr v1.0.4
+2026-08-02T03:46:56.4880815Z [1m[92m  Downloaded[0m pulp-wasm-simd-flag v0.1.1
+2026-08-02T03:46:56.4887840Z [1m[92m  Downloaded[0m toml v1.1.4+spec-1.1.0
+2026-08-02T03:46:56.4931409Z [1m[92m  Downloaded[0m toml_parser v1.1.3+spec-1.1.0
+2026-08-02T03:46:56.4955123Z [1m[92m  Downloaded[0m tray-icon v0.24.2
+2026-08-02T03:46:56.4981606Z [1m[92m  Downloaded[0m zbus_macros v5.18.0
+2026-08-02T03:46:56.4998506Z [1m[92m  Downloaded[0m async-io v2.6.0
+2026-08-02T03:46:56.5029230Z [1m[92m  Downloaded[0m atk v0.18.2
+2026-08-02T03:46:56.5066271Z [1m[92m  Downloaded[0m built v0.8.1
+2026-08-02T03:46:56.5087485Z [1m[92m  Downloaded[0m bytemuck v1.25.2
+2026-08-02T03:46:56.5120978Z [1m[92m  Downloaded[0m cairo-rs v0.18.5
+2026-08-02T03:46:56.5155408Z [1m[92m  Downloaded[0m camino v1.2.5
+2026-08-02T03:46:56.5173159Z [1m[92m  Downloaded[0m combine v4.6.7
+2026-08-02T03:46:56.5229982Z [1m[92m  Downloaded[0m darling_core v0.23.0
+2026-08-02T03:46:56.5289521Z [1m[92m  Downloaded[0m derive_more v2.1.1
+2026-08-02T03:46:56.5428824Z [1m[92m  Downloaded[0m derive_more-impl v2.1.1
+2026-08-02T03:46:56.5485133Z [1m[92m  Downloaded[0m fax v0.2.7
+2026-08-02T03:46:56.5506267Z [1m[92m  Downloaded[0m fdeflate v0.3.7
+2026-08-02T03:46:56.5523687Z [1m[92m  Downloaded[0m find-msvc-tools v0.1.9
+2026-08-02T03:46:56.5540609Z [1m[92m  Downloaded[0m cfb v0.7.3
+2026-08-02T03:46:56.5578839Z [1m[92m  Downloaded[0m enumflags2_derive v0.7.12
+2026-08-02T03:46:56.5587219Z [1m[92m  Downloaded[0m gdkx11-sys v0.18.2
+2026-08-02T03:46:56.5597068Z [1m[92m  Downloaded[0m generic-array v0.14.7
+2026-08-02T03:46:56.5611868Z [1m[92m  Downloaded[0m log v0.4.33
+2026-08-02T03:46:56.5638507Z [1m[92m  Downloaded[0m num-integer v0.1.46
+2026-08-02T03:46:56.5655322Z [1m[92m  Downloaded[0m num_enum v0.7.6
+2026-08-02T03:46:56.5718459Z [1m[92m  Downloaded[0m ordered-stream v0.2.0
+2026-08-02T03:46:56.5730800Z [1m[92m  Downloaded[0m pango-sys v0.18.0
+2026-08-02T03:46:56.5746166Z [1m[92m  Downloaded[0m phf v0.13.1
+2026-08-02T03:46:56.5759528Z [1m[92m  Downloaded[0m pkg-config v0.3.33
+2026-08-02T03:46:56.5776103Z [1m[92m  Downloaded[0m powerfmt v0.2.0
+2026-08-02T03:46:56.5788512Z [1m[92m  Downloaded[0m ppv-lite86 v0.2.21
+2026-08-02T03:46:56.5802306Z [1m[92m  Downloaded[0m proc-macro-crate v3.5.0
+2026-08-02T03:46:56.5816553Z [1m[92m  Downloaded[0m quinn-udp v0.5.15
+2026-08-02T03:46:56.5835274Z [1m[92m  Downloaded[0m quote v1.0.47
+2026-08-02T03:46:56.5865135Z [1m[92m  Downloaded[0m rand_chacha v0.9.0
+2026-08-02T03:46:56.5877246Z [1m[92m  Downloaded[0m zerotrie v0.2.4
+2026-08-02T03:46:56.5919383Z [1m[92m  Downloaded[0m aho-corasick v1.1.4
+2026-08-02T03:46:56.5974980Z [1m[92m  Downloaded[0m bitstream-io v4.10.0
+2026-08-02T03:46:56.6005450Z [1m[92m  Downloaded[0m bumpalo v3.20.3
+2026-08-02T03:46:56.6033846Z [1m[92m  Downloaded[0m bytes v1.12.1
+2026-08-02T03:46:56.6072058Z [1m[92m  Downloaded[0m cc v1.4.0
+2026-08-02T03:46:56.6103839Z [1m[92m  Downloaded[0m crossbeam-channel v0.5.16
+2026-08-02T03:46:56.6146578Z [1m[92m  Downloaded[0m dbus v0.9.12
+2026-08-02T03:46:56.6191365Z [1m[92m  Downloaded[0m dom_query v0.27.0
+2026-08-02T03:46:56.6243237Z [1m[92m  Downloaded[0m flate2 v1.1.9
+2026-08-02T03:46:56.6295803Z [1m[92m  Downloaded[0m futures-macro v0.3.33
+2026-08-02T03:46:56.6306587Z [1m[92m  Downloaded[0m glob v0.3.4
+2026-08-02T03:46:56.6322607Z [1m[92m  Downloaded[0m gobject-sys v0.18.0
+2026-08-02T03:46:56.6338456Z [1m[92m  Downloaded[0m hex v0.4.3
+2026-08-02T03:46:56.6354933Z [1m[92m  Downloaded[0m http-body-util v0.1.4
+2026-08-02T03:46:56.6375762Z [1m[92m  Downloaded[0m litemap v0.8.2
+2026-08-02T03:46:56.6400697Z [1m[92m  Downloaded[0m open v5.4.0
+2026-08-02T03:46:56.6417367Z [1m[92m  Downloaded[0m piper v0.2.5
+2026-08-02T03:46:56.6434321Z [1m[92m  Downloaded[0m rand_core v0.10.1
+2026-08-02T03:46:56.6451123Z [1m[92m  Downloaded[0m url v2.5.8
+2026-08-02T03:46:56.6478581Z [1m[92m  Downloaded[0m v_frame v0.3.9
+2026-08-02T03:46:56.6495398Z [1m[92m  Downloaded[0m wasm-bindgen-macro-support v0.2.126
+2026-08-02T03:46:56.6517289Z [1m[92m  Downloaded[0m zbus v5.18.0
+2026-08-02T03:46:56.6616737Z [1m[92m  Downloaded[0m zerovec v0.11.6
+2026-08-02T03:46:56.6679250Z [1m[92m  Downloaded[0m zvariant_utils v3.5.0
+2026-08-02T03:46:56.6694556Z [1m[92m  Downloaded[0m brotli-decompressor v5.0.3
+2026-08-02T03:46:56.6755501Z [1m[92m  Downloaded[0m http-body v1.1.0
+2026-08-02T03:46:56.6765797Z [1m[92m  Downloaded[0m httparse v1.10.1
+2026-08-02T03:46:56.6792345Z [1m[92m  Downloaded[0m is-docker v0.2.0
+2026-08-02T03:46:56.6803622Z [1m[92m  Downloaded[0m javascriptcore-rs-sys v1.1.1
+2026-08-02T03:46:56.6816579Z [1m[92m  Downloaded[0m libloading v0.7.4
+2026-08-02T03:46:56.6841928Z [1m[92m  Downloaded[0m no_std_io2 v0.9.4
+2026-08-02T03:46:56.6862318Z [1m[92m  Downloaded[0m once_cell v1.21.4
+2026-08-02T03:46:56.6889103Z [1m[92m  Downloaded[0m parking_lot v0.12.5
+2026-08-02T03:46:56.6915240Z [1m[92m  Downloaded[0m parking_lot_core v0.9.12
+2026-08-02T03:46:56.6937733Z [1m[92m  Downloaded[0m phf_macros v0.13.1
+2026-08-02T03:46:56.6948381Z [1m[92m  Downloaded[0m pin-project-lite v0.2.17
+2026-08-02T03:46:56.7010712Z [1m[92m  Downloaded[0m png v0.17.16
+2026-08-02T03:46:56.7051780Z [1m[92m  Downloaded[0m proc-macro-error v1.0.4
+2026-08-02T03:46:56.7088598Z [1m[92m  Downloaded[0m ravif v0.13.0
+2026-08-02T03:46:56.7100847Z [1m[92m  Downloaded[0m raw-window-handle v0.6.2
+2026-08-02T03:46:56.7119795Z [1m[92m  Downloaded[0m reborrow v0.5.5
+2026-08-02T03:46:56.7127426Z [1m[92m  Downloaded[0m ref-cast v1.0.26
+2026-08-02T03:46:56.7158861Z [1m[92m  Downloaded[0m ref-cast-impl v1.0.26
+2026-08-02T03:46:56.7167445Z [1m[92m  Downloaded[0m schemars_derive v0.8.22
+2026-08-02T03:46:56.7183971Z [1m[92m  Downloaded[0m serde_spanned v1.1.1
+2026-08-02T03:46:56.7196609Z [1m[92m  Downloaded[0m toml_datetime v1.1.1+spec-1.1.0
+2026-08-02T03:46:56.7209932Z [1m[92m  Downloaded[0m walkdir v2.5.0
+2026-08-02T03:46:56.7229203Z [1m[92m  Downloaded[0m chrono v0.4.45
+2026-08-02T03:46:56.7299602Z [1m[92m  Downloaded[0m gtk-sys v0.18.2
+2026-08-02T03:46:56.7335861Z [1m[92m  Downloaded[0m html5ever v0.38.0
+2026-08-02T03:46:56.7373761Z [1m[92m  Downloaded[0m http v1.5.0
+2026-08-02T03:46:56.7412650Z [1m[92m  Downloaded[0m javascriptcore-rs v1.1.2
+2026-08-02T03:46:56.7440223Z [1m[92m  Downloaded[0m jobserver v0.1.35
+2026-08-02T03:46:56.7460254Z [1m[92m  Downloaded[0m json-patch v3.0.1
+2026-08-02T03:46:56.7483967Z [1m[92m  Downloaded[0m jsonptr v0.6.3
+2026-08-02T03:46:56.7510664Z [1m[92m  Downloaded[0m miniz_oxide v0.8.9
+2026-08-02T03:46:56.7536999Z [1m[92m  Downloaded[0m ndk v0.9.0
+2026-08-02T03:46:56.7569728Z [1m[92m  Downloaded[0m notify-rust v4.18.0
+2026-08-02T03:46:56.7603924Z [1m[92m  Downloaded[0m num-traits v0.2.19
+2026-08-02T03:46:56.7631537Z [1m[92m  Downloaded[0m plist v1.10.0
+2026-08-02T03:46:56.7675031Z [1m[92m  Downloaded[0m polling v3.11.0
+2026-08-02T03:46:56.7707377Z [1m[92m  Downloaded[0m proc-macro2 v1.0.107
+2026-08-02T03:46:56.7738818Z [1m[92m  Downloaded[0m qoi v0.4.1
+2026-08-02T03:46:56.7770001Z [1m[92m  Downloaded[0m quinn v0.11.11
+2026-08-02T03:46:56.7804695Z [1m[92m  Downloaded[0m rand v0.10.2
+2026-08-02T03:46:56.7846567Z [1m[92m  Downloaded[0m rayon-core v1.13.0
+2026-08-02T03:46:56.7885916Z [1m[92m  Downloaded[0m serde_urlencoded v0.7.1
+2026-08-02T03:46:56.7903709Z [1m[92m  Downloaded[0m serde_with v3.21.0
+2026-08-02T03:46:56.8043047Z [1m[92m  Downloaded[0m serde_with_macros v3.21.0
+2026-08-02T03:46:56.8062793Z [1m[92m  Downloaded[0m siphasher v1.0.3
+2026-08-02T03:46:56.8077293Z [1m[92m  Downloaded[0m slab v0.4.12
+2026-08-02T03:46:56.8090995Z [1m[92m  Downloaded[0m smallvec v1.15.2
+2026-08-02T03:46:56.8106878Z [1m[92m  Downloaded[0m synstructure v0.13.2
+2026-08-02T03:46:56.8117322Z [1m[92m  Downloaded[0m tao-macros v0.1.4
+2026-08-02T03:46:56.8129475Z [1m[92m  Downloaded[0m target-lexicon v0.12.16
+2026-08-02T03:46:56.8151373Z [1m[92m  Downloaded[0m thiserror-impl v2.0.19
+2026-08-02T03:46:56.8166775Z [1m[92m  Downloaded[0m tiff v0.11.3
+2026-08-02T03:46:56.8212866Z [1m[92m  Downloaded[0m unic-ucd-ident v0.9.0
+2026-08-02T03:46:56.8230228Z [1m[92m  Downloaded[0m version_check v0.9.5
+2026-08-02T03:46:56.8243631Z [1m[92m  Downloaded[0m winnow v0.5.40
+2026-08-02T03:46:56.8334642Z [1m[92m  Downloaded[0m av-scenechange v0.14.1
+2026-08-02T03:46:56.8454186Z [1m[92m  Downloaded[0m brotli v8.0.4
+2026-08-02T03:46:56.8610126Z [1m[92m  Downloaded[0m enumflags2 v0.7.12
+2026-08-02T03:46:56.8624189Z [1m[92m  Downloaded[0m equator v0.4.2
+2026-08-02T03:46:56.8638568Z [1m[92m  Downloaded[0m equator-macro v0.4.2
+2026-08-02T03:46:56.8646913Z [1m[92m  Downloaded[0m equivalent v1.0.2
+2026-08-02T03:46:56.8657314Z [1m[92m  Downloaded[0m futures-core v0.3.33
+2026-08-02T03:46:56.8671726Z [1m[92m  Downloaded[0m gtk v0.18.2
+2026-08-02T03:46:56.8984918Z [1m[92m  Downloaded[0m memchr v2.8.3
+2026-08-02T03:46:56.9044611Z [1m[92m  Downloaded[0m mio v1.2.2
+2026-08-02T03:46:56.9111821Z [1m[92m  Downloaded[0m moxcms v0.8.1
+2026-08-02T03:46:56.9220328Z [1m[92m  Downloaded[0m muda v0.19.3
+2026-08-02T03:46:56.9262033Z [1m[92m  Downloaded[0m nom v8.0.0
+2026-08-02T03:46:56.9318880Z [1m[92m  Downloaded[0m num-bigint v0.4.8
+2026-08-02T03:46:56.9369510Z [1m[92m  Downloaded[0m png v0.18.1
+2026-08-02T03:46:56.9413360Z [1m[92m  Downloaded[0m rand v0.9.5
+2026-08-02T03:46:56.9453645Z [1m[92m  Downloaded[0m raw-cpuid v11.6.0
+2026-08-02T03:46:56.9489864Z [1m[92m  Downloaded[0m rayon v1.12.0
+2026-08-02T03:46:56.9589769Z [1m[92m  Downloaded[0m rustc-hash v2.1.3
+2026-08-02T03:46:56.9603316Z [1m[92m  Downloaded[0m syn v3.0.3
+2026-08-02T03:46:56.9715364Z [1m[92m  Downloaded[0m sync_wrapper v1.0.2
+2026-08-02T03:46:56.9723503Z [1m[92m  Downloaded[0m system-deps v6.2.2
+2026-08-02T03:46:56.9746825Z [1m[92m  Downloaded[0m tao v0.35.3
+2026-08-02T03:46:56.9863403Z [1m[92m  Downloaded[0m time v0.3.55
+2026-08-02T03:46:57.0019650Z [1m[92m  Downloaded[0m toml_datetime v0.6.3
+2026-08-02T03:46:57.0029223Z [1m[92m  Downloaded[0m toml_edit v0.19.15
+2026-08-02T03:46:57.0248912Z [1m[92m  Downloaded[0m toml_edit v0.20.2
+2026-08-02T03:46:57.0467441Z [1m[92m  Downloaded[0m toml_edit v0.25.13+spec-1.1.0
+2026-08-02T03:46:57.0509301Z [1m[92m  Downloaded[0m urlpattern v0.3.0
+2026-08-02T03:46:57.0529177Z [1m[92m  Downloaded[0m vcpkg v0.2.15
+2026-08-02T03:46:57.1113446Z [1m[92m  Downloaded[0m version-compare v0.2.1
+2026-08-02T03:46:57.1127229Z [1m[92m  Downloaded[0m weezl v0.1.12
+2026-08-02T03:46:57.1154000Z [1m[92m  Downloaded[0m writeable v0.6.3
+2026-08-02T03:46:57.1174981Z [1m[92m  Downloaded[0m wry v0.55.1
+2026-08-02T03:46:57.1257614Z [1m[92m  Downloaded[0m erased-serde v0.4.10
+2026-08-02T03:46:57.1283361Z [1m[92m  Downloaded[0m futures-executor v0.3.33
+2026-08-02T03:46:57.1298238Z [1m[92m  Downloaded[0m glib-macros v0.18.5
+2026-08-02T03:46:57.1325353Z [1m[92m  Downloaded[0m glib-sys v0.18.1
+2026-08-02T03:46:57.1347161Z [1m[92m  Downloaded[0m hyper v1.11.0
+2026-08-02T03:46:57.1421295Z [1m[92m  Downloaded[0m hyper-rustls v0.27.9
+2026-08-02T03:46:57.1437167Z [1m[92m  Downloaded[0m iana-time-zone v0.1.65
+2026-08-02T03:46:57.1467489Z [1m[92m  Downloaded[0m indexmap v2.14.0
+2026-08-02T03:46:57.1512627Z [1m[92m  Downloaded[0m infer v0.19.0
+2026-08-02T03:46:57.1535484Z [1m[92m  Downloaded[0m ipnet v2.12.1
+2026-08-02T03:46:57.1553361Z [1m[92m  Downloaded[0m is-wsl v0.4.0
+2026-08-02T03:46:57.1564421Z [1m[92m  Downloaded[0m itertools v0.14.0
+2026-08-02T03:46:57.1639223Z [1m[92m  Downloaded[0m itoa v1.0.18
+2026-08-02T03:46:57.1654457Z [1m[92m  Downloaded[0m jni v0.21.1
+2026-08-02T03:46:57.1726165Z [1m[92m  Downloaded[0m jni-sys v0.3.1
+2026-08-02T03:46:57.1737397Z [1m[92m  Downloaded[0m jni-sys v0.4.1
+2026-08-02T03:46:57.1748175Z [1m[92m  Downloaded[0m jni-sys-macros v0.4.1
+2026-08-02T03:46:57.1756635Z [1m[92m  Downloaded[0m libm v0.2.16
+2026-08-02T03:46:57.1875111Z [1m[92m  Downloaded[0m pulp v0.22.3
+2026-08-02T03:46:57.1930612Z [1m[92m  Downloaded[0m quick-xml v0.41.0
+2026-08-02T03:46:57.2001661Z [1m[92m  Downloaded[0m regex v1.13.1
+2026-08-02T03:46:57.2059177Z [1m[92m  Downloaded[0m rustc_version v0.4.1
+2026-08-02T03:46:57.2072353Z [1m[92m  Downloaded[0m scopeguard v1.2.0
+2026-08-02T03:46:57.2085071Z [1m[92m  Downloaded[0m tauri-plugin-fs v2.5.1
+2026-08-02T03:46:57.2169481Z [1m[92m  Downloaded[0m tauri-winres v0.3.6
+2026-08-02T03:46:57.2186826Z [1m[92m  Downloaded[0m tokio-util v0.7.19
+2026-08-02T03:46:57.2270482Z [1m[92m  Downloaded[0m toml v0.8.2
+2026-08-02T03:46:57.2303545Z [1m[92m  Downloaded[0m toml_writer v1.1.2+spec-1.1.0
+2026-08-02T03:46:57.2318403Z [1m[92m  Downloaded[0m tower v0.5.3
+2026-08-02T03:46:57.2424941Z [1m[92m  Downloaded[0m tracing-attributes v0.1.31
+2026-08-02T03:46:57.2453574Z [1m[92m  Downloaded[0m typeid v1.0.3
+2026-08-02T03:46:57.2467119Z [1m[92m  Downloaded[0m unic-char-range v0.9.0
+2026-08-02T03:46:57.2482356Z [1m[92m  Downloaded[0m unic-common v0.9.0
+2026-08-02T03:46:57.2490580Z [1m[92m  Downloaded[0m winnow v0.7.15
+2026-08-02T03:46:57.2593001Z [1m[92m  Downloaded[0m winnow v1.0.4
+2026-08-02T03:46:57.2694686Z [1m[92m  Downloaded[0m x11 v2.21.0
+2026-08-02T03:46:57.2729007Z [1m[92m  Downloaded[0m zune-jpeg v0.5.15
+2026-08-02T03:46:57.2766906Z [1m[92m  Downloaded[0m zvariant v5.13.1
+2026-08-02T03:46:57.2840593Z [1m[92m  Downloaded[0m errno v0.3.14
+2026-08-02T03:46:57.2857357Z [1m[92m  Downloaded[0m event-listener v5.4.2
+2026-08-02T03:46:57.2876256Z [1m[92m  Downloaded[0m hyper-util v0.1.20
+2026-08-02T03:46:57.2941892Z [1m[92m  Downloaded[0m ico v0.5.0
+2026-08-02T03:46:57.2973064Z [1m[92m  Downloaded[0m quinn-proto v0.11.16
+2026-08-02T03:46:57.3044152Z [1m[92m  Downloaded[0m regex-automata v0.4.16
+2026-08-02T03:46:57.3196832Z [1m[92m  Downloaded[0m rgb v0.8.53
+2026-08-02T03:46:57.3222897Z [1m[92m  Downloaded[0m rustls-webpki v0.103.13
+2026-08-02T03:46:57.3256166Z [1m[92m  Downloaded[0m same-file v1.0.6
+2026-08-02T03:46:57.3271237Z [1m[92m  Downloaded[0m tauri-runtime v2.11.3
+2026-08-02T03:46:57.3288968Z [1m[92m  Downloaded[0m tauri-runtime-wry v2.11.4
+2026-08-02T03:46:57.3317217Z [1m[92m  Downloaded[0m tauri-utils v2.9.3
+2026-08-02T03:46:57.3362659Z [1m[92m  Downloaded[0m tendril v0.5.1
+2026-08-02T03:46:57.3401187Z [1m[92m  Downloaded[0m thiserror v1.0.69
+2026-08-02T03:46:57.3447406Z [1m[92m  Downloaded[0m time-core v0.1.9
+2026-08-02T03:46:57.3458882Z [1m[92m  Downloaded[0m tinystr v0.8.3
+2026-08-02T03:46:57.3480614Z [1m[92m  Downloaded[0m tinyvec_macros v0.1.1
+2026-08-02T03:46:57.3489411Z [1m[92m  Downloaded[0m tokio-macros v2.7.2
+2026-08-02T03:46:57.3500862Z [1m[92m  Downloaded[0m toml v0.9.12+spec-1.1.0
+2026-08-02T03:46:57.3543809Z [1m[92m  Downloaded[0m toml_datetime v0.7.5+spec-1.1.0
+2026-08-02T03:46:57.3557342Z [1m[92m  Downloaded[0m tower-http v0.6.11
+2026-08-02T03:46:57.3656206Z [1m[92m  Downloaded[0m tower-service v0.3.3
+2026-08-02T03:46:57.3664600Z [1m[92m  Downloaded[0m tracing v0.1.44
+2026-08-02T03:46:57.3832174Z [1m[92m  Downloaded[0m tracing-core v0.1.36
+2026-08-02T03:46:57.3860155Z [1m[92m  Downloaded[0m try-lock v0.2.5
+2026-08-02T03:46:57.3869685Z [1m[92m  Downloaded[0m typenum v1.20.1
+2026-08-02T03:46:57.3906670Z [1m[92m  Downloaded[0m utf8_iter v1.0.4
+2026-08-02T03:46:57.3917507Z [1m[92m  Downloaded[0m want v0.3.1
+2026-08-02T03:46:57.3927636Z [1m[92m  Downloaded[0m wasm-bindgen-shared v0.2.126
+2026-08-02T03:46:57.3939067Z [1m[92m  Downloaded[0m zbus_names v4.3.4
+2026-08-02T03:46:57.3955764Z [1m[92m  Downloaded[0m zerovec-derive v0.11.3
+2026-08-02T03:46:57.3971905Z [1m[92m  Downloaded[0m getrandom v0.2.17
+2026-08-02T03:46:57.4003594Z [1m[92m  Downloaded[0m icu_locale_core v2.2.0
+2026-08-02T03:46:57.4080112Z [1m[92m  Downloaded[0m rfd v0.16.0
+2026-08-02T03:46:57.4134900Z [1m[92m  Downloaded[0m rustls-pki-types v1.15.1
+2026-08-02T03:46:57.4162579Z [1m[92m  Downloaded[0m rustversion v1.0.23
+2026-08-02T03:46:57.4192196Z [1m[92m  Downloaded[0m ryu v1.0.23
+2026-08-02T03:46:57.4227270Z [1m[92m  Downloaded[0m schemars v0.8.22
+2026-08-02T03:46:57.4364507Z [1m[92m  Downloaded[0m schemars v1.2.2
+2026-08-02T03:46:57.4549098Z [1m[92m  Downloaded[0m semver v1.0.28
+2026-08-02T03:46:57.4573777Z [1m[92m  Downloaded[0m serde-untagged v0.1.9
+2026-08-02T03:46:57.4591313Z [1m[92m  Downloaded[0m serde_core v1.0.229
+2026-08-02T03:46:57.4620440Z [1m[92m  Downloaded[0m serde_derive_internals v0.29.1
+2026-08-02T03:46:57.4635662Z [1m[92m  Downloaded[0m serde_json v1.0.151
+2026-08-02T03:46:57.4715331Z [1m[92m  Downloaded[0m serde_repr v0.1.21
+2026-08-02T03:46:57.4736699Z [1m[92m  Downloaded[0m serde_spanned v0.6.9
+2026-08-02T03:46:57.4747836Z [1m[92m  Downloaded[0m serialize-to-javascript v0.1.2
+2026-08-02T03:46:57.4758721Z [1m[92m  Downloaded[0m serialize-to-javascript-impl v0.1.2
+2026-08-02T03:46:57.4765725Z [1m[92m  Downloaded[0m shlex v2.0.1
+2026-08-02T03:46:57.4779520Z [1m[92m  Downloaded[0m tauri-plugin-notification v2.3.3
+2026-08-02T03:46:57.4845782Z [1m[92m  Downloaded[0m tauri-plugin-opener v2.5.4
+2026-08-02T03:46:57.4885346Z [1m[92m  Downloaded[0m thiserror v2.0.19
+2026-08-02T03:46:57.4954371Z [1m[92m  Downloaded[0m thiserror-impl v1.0.69
+2026-08-02T03:46:57.4968071Z [1m[92m  Downloaded[0m time-macros v0.2.32
+2026-08-02T03:46:57.4992882Z [1m[92m  Downloaded[0m tinyvec v1.12.0
+2026-08-02T03:46:57.5020269Z [1m[92m  Downloaded[0m tokio-rustls v0.26.4
+2026-08-02T03:46:57.5041428Z [1m[92m  Downloaded[0m x11-dl v2.21.0
+2026-08-02T03:46:57.5074358Z [1m[92m  Downloaded[0m event-listener-strategy v0.5.4
+2026-08-02T03:46:57.5085775Z [1m[92m  Downloaded[0m exr v1.74.2
+2026-08-02T03:46:57.5197343Z [1m[92m  Downloaded[0m fallible-iterator v0.3.0
+2026-08-02T03:46:57.5210459Z [1m[92m  Downloaded[0m foldhash v0.2.0
+2026-08-02T03:46:57.5222895Z [1m[92m  Downloaded[0m getrandom v0.3.4
+2026-08-02T03:46:57.5259021Z [1m[92m  Downloaded[0m gtk3-macros v0.18.2
+2026-08-02T03:46:57.5267717Z [1m[92m  Downloaded[0m icu_collections v2.2.0
+2026-08-02T03:46:57.5333638Z [1m[92m  Downloaded[0m ndk-sys v0.6.0+11769913
+2026-08-02T03:46:57.5412663Z [1m[92m  Downloaded[0m openssl v0.10.81
+2026-08-02T03:46:57.5516017Z [1m[92m  Downloaded[0m rusqlite v0.32.1
+2026-08-02T03:46:57.5579224Z [1m[92m  Downloaded[0m schemars v0.9.0
+2026-08-02T03:46:57.5728271Z [1m[92m  Downloaded[0m selectors v0.36.1
+2026-08-02T03:46:57.5752473Z [1m[92m  Downloaded[0m serde v1.0.229
+2026-08-02T03:46:57.5787990Z [1m[92m  Downloaded[0m serde_derive v1.0.229
+2026-08-02T03:46:57.5819061Z [1m[92m  Downloaded[0m servo_arc v0.4.3
+2026-08-02T03:46:57.5827553Z [1m[92m  Downloaded[0m string_cache v0.9.0
+2026-08-02T03:46:57.5843477Z [1m[92m  Downloaded[0m subtle v2.6.1
+2026-08-02T03:46:57.5855280Z [1m[92m  Downloaded[0m syn v2.0.119
+2026-08-02T03:46:57.5965596Z [1m[92m  Downloaded[0m tauri-build v2.6.3
+2026-08-02T03:46:57.5982146Z [1m[92m  Downloaded[0m tauri-codegen v2.6.3
+2026-08-02T03:46:57.5998049Z [1m[92m  Downloaded[0m uuid v1.24.0
+2026-08-02T03:46:57.6029213Z [1m[92m  Downloaded[0m fallible-streaming-iterator v0.1.9
+2026-08-02T03:46:57.6038093Z [1m[92m  Downloaded[0m foreign-types v0.3.2
+2026-08-02T03:46:57.6045381Z [1m[92m  Downloaded[0m icu_normalizer v2.2.0
+2026-08-02T03:46:57.6084209Z [1m[92m  Downloaded[0m reqwest v0.12.28
+2026-08-02T03:46:57.6141316Z [1m[92m  Downloaded[0m reqwest v0.13.4
+2026-08-02T03:46:57.6198365Z [1m[92m  Downloaded[0m sha2 v0.10.9
+2026-08-02T03:46:57.6225146Z [1m[92m  Downloaded[0m signal-hook-registry v1.4.8
+2026-08-02T03:46:57.6237547Z [1m[92m  Downloaded[0m simd-adler32 v0.3.10
+2026-08-02T03:46:57.6257042Z [1m[92m  Downloaded[0m simd_helpers v0.1.0
+2026-08-02T03:46:57.6265074Z [1m[92m  Downloaded[0m soup3 v0.5.0
+2026-08-02T03:46:57.6308975Z [1m[92m  Downloaded[0m soup3-sys v0.5.0
+2026-08-02T03:46:57.6323238Z [1m[92m  Downloaded[0m stable_deref_trait v1.2.1
+2026-08-02T03:46:57.6332475Z [1m[92m  Downloaded[0m string_cache_codegen v0.6.1
+2026-08-02T03:46:57.6339326Z [1m[92m  Downloaded[0m syn v1.0.109
+2026-08-02T03:46:57.6441531Z [1m[92m  Downloaded[0m tauri-plugin v2.6.3
+2026-08-02T03:46:57.6453072Z [1m[92m  Downloaded[0m tauri-plugin-dialog v2.7.2
+2026-08-02T03:46:57.6504927Z [1m[92m  Downloaded[0m unicode-ident v1.0.24
+2026-08-02T03:46:57.6533571Z [1m[92m  Downloaded[0m wasm-bindgen-macro v0.2.126
+2026-08-02T03:46:57.6543226Z [1m[92m  Downloaded[0m fastrand v2.5.0
+2026-08-02T03:46:57.6557502Z [1m[92m  Downloaded[0m fnv v1.0.7
+2026-08-02T03:46:57.6566681Z [1m[92m  Downloaded[0m futures-io v0.3.33
+2026-08-02T03:46:57.6575322Z [1m[92m  Downloaded[0m futures-lite v2.6.1
+2026-08-02T03:46:57.6592793Z [1m[92m  Downloaded[0m icu_normalizer_data v2.2.0
+2026-08-02T03:46:57.6614397Z [1m[92m  Downloaded[0m socket2 v0.6.5
+2026-08-02T03:46:57.6633295Z [1m[92m  Downloaded[0m strsim v0.11.1
+2026-08-02T03:46:57.6646657Z [1m[92m  Downloaded[0m wasm-bindgen v0.2.126
+2026-08-02T03:46:57.6674473Z [1m[92m  Downloaded[0m gdk-sys v0.18.2
+2026-08-02T03:46:57.6695757Z [1m[92m  Downloaded[0m gif v0.14.2
+2026-08-02T03:46:57.6713606Z [1m[92m  Downloaded[0m tauri-macros v2.6.3
+2026-08-02T03:46:57.6730158Z [1m[92m  Downloaded[0m gdk-pixbuf v0.18.5
+2026-08-02T03:46:57.6753439Z [1m[92m  Downloaded[0m gdk-pixbuf-sys v0.18.0
+2026-08-02T03:46:57.6766053Z [1m[92m  Downloaded[0m hashbrown v0.12.3
+2026-08-02T03:46:57.6805479Z [1m[92m  Downloaded[0m regex-syntax v0.8.11
+2026-08-02T03:46:57.6876553Z [1m[92m  Downloaded[0m rustls v0.23.43
+2026-08-02T03:46:57.7000720Z [1m[92m  Downloaded[0m untrusted v0.9.0
+2026-08-02T03:46:57.7017862Z [1m[92m  Downloaded[0m web_atoms v0.2.5
+2026-08-02T03:46:57.7029588Z [1m[92m  Downloaded[0m foreign-types-shared v0.1.1
+2026-08-02T03:46:57.7036190Z [1m[92m  Downloaded[0m gdk v0.18.2
+2026-08-02T03:46:57.7098529Z [1m[92m  Downloaded[0m getrandom v0.4.3
+2026-08-02T03:46:57.7137799Z [1m[92m  Downloaded[0m rustix v1.1.4
+2026-08-02T03:46:57.7424705Z [1m[92m  Downloaded[0m zerofrom v0.1.8
+2026-08-02T03:46:57.7434640Z [1m[92m  Downloaded[0m zerofrom-derive v0.1.7
+2026-08-02T03:46:57.7445436Z [1m[92m  Downloaded[0m form_urlencoded v1.2.2
+2026-08-02T03:46:57.7453531Z [1m[92m  Downloaded[0m unicode-segmentation v1.13.3
+2026-08-02T03:46:57.7483989Z [1m[92m  Downloaded[0m zmij v1.0.23
+2026-08-02T03:46:57.7502338Z [1m[92m  Downloaded[0m zune-core v0.5.1
+2026-08-02T03:46:57.7525578Z [1m[92m  Downloaded[0m zune-inflate v0.2.54
+2026-08-02T03:46:57.7543253Z [1m[92m  Downloaded[0m gdkwayland-sys v0.18.2
+2026-08-02T03:46:57.7549958Z [1m[92m  Downloaded[0m tauri v2.11.5
+2026-08-02T03:46:57.7707587Z [1m[92m  Downloaded[0m y4m v0.8.0
+2026-08-02T03:46:57.7719831Z [1m[92m  Downloaded[0m zeroize v1.9.0
+2026-08-02T03:46:57.7735710Z [1m[92m  Downloaded[0m zvariant_derive v5.13.1
+2026-08-02T03:46:57.7750544Z [1m[92m  Downloaded[0m futures-util v0.3.33
+2026-08-02T03:46:57.7891413Z [1m[92m  Downloaded[0m half v2.7.1
+2026-08-02T03:46:57.7918944Z [1m[92m  Downloaded[0m libc v0.2.189
+2026-08-02T03:46:57.8376020Z [1m[92m  Downloaded[0m futures-channel v0.3.33
+2026-08-02T03:46:57.8394654Z [1m[92m  Downloaded[0m gio v0.18.4
+2026-08-02T03:46:57.8570451Z [1m[92m  Downloaded[0m webkit2gtk v2.0.2
+2026-08-02T03:46:57.8636107Z [1m[92m  Downloaded[0m yoke v0.8.3
+2026-08-02T03:46:57.8657881Z [1m[92m  Downloaded[0m futures-sink v0.3.33
+2026-08-02T03:46:57.8666928Z [1m[92m  Downloaded[0m icu_properties v2.2.0
+2026-08-02T03:46:57.8691062Z [1m[92m  Downloaded[0m futures-task v0.3.33
+2026-08-02T03:46:57.8703059Z [1m[92m  Downloaded[0m pxfm v0.1.30
+2026-08-02T03:46:57.8961740Z [1m[92m  Downloaded[0m idna v1.1.0
+2026-08-02T03:46:57.8998005Z [1m[92m  Downloaded[0m idna_adapter v1.2.2
+2026-08-02T03:46:57.9007316Z [1m[92m  Downloaded[0m webpki-roots v1.0.9
+2026-08-02T03:46:57.9039867Z [1m[92m  Downloaded[0m zerocopy-derive v0.8.55
+2026-08-02T03:46:57.9137073Z [1m[92m  Downloaded[0m ident_case v1.0.1
+2026-08-02T03:46:57.9145437Z [1m[92m  Downloaded[0m imgref v1.12.2
+2026-08-02T03:46:57.9156889Z [1m[92m  Downloaded[0m zerocopy v0.8.55
+2026-08-02T03:46:57.9379620Z [1m[92m  Downloaded[0m icu_provider v2.2.0
+2026-08-02T03:46:57.9407172Z [1m[92m  Downloaded[0m image-webp v0.2.4
+2026-08-02T03:46:57.9430684Z [1m[92m  Downloaded[0m hashlink v0.9.1
+2026-08-02T03:46:57.9449457Z [1m[92m  Downloaded[0m heck v0.4.1
+2026-08-02T03:46:57.9462913Z [1m[92m  Downloaded[0m gio-sys v0.18.1
+2026-08-02T03:46:57.9488983Z [1m[92m  Downloaded[0m indexmap v1.9.3
+2026-08-02T03:46:57.9521758Z [1m[92m  Downloaded[0m libdbus-sys v0.2.7
+2026-08-02T03:46:57.9848325Z [1m[92m  Downloaded[0m hashbrown v0.14.5
+2026-08-02T03:46:57.9898452Z [1m[92m  Downloaded[0m icu_properties_data v2.2.0
+2026-08-02T03:46:58.0012033Z [1m[92m  Downloaded[0m tokio v1.53.1
+2026-08-02T03:46:58.0491065Z [1m[92m  Downloaded[0m hashbrown v0.17.1
+2026-08-02T03:46:58.0546732Z [1m[92m  Downloaded[0m heck v0.5.0
+2026-08-02T03:46:58.0560304Z [1m[92m  Downloaded[0m glib v0.18.5
+2026-08-02T03:46:58.0673872Z [1m[92m  Downloaded[0m image v0.25.10
+2026-08-02T03:46:58.0772998Z [1m[92m  Downloaded[0m rav1e v0.8.1
+2026-08-02T03:46:58.1130466Z [1m[92m  Downloaded[0m ring v0.17.14
+2026-08-02T03:46:58.1572774Z [1m[92m  Downloaded[0m linux-raw-sys v0.12.1
+2026-08-02T03:46:58.2337239Z [1m[92m  Downloaded[0m libsqlite3-sys v0.30.1
+2026-08-02T03:46:58.2978195Z [1m[92m  Downloaded[0m openssl-src v300.6.1+3.6.3
+2026-08-02T03:46:58.8499958Z [1m[92m   Compiling[0m proc-macro2 v1.0.107
+2026-08-02T03:46:58.8546980Z [1m[92m   Compiling[0m unicode-ident v1.0.24
+2026-08-02T03:46:58.8547981Z [1m[92m   Compiling[0m quote v1.0.47
+2026-08-02T03:46:58.8551712Z [1m[92m   Compiling[0m libc v0.2.189
+2026-08-02T03:47:01.4066853Z [1m[92m   Compiling[0m serde_core v1.0.229
+2026-08-02T03:47:02.9269094Z [1m[92m   Compiling[0m cfg-if v1.0.4
+2026-08-02T03:47:03.2282693Z [1m[92m   Compiling[0m siphasher v1.0.3
+2026-08-02T03:47:03.4025602Z [1m[92m   Compiling[0m phf_shared v0.13.1
+2026-08-02T03:47:03.7818383Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+2026-08-02T03:47:04.0668308Z [1m[92m   Compiling[0m syn v2.0.119
+2026-08-02T03:47:04.0877267Z [1m[92m   Compiling[0m syn v3.0.3
+2026-08-02T03:47:05.0927484Z [1m[92m   Compiling[0m fastrand v2.5.0
+2026-08-02T03:47:05.2188824Z [1m[92m   Compiling[0m phf_generator v0.13.1
+2026-08-02T03:47:05.3608406Z [1m[92m   Compiling[0m icu_properties_data v2.2.0
+2026-08-02T03:47:05.4608985Z [1m[92m   Compiling[0m icu_normalizer_data v2.2.0
+2026-08-02T03:47:05.5678608Z [1m[92m   Compiling[0m autocfg v1.5.1
+2026-08-02T03:47:06.0008382Z [1m[92m   Compiling[0m phf_codegen v0.13.1
+2026-08-02T03:47:06.0872377Z [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+2026-08-02T03:47:06.1368139Z [1m[92m   Compiling[0m zmij v1.0.23
+2026-08-02T03:47:06.3570838Z [1m[92m   Compiling[0m smallvec v1.15.2
+2026-08-02T03:47:06.8468829Z [1m[92m   Compiling[0m synstructure v0.13.2
+2026-08-02T03:47:07.3568866Z [1m[92m   Compiling[0m version_check v0.9.5
+2026-08-02T03:47:07.5942449Z [1m[92m   Compiling[0m serde v1.0.229
+2026-08-02T03:47:07.7108138Z [1m[92m   Compiling[0m serde_derive v1.0.229
+2026-08-02T03:47:07.7298700Z [1m[92m   Compiling[0m displaydoc v0.2.7
+2026-08-02T03:47:08.2948311Z [1m[92m   Compiling[0m winnow v1.0.4
+2026-08-02T03:47:08.4088172Z [1m[92m   Compiling[0m zerofrom-derive v0.1.7
+2026-08-02T03:47:08.9418043Z [1m[92m   Compiling[0m yoke-derive v0.8.2
+2026-08-02T03:47:09.4808297Z [1m[92m   Compiling[0m zerovec-derive v0.11.3
+2026-08-02T03:47:09.6638191Z [1m[92m   Compiling[0m phf_macros v0.13.1
+2026-08-02T03:47:09.8628796Z [1m[92m   Compiling[0m zerofrom v0.1.8
+2026-08-02T03:47:09.9448153Z [1m[92m   Compiling[0m yoke v0.8.3
+2026-08-02T03:47:10.1785861Z [1m[92m   Compiling[0m getrandom v0.4.3
+2026-08-02T03:47:10.2568465Z [1m[92m   Compiling[0m shlex v2.0.1
+2026-08-02T03:47:10.3268603Z [1m[92m   Compiling[0m find-msvc-tools v0.1.9
+2026-08-02T03:47:10.3848915Z [1m[92m   Compiling[0m toml_parser v1.1.3+spec-1.1.0
+2026-08-02T03:47:10.4778183Z [1m[92m   Compiling[0m cc v1.4.0
+2026-08-02T03:47:10.5088282Z [1m[92m   Compiling[0m string_cache_codegen v0.6.1
+2026-08-02T03:47:10.8759374Z [1m[92m   Compiling[0m thiserror v1.0.69
+2026-08-02T03:47:11.0253550Z [1m[92m   Compiling[0m thiserror v2.0.19
+2026-08-02T03:47:11.0504872Z [1m[92m   Compiling[0m memchr v2.8.3
+2026-08-02T03:47:11.2078617Z [1m[92m   Compiling[0m web_atoms v0.2.5
+2026-08-02T03:47:11.4438388Z [1m[92m   Compiling[0m zerovec v0.11.6
+2026-08-02T03:47:11.7278054Z [1m[92m   Compiling[0m anyhow v1.0.104
+2026-08-02T03:47:11.7778946Z [1m[92m   Compiling[0m thiserror-impl v1.0.69
+2026-08-02T03:47:11.8658240Z [1m[92m   Compiling[0m thiserror-impl v2.0.19
+2026-08-02T03:47:11.9039188Z [1m[92m   Compiling[0m toml_datetime v1.1.1+spec-1.1.0
+2026-08-02T03:47:12.0218186Z [1m[92m   Compiling[0m typeid v1.0.3
+2026-08-02T03:47:12.1682065Z [1m[92m   Compiling[0m equivalent v1.0.2
+2026-08-02T03:47:12.2208066Z [1m[92m   Compiling[0m time-core v0.1.9
+2026-08-02T03:47:12.4008352Z [1m[92m   Compiling[0m num-conv v0.2.2
+2026-08-02T03:47:12.5209635Z [1m[92m   Compiling[0m hashbrown v0.17.1
+2026-08-02T03:47:12.6798161Z [1m[92m   Compiling[0m tinystr v0.8.3
+2026-08-02T03:47:12.8389776Z [1m[92m   Compiling[0m writeable v0.6.3
+2026-08-02T03:47:12.8488751Z [1m[92m   Compiling[0m litemap v0.8.2
+2026-08-02T03:47:12.9737988Z [1m[92m   Compiling[0m strsim v0.11.1
+2026-08-02T03:47:13.0067482Z [1m[92m   Compiling[0m itoa v1.0.18
+2026-08-02T03:47:13.0148954Z [1m[92m   Compiling[0m ident_case v1.0.1
+2026-08-02T03:47:13.0847117Z [1m[92m   Compiling[0m indexmap v2.14.0
+2026-08-02T03:47:13.1128327Z [1m[92m   Compiling[0m erased-serde v0.4.10
+2026-08-02T03:47:13.2258339Z [1m[92m   Compiling[0m darling_core v0.23.0
+2026-08-02T03:47:13.2605142Z [1m[92m   Compiling[0m icu_locale_core v2.2.0
+2026-08-02T03:47:13.8398328Z [1m[92m   Compiling[0m potential_utf v0.1.5
+2026-08-02T03:47:13.9408903Z [1m[92m   Compiling[0m zerotrie v0.2.4
+2026-08-02T03:47:14.0358218Z [1m[92m   Compiling[0m derive_more-impl v2.1.1
+2026-08-02T03:47:14.2038414Z [1m[92m   Compiling[0m cssparser-macros v0.6.1
+2026-08-02T03:47:14.4298062Z [1m[92m   Compiling[0m selectors v0.36.1
+2026-08-02T03:47:14.4678778Z [1m[92m   Compiling[0m utf8_iter v1.0.4
+2026-08-02T03:47:14.5588347Z [1m[92m   Compiling[0m icu_collections v2.2.0
+2026-08-02T03:47:14.6858072Z [1m[92m   Compiling[0m icu_provider v2.2.0
+2026-08-02T03:47:14.9173259Z [1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+2026-08-02T03:47:14.9647178Z [1m[92m   Compiling[0m scopeguard v1.2.0
+2026-08-02T03:47:15.0230998Z [1m[92m   Compiling[0m lock_api v0.4.14
+2026-08-02T03:47:15.1653345Z [1m[92m   Compiling[0m phf v0.13.1
+2026-08-02T03:47:15.2075422Z [1m[92m   Compiling[0m precomputed-hash v0.1.1
+2026-08-02T03:47:15.2318125Z [1m[92m   Compiling[0m serde_json v1.0.151
+2026-08-02T03:47:15.2630000Z [1m[92m   Compiling[0m parking_lot v0.12.5
+2026-08-02T03:47:15.3552391Z [1m[92m   Compiling[0m icu_normalizer v2.2.0
+2026-08-02T03:47:15.5533163Z [1m[92m   Compiling[0m icu_properties v2.2.0
+2026-08-02T03:47:15.6868131Z [1m[92m   Compiling[0m serde_spanned v1.1.1
+2026-08-02T03:47:15.7694053Z [1m[92m   Compiling[0m toml_writer v1.1.2+spec-1.1.0
+2026-08-02T03:47:15.8488785Z [1m[92m   Compiling[0m ctor-proc-macro v0.0.7
+2026-08-02T03:47:15.9008370Z [1m[92m   Compiling[0m darling_macro v0.23.0
+2026-08-02T03:47:16.0928697Z [1m[92m   Compiling[0m string_cache v0.9.0
+2026-08-02T03:47:16.1348679Z [1m[92m   Compiling[0m darling v0.23.0
+2026-08-02T03:47:16.1908250Z [1m[92m   Compiling[0m serde_with_macros v3.21.0
+2026-08-02T03:47:16.6958298Z [1m[92m   Compiling[0m idna_adapter v1.2.2
+2026-08-02T03:47:16.7798123Z [1m[92m   Compiling[0m semver v1.0.28
+2026-08-02T03:47:17.0237994Z [1m[92m   Compiling[0m log v0.4.33
+2026-08-02T03:47:17.0415196Z [1m[92m   Compiling[0m percent-encoding v2.3.2
+2026-08-02T03:47:17.0466110Z [1m[92m   Compiling[0m dtoa v1.0.11
+2026-08-02T03:47:17.1208350Z [1m[92m   Compiling[0m idna v1.1.0
+2026-08-02T03:47:17.1488587Z [1m[92m   Compiling[0m form_urlencoded v1.2.2
+2026-08-02T03:47:17.1568235Z [1m[92m   Compiling[0m dtoa-short v0.3.5
+2026-08-02T03:47:17.2579486Z [1m[92m   Compiling[0m uuid v1.24.0
+2026-08-02T03:47:17.3400505Z [1m[92m   Compiling[0m tendril v0.5.1
+2026-08-02T03:47:17.6218686Z [1m[92m   Compiling[0m aho-corasick v1.1.4
+2026-08-02T03:47:17.6347838Z [1m[92m   Compiling[0m bytes v1.12.1
+2026-08-02T03:47:17.6960042Z [1m[92m   Compiling[0m indexmap v1.9.3
+2026-08-02T03:47:17.8049013Z [1m[92m   Compiling[0m alloc-no-stdlib v2.0.4
+2026-08-02T03:47:17.8758814Z [1m[92m   Compiling[0m unic-common v0.9.0
+2026-08-02T03:47:17.8898085Z [1m[92m   Compiling[0m byteorder v1.5.0
+2026-08-02T03:47:17.9401839Z [1m[92m   Compiling[0m unic-char-range v0.9.0
+2026-08-02T03:47:18.0139528Z [1m[92m   Compiling[0m regex-syntax v0.8.11
+2026-08-02T03:47:18.0948154Z [1m[92m   Compiling[0m camino v1.2.5
+2026-08-02T03:47:18.3067591Z [1m[92m   Compiling[0m unic-char-property v0.9.0
+2026-08-02T03:47:18.3798297Z [1m[92m   Compiling[0m unic-ucd-version v0.9.0
+2026-08-02T03:47:18.4298191Z [1m[92m   Compiling[0m alloc-stdlib v0.2.4
+2026-08-02T03:47:18.5256090Z [1m[92m   Compiling[0m markup5ever v0.38.0
+2026-08-02T03:47:18.7058088Z [1m[92m   Compiling[0m url v2.5.8
+2026-08-02T03:47:18.7278370Z [1m[92m   Compiling[0m cssparser v0.36.0
+2026-08-02T03:47:19.4382180Z [1m[92m   Compiling[0m toml v1.1.4+spec-1.1.0
+2026-08-02T03:47:19.4703146Z [1m[92m   Compiling[0m derive_more v2.1.1
+2026-08-02T03:47:19.6268513Z [1m[92m   Compiling[0m serde_derive_internals v0.29.1
+2026-08-02T03:47:19.6352994Z [1m[92m   Compiling[0m servo_arc v0.4.3
+2026-08-02T03:47:19.7698147Z [1m[92m   Compiling[0m regex-automata v0.4.16
+2026-08-02T03:47:20.5168105Z [1m[92m   Compiling[0m fnv v1.0.7
+2026-08-02T03:47:20.5313737Z [1m[92m   Compiling[0m bit-vec v0.8.0
+2026-08-02T03:47:20.5722324Z [1m[92m   Compiling[0m powerfmt v0.2.0
+2026-08-02T03:47:20.7107654Z [1m[92m   Compiling[0m rustc-hash v2.1.3
+2026-08-02T03:47:20.7202595Z [1m[92m   Compiling[0m deranged v0.5.8
+2026-08-02T03:47:20.7858044Z [1m[92m   Compiling[0m bitflags v2.13.1
+2026-08-02T03:47:20.8155608Z [1m[92m   Compiling[0m hashbrown v0.12.3
+2026-08-02T03:47:20.9338806Z [1m[92m   Compiling[0m schemars v0.8.22
+2026-08-02T03:47:21.7964227Z [1m[92m   Compiling[0m time v0.3.55
+2026-08-02T03:47:21.9458051Z [1m[92m   Compiling[0m regex v1.13.1
+2026-08-02T03:47:22.1108173Z [1m[92m   Compiling[0m bit-set v0.8.0
+2026-08-02T03:47:22.2318129Z [1m[92m   Compiling[0m cfb v0.7.3
+2026-08-02T03:47:22.6784284Z [1m[92m   Compiling[0m schemars_derive v0.8.22
+2026-08-02T03:47:23.0198901Z [1m[92m   Compiling[0m html5ever v0.38.0
+2026-08-02T03:47:23.4758236Z [1m[92m   Compiling[0m brotli-decompressor v5.0.3
+2026-08-02T03:47:23.7858274Z [1m[92m   Compiling[0m unic-ucd-ident v0.9.0
+2026-08-02T03:47:24.1478158Z [1m[92m   Compiling[0m jsonptr v0.6.3
+2026-08-02T03:47:24.2310720Z [1m[92m   Compiling[0m cargo-platform v0.1.9
+2026-08-02T03:47:24.4308449Z [1m[92m   Compiling[0m quick-xml v0.41.0
+2026-08-02T03:47:24.4598112Z [1m[92m   Compiling[0m once_cell v1.21.4
+2026-08-02T03:47:24.5348192Z [1m[92m   Compiling[0m dyn-clone v1.0.20
+2026-08-02T03:47:24.6078842Z [1m[92m   Compiling[0m dunce v1.0.5
+2026-08-02T03:47:24.6739407Z [1m[92m   Compiling[0m foldhash v0.2.0
+2026-08-02T03:47:24.8081119Z [1m[92m   Compiling[0m base64 v0.22.1
+2026-08-02T03:47:24.8233049Z [1m[92m   Compiling[0m same-file v1.0.6
+2026-08-02T03:47:24.9168282Z [1m[92m   Compiling[0m walkdir v2.5.0
+2026-08-02T03:47:25.1108794Z [1m[92m   Compiling[0m dom_query v0.27.0
+2026-08-02T03:47:25.1859632Z [1m[92m   Compiling[0m http v1.5.0
+2026-08-02T03:47:25.2638239Z [1m[92m   Compiling[0m plist v1.10.0
+2026-08-02T03:47:26.1368325Z [1m[92m   Compiling[0m json-patch v3.0.1
+2026-08-02T03:47:26.3838261Z [1m[92m   Compiling[0m cargo_metadata v0.19.2
+2026-08-02T03:47:26.5496140Z [1m[92m   Compiling[0m brotli v8.0.4
+2026-08-02T03:47:26.6278171Z [1m[92m   Compiling[0m urlpattern v0.3.0
+2026-08-02T03:47:26.8928641Z [1m[92m   Compiling[0m serde-untagged v0.1.9
+2026-08-02T03:47:27.1058065Z [1m[92m   Compiling[0m infer v0.19.0
+2026-08-02T03:47:27.6288270Z [1m[92m   Compiling[0m serde_with v3.21.0
+2026-08-02T03:47:27.8698166Z [1m[92m   Compiling[0m ctor v0.8.0
+2026-08-02T03:47:27.9188010Z [1m[92m   Compiling[0m glob v0.3.4
+2026-08-02T03:47:28.2088271Z [1m[92m   Compiling[0m generic-array v0.14.7
+2026-08-02T03:47:28.3098739Z [1m[92m   Compiling[0m crossbeam-utils v0.8.22
+2026-08-02T03:47:29.7208775Z [1m[92m   Compiling[0m tauri-utils v2.9.3
+2026-08-02T03:47:30.8388836Z [1m[92m   Compiling[0m pin-project-lite v0.2.17
+2026-08-02T03:47:31.1288175Z [1m[92m   Compiling[0m crc32fast v1.5.0
+2026-08-02T03:47:31.5498737Z [1m[92m   Compiling[0m futures-core v0.3.33
+2026-08-02T03:47:33.1568312Z [1m[92m   Compiling[0m rustc_version v0.4.1
+2026-08-02T03:47:33.3760763Z [1m[92m   Compiling[0m num-traits v0.2.19
+2026-08-02T03:47:33.4778310Z [1m[92m   Compiling[0m toml_datetime v0.7.5+spec-1.1.0
+2026-08-02T03:47:33.5978394Z [1m[92m   Compiling[0m errno v0.3.14
+2026-08-02T03:47:33.7118140Z [1m[92m   Compiling[0m option-ext v0.2.0
+2026-08-02T03:47:33.7202474Z [1m[92m   Compiling[0m winnow v0.7.15
+2026-08-02T03:47:33.7658725Z [1m[92m   Compiling[0m dirs-sys v0.5.0
+2026-08-02T03:47:33.9459254Z [1m[92m   Compiling[0m signal-hook-registry v1.4.8
+2026-08-02T03:47:34.1663944Z [1m[92m   Compiling[0m embed-resource v3.0.11
+2026-08-02T03:47:34.5268261Z [1m[92m   Compiling[0m tokio-macros v2.7.2
+2026-08-02T03:47:34.7108109Z [1m[92m   Compiling[0m socket2 v0.6.5
+2026-08-02T03:47:35.0538810Z [1m[92m   Compiling[0m mio v1.2.2
+2026-08-02T03:47:35.3398764Z [1m[92m   Compiling[0m toml v0.9.12+spec-1.1.0
+2026-08-02T03:47:35.7238853Z [1m[92m   Compiling[0m heck v0.5.0
+2026-08-02T03:47:35.8508091Z [1m[92m   Compiling[0m tokio v1.53.1
+2026-08-02T03:47:36.2887404Z [1m[92m   Compiling[0m cargo_toml v0.22.3
+2026-08-02T03:47:39.2718544Z [1m[92m   Compiling[0m tauri-winres v0.3.6
+2026-08-02T03:47:39.5615896Z [1m[92m   Compiling[0m dirs v6.0.0
+2026-08-02T03:47:39.8068378Z [1m[92m   Compiling[0m jni-sys-macros v0.4.1
+2026-08-02T03:47:40.1498271Z [1m[92m   Compiling[0m jni-sys v0.3.1
+2026-08-02T03:47:40.2860188Z [1m[92m   Compiling[0m zerocopy v0.8.55
+2026-08-02T03:47:40.5948280Z [1m[92m   Compiling[0m jni-sys v0.4.1
+2026-08-02T03:47:40.9304741Z [1m[92m   Compiling[0m tauri-build v2.6.3
+2026-08-02T03:47:42.1278260Z [1m[92m   Compiling[0m tauri-plugin v2.6.3
+2026-08-02T03:47:44.5627034Z [1m[92m   Compiling[0m zerocopy-derive v0.8.55
+2026-08-02T03:47:44.7205179Z [1m[92m   Compiling[0m http-body v1.1.0
+2026-08-02T03:47:44.9018408Z [1m[92m   Compiling[0m toml_edit v0.25.13+spec-1.1.0
+2026-08-02T03:47:45.8819436Z [1m[92m   Compiling[0m time-macros v0.2.32
+2026-08-02T03:47:47.4344704Z [1m[92m   Compiling[0m httparse v1.10.1
+2026-08-02T03:47:47.5778800Z [1m[92m   Compiling[0m rustversion v1.0.23
+2026-08-02T03:47:47.7879486Z [1m[92m   Compiling[0m typenum v1.20.1
+2026-08-02T03:47:48.5588193Z [1m[92m   Compiling[0m simd-adler32 v0.3.10
+2026-08-02T03:47:48.7168086Z [1m[92m   Compiling[0m slab v0.4.12
+2026-08-02T03:47:48.7938883Z [1m[92m   Compiling[0m futures-task v0.3.33
+2026-08-02T03:47:48.9202814Z [1m[92m   Compiling[0m futures-util v0.3.33
+2026-08-02T03:47:50.5748254Z [1m[92m   Compiling[0m proc-macro-crate v3.5.0
+2026-08-02T03:47:51.0188601Z [1m[92m   Compiling[0m tauri v2.11.5
+2026-08-02T03:47:51.6128905Z [1m[92m   Compiling[0m crossbeam-epoch v0.9.20
+2026-08-02T03:47:51.9192618Z [1m[92m   Compiling[0m tower-service v0.3.3
+2026-08-02T03:47:51.9788073Z [1m[92m   Compiling[0m adler2 v2.0.1
+2026-08-02T03:47:52.0528700Z [1m[92m   Compiling[0m try-lock v0.2.5
+2026-08-02T03:47:52.1288101Z [1m[92m   Compiling[0m want v0.3.1
+2026-08-02T03:47:52.2518431Z [1m[92m   Compiling[0m miniz_oxide v0.8.9
+2026-08-02T03:47:54.2338674Z [1m[92m   Compiling[0m num_enum_derive v0.7.6
+2026-08-02T03:47:56.4838130Z [1m[92m   Compiling[0m futures-channel v0.3.33
+2026-08-02T03:47:56.6993159Z [1m[92m   Compiling[0m tracing-core v0.1.36
+2026-08-02T03:47:56.9308322Z [1m[92m   Compiling[0m combine v4.6.7
+2026-08-02T03:47:57.8318274Z [1m[92m   Compiling[0m cookie v0.18.1
+2026-08-02T03:47:57.9249440Z [1m[92m   Compiling[0m atomic-waker v1.1.2
+2026-08-02T03:47:57.9878265Z [1m[92m   Compiling[0m getrandom v0.3.4
+2026-08-02T03:47:58.1809046Z [1m[92m   Compiling[0m crossbeam-deque v0.8.7
+2026-08-02T03:47:58.6028116Z [1m[92m   Compiling[0m cesu8 v1.1.0
+2026-08-02T03:47:58.8148480Z [1m[92m   Compiling[0m raw-window-handle v0.6.2
+2026-08-02T03:48:01.7158201Z [1m[92m   Compiling[0m jni v0.21.1
+2026-08-02T03:48:02.2501432Z [1m[92m   Compiling[0m hyper v1.11.0
+2026-08-02T03:48:04.5218202Z [1m[92m   Compiling[0m tracing v0.1.44
+2026-08-02T03:48:05.1658213Z [1m[92m   Compiling[0m num_enum v0.7.6
+2026-08-02T03:48:06.0298001Z [1m[92m   Compiling[0m flate2 v1.1.9
+2026-08-02T03:48:07.5198205Z [1m[92m   Compiling[0m block-buffer v0.10.4
+2026-08-02T03:48:07.6338198Z [1m[92m   Compiling[0m crypto-common v0.1.7
+2026-08-02T03:48:07.8904778Z [1m[92m   Compiling[0m fdeflate v0.3.7
+2026-08-02T03:48:08.2546932Z [1m[92m   Compiling[0m ndk-sys v0.6.0+11769913
+2026-08-02T03:48:09.0258153Z [1m[92m   Compiling[0m sync_wrapper v1.0.2
+2026-08-02T03:48:09.1308094Z [1m[92m   Compiling[0m dpi v0.1.2
+2026-08-02T03:48:10.3378149Z [1m[92m   Compiling[0m tower-layer v0.3.3
+2026-08-02T03:48:10.4988117Z [1m[92m   Compiling[0m pkg-config v0.3.33
+2026-08-02T03:48:10.5338149Z [1m[92m   Compiling[0m rayon-core v1.13.0
+2026-08-02T03:48:10.7468189Z [1m[92m   Compiling[0m bitflags v1.3.2
+2026-08-02T03:48:10.7994757Z [1m[92m   Compiling[0m ipnet v2.12.1
+2026-08-02T03:48:10.9522293Z [1m[92m   Compiling[0m vcpkg v0.2.15
+2026-08-02T03:48:11.5898084Z [1m[92m   Compiling[0m hyper-util v0.1.20
+2026-08-02T03:48:11.9998102Z [1m[92m   Compiling[0m png v0.17.16
+2026-08-02T03:48:12.4878413Z [1m[92m   Compiling[0m tower v0.5.3
+2026-08-02T03:48:14.9695505Z [1m[92m   Compiling[0m ndk v0.9.0
+2026-08-02T03:48:15.0362585Z [1m[92m   Compiling[0m digest v0.10.7
+2026-08-02T03:48:20.3258148Z [1m[92m   Compiling[0m crossbeam-channel v0.5.16
+2026-08-02T03:48:21.0538164Z [1m[92m   Compiling[0m ring v0.17.14
+2026-08-02T03:48:21.0888019Z [1m[92m   Compiling[0m equator-macro v0.4.2
+2026-08-02T03:48:21.4158687Z [1m[92m   Compiling[0m tao-macros v0.1.4
+2026-08-02T03:48:21.6208882Z [1m[92m   Compiling[0m cpufeatures v0.2.17
+2026-08-02T03:48:21.6932685Z [1m[92m   Compiling[0m tauri-runtime v2.11.3
+2026-08-02T03:48:21.7488794Z [1m[92m   Compiling[0m wry v0.55.1
+2026-08-02T03:48:22.5090479Z [1m[92m   Compiling[0m sha2 v0.10.9
+2026-08-02T03:48:22.9267951Z [1m[92m   Compiling[0m equator v0.4.2
+2026-08-02T03:48:25.7042316Z [1m[92m   Compiling[0m tower-http v0.6.11
+2026-08-02T03:48:26.2011181Z [1m[92m   Compiling[0m ico v0.5.0
+2026-08-02T03:48:26.6121623Z [1m[92m   Compiling[0m http-body-util v0.1.4
+2026-08-02T03:48:26.8702213Z [1m[92m   Compiling[0m num-integer v0.1.46
+2026-08-02T03:48:27.2589221Z [1m[92m   Compiling[0m either v1.17.0
+2026-08-02T03:48:27.4199999Z [1m[92m   Compiling[0m paste v1.0.15
+2026-08-02T03:48:27.5309277Z [1m[92m   Compiling[0m futures-sink v0.3.33
+2026-08-02T03:48:27.6508803Z [1m[92m   Compiling[0m zeroize v1.9.0
+2026-08-02T03:48:27.7998511Z [1m[92m   Compiling[0m tauri-runtime-wry v2.11.4
+2026-08-02T03:48:27.9264030Z [1m[92m   Compiling[0m rustls-pki-types v1.15.1
+2026-08-02T03:48:29.5697364Z [1m[92m   Compiling[0m tokio-util v0.7.19
+2026-08-02T03:48:30.1056051Z [1m[92m   Compiling[0m num-bigint v0.4.8
+2026-08-02T03:48:30.2543742Z [1m[92m   Compiling[0m tauri-codegen v2.6.3
+2026-08-02T03:48:35.1361227Z [1m[92m   Compiling[0m aligned-vec v0.6.4
+2026-08-02T03:48:35.3508386Z [1m[92m   Compiling[0m tao v0.35.3
+2026-08-02T03:48:36.8038178Z [1m[92m   Compiling[0m serialize-to-javascript-impl v0.1.2
+2026-08-02T03:48:37.0698216Z [1m[92m   Compiling[0m getrandom v0.2.17
+2026-08-02T03:48:37.2478190Z [1m[92m   Compiling[0m arrayvec v0.7.8
+2026-08-02T03:48:37.5938162Z [1m[92m   Compiling[0m untrusted v0.9.0
+2026-08-02T03:48:43.0788511Z [1m[92m   Compiling[0m serialize-to-javascript v0.1.2
+2026-08-02T03:48:44.6241171Z [1m[92m   Compiling[0m v_frame v0.3.9
+2026-08-02T03:48:44.8728287Z [1m[92m   Compiling[0m tauri-macros v2.6.3
+2026-08-02T03:48:44.9278111Z [1m[92m   Compiling[0m num-rational v0.4.2
+2026-08-02T03:48:45.4317992Z [1m[92m   Compiling[0m reqwest v0.13.4
+2026-08-02T03:48:46.1468282Z [1m[92m   Compiling[0m rayon v1.12.0
+2026-08-02T03:48:46.5127976Z [1m[92m   Compiling[0m tauri-plugin-fs v2.5.1
+2026-08-02T03:48:47.2258408Z [1m[92m   Compiling[0m openssl-src v300.6.1+3.6.3
+2026-08-02T03:48:47.4658213Z [1m[92m   Compiling[0m as-slice v0.2.1
+2026-08-02T03:48:47.5234041Z [1m[92m   Compiling[0m serde_repr v0.1.21
+2026-08-02T03:48:47.8598172Z [1m[92m   Compiling[0m ahash v0.8.12
+2026-08-02T03:48:47.9772429Z [1m[92m   Compiling[0m libm v0.2.16
+2026-08-02T03:48:48.1668327Z [1m[92m   Compiling[0m mime v0.3.17
+2026-08-02T03:48:48.8908252Z [1m[92m   Compiling[0m built v0.8.1
+2026-08-02T03:48:49.3605341Z [1m[92m   Compiling[0m rustls v0.23.43
+2026-08-02T03:48:49.4608085Z [1m[92m   Compiling[0m bytemuck v1.25.2
+2026-08-02T03:48:49.7668331Z [1m[92m   Compiling[0m av-scenechange v0.14.1
+2026-08-02T03:48:49.8917886Z [1m[92m   Compiling[0m rav1e v0.8.1
+2026-08-02T03:48:50.0838179Z [1m[92m   Compiling[0m aligned v0.4.3
+2026-08-02T03:48:50.1798235Z [1m[92m   Compiling[0m openssl-sys v0.9.117
+2026-08-02T03:48:50.8348348Z [1m[92m   Compiling[0m rustls-webpki v0.103.13
+2026-08-02T03:48:53.7938079Z [1m[92m   Compiling[0m no_std_io2 v0.9.4
+2026-08-02T03:48:53.8438075Z [1m[92m   Compiling[0m nom v8.0.0
+2026-08-02T03:48:57.5798232Z [1m[92m   Compiling[0m profiling-procmacros v1.0.18
+2026-08-02T03:48:57.8138076Z [1m[92m   Compiling[0m arg_enum_proc_macro v0.3.4
+2026-08-02T03:48:57.8778334Z [1m[92m   Compiling[0m pulp v0.22.3
+2026-08-02T03:48:58.0668282Z [1m[92m   Compiling[0m subtle v2.6.1
+2026-08-02T03:48:58.1808389Z [1m[92m   Compiling[0m pastey v0.1.1
+2026-08-02T03:48:58.2131760Z [1m[92m   Compiling[0m y4m v0.8.0
+2026-08-02T03:48:58.4888777Z [1m[92m   Compiling[0m quick-error v2.0.1
+2026-08-02T03:48:59.9198302Z [1m[92m   Compiling[0m profiling v1.0.18
+2026-08-02T03:48:59.9665514Z [1m[92m   Compiling[0m av1-grain v0.2.5
+2026-08-02T03:49:02.9588282Z [1m[92m   Compiling[0m bitstream-io v4.10.0
+2026-08-02T03:49:06.0798032Z [1m[92m   Compiling[0m num-complex v0.4.6
+2026-08-02T03:49:06.5848408Z [1m[92m   Compiling[0m maybe-rayon v0.1.1
+2026-08-02T03:49:06.6408370Z [1m[92m   Compiling[0m itertools v0.14.0
+2026-08-02T03:49:08.3628229Z [1m[92m   Compiling[0m rand_core v0.9.5
+2026-08-02T03:49:08.5658283Z [1m[92m   Compiling[0m libsqlite3-sys v0.30.1
+2026-08-02T03:49:08.7798217Z [1m[92m   Compiling[0m half v2.7.1
+2026-08-02T03:49:08.9848191Z [1m[92m   Compiling[0m ppv-lite86 v0.2.21
+2026-08-02T03:49:09.2246007Z [1m[92m   Compiling[0m tauri-plugin-dialog v2.7.2
+2026-08-02T03:49:09.4688495Z [1m[92m   Compiling[0m tauri-plugin-opener v2.5.4
+2026-08-02T03:49:09.6088511Z [1m[92m   Compiling[0m tauri-plugin-notification v2.3.3
+2026-08-02T03:49:09.9536181Z [1m[92m   Compiling[0m is-docker v0.2.0
+2026-08-02T03:49:10.0098207Z [1m[92m   Compiling[0m num-derive v0.4.2
+2026-08-02T03:49:10.1468579Z [1m[92m   Compiling[0m simd_helpers v0.1.0
+2026-08-02T03:49:10.3058091Z [1m[92m   Compiling[0m reborrow v0.5.5
+2026-08-02T03:49:10.3664354Z [1m[92m   Compiling[0m noop_proc_macro v0.3.0
+2026-08-02T03:49:10.5128249Z [1m[92m   Compiling[0m pulp-wasm-simd-flag v0.1.1
+2026-08-02T03:49:10.5618088Z [1m[92m   Compiling[0m imgref v1.12.2
+2026-08-02T03:49:10.7519229Z [1m[92m   Compiling[0m zune-core v0.5.1
+2026-08-02T03:49:10.7978449Z [1m[92m   Compiling[0m weezl v0.1.12
+2026-08-02T03:49:10.9777990Z [1m[92m   Compiling[0m zune-jpeg v0.5.15
+2026-08-02T03:49:12.8498442Z [1m[92m   Compiling[0m loop9 v0.1.5
+2026-08-02T03:49:17.5548742Z [1m[92m   Compiling[0m is-wsl v0.4.0
+2026-08-02T03:49:17.8277914Z [1m[92m   Compiling[0m rand_chacha v0.9.0
+2026-08-02T03:49:22.2378196Z [1m[92m   Compiling[0m hashbrown v0.14.5
+2026-08-02T03:49:22.4148046Z [1m[92m   Compiling[0m tokio-rustls v0.26.4
+2026-08-02T03:49:22.6568100Z [1m[92m   Compiling[0m avif-serialize v0.8.9
+2026-08-02T03:49:22.9798231Z [1m[92m   Compiling[0m webpki-roots v1.0.9
+2026-08-02T03:49:23.4678288Z [1m[92m   Compiling[0m zune-inflate v0.2.54
+2026-08-02T03:49:24.0448096Z [1m[92m   Compiling[0m android_system_properties v0.1.5
+2026-08-02T03:49:24.1488044Z [1m[92m   Compiling[0m fax v0.2.7
+2026-08-02T03:49:24.1830577Z [1m[92m   Compiling[0m pxfm v0.1.30
+2026-08-02T03:49:24.5168302Z [1m[92m   Compiling[0m foreign-types-shared v0.1.1
+2026-08-02T03:49:24.5738225Z [1m[92m   Compiling[0m lebe v0.5.3
+2026-08-02T03:49:24.7378974Z [1m[92m   Compiling[0m color_quant v1.1.0
+2026-08-02T03:49:25.0308132Z [1m[92m   Compiling[0m ryu v1.0.23
+2026-08-02T03:49:25.3072718Z [1m[92m   Compiling[0m rgb v0.8.53
+2026-08-02T03:49:25.6458024Z [1m[92m   Compiling[0m byteorder-lite v0.1.0
+2026-08-02T03:49:25.9258231Z [1m[92m   Compiling[0m bit_field v0.10.3
+2026-08-02T03:49:26.0418256Z [1m[92m   Compiling[0m openssl v0.10.81
+2026-08-02T03:49:26.2328731Z [1m[92m   Compiling[0m exr v1.74.2
+2026-08-02T03:49:36.7318241Z [1m[92m   Compiling[0m moxcms v0.8.1
+2026-08-02T03:49:38.4958773Z [1m[92m   Compiling[0m image-webp v0.2.4
+2026-08-02T03:49:42.4618116Z [1m[92m   Compiling[0m ravif v0.13.0
+2026-08-02T03:49:57.1349829Z [1m[92m   Compiling[0m serde_urlencoded v0.7.1
+2026-08-02T03:49:57.3838521Z [1m[92m   Compiling[0m gif v0.14.2
+2026-08-02T03:49:58.8158131Z [1m[92m   Compiling[0m foreign-types v0.3.2
+2026-08-02T03:49:58.8678180Z [1m[92m   Compiling[0m tiff v0.11.3
+2026-08-02T03:49:59.5388118Z [1m[92m   Compiling[0m iana-time-zone v0.1.65
+2026-08-02T03:49:59.6438319Z [1m[92m   Compiling[0m png v0.18.1
+2026-08-02T03:50:02.8294967Z [1m[92m   Compiling[0m hyper-rustls v0.27.9
+2026-08-02T03:50:02.9658237Z [1m[92m   Compiling[0m hashlink v0.9.1
+2026-08-02T03:50:03.3128055Z [1m[92m   Compiling[0m rand v0.9.5
+2026-08-02T03:50:03.3758011Z [1m[92m   Compiling[0m open v5.4.0
+2026-08-02T03:50:04.0664232Z [1m[92m   Compiling[0m qoi v0.4.1
+2026-08-02T03:50:04.3019535Z [1m[92m   Compiling[0m wps-note-clone v0.1.0 (/home/runner/work/wps-note-clone/wps-note-clone/src-tauri)
+2026-08-02T03:50:04.7488166Z [1m[92m   Compiling[0m openssl-macros v0.1.1
+2026-08-02T03:50:04.9468973Z [1m[92m   Compiling[0m fallible-streaming-iterator v0.1.9
+2026-08-02T03:50:05.0688566Z [1m[92m   Compiling[0m fallible-iterator v0.3.0
+2026-08-02T03:50:05.4349908Z [1m[92m   Compiling[0m rusqlite v0.32.1
+2026-08-02T03:50:05.9348224Z [1m[92m   Compiling[0m image v0.25.10
+2026-08-02T03:50:09.6998177Z [1m[92m   Compiling[0m reqwest v0.12.28
+2026-08-02T03:50:22.5028389Z [1m[92m   Compiling[0m chrono v0.4.45
+2026-08-02T03:51:07.1048158Z [1m[33mwarning[0m[1m: unused import: `image::*`[0m
+2026-08-02T03:51:07.1049049Z  [1m[94m--> [0msrc/commands/mod.rs:4:9
+2026-08-02T03:51:07.1049551Z   [1m[94m|[0m
+2026-08-02T03:51:07.1050260Z [1m[94m4[0m [1m[94m|[0m pub use image::*;
+2026-08-02T03:51:07.1050962Z   [1m[94m|[0m         [1m[33m^^^^^^^^[0m
+2026-08-02T03:51:07.1051438Z   [1m[94m|[0m
+2026-08-02T03:51:07.1052379Z   [1m[94m= [0m[1mnote[0m: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:51:07.1052959Z 
+2026-08-02T03:51:07.1053527Z [1m[33mwarning[0m[1m: unused import: `sync::*`[0m
+2026-08-02T03:51:07.1054220Z  [1m[94m--> [0msrc/commands/mod.rs:5:9
+2026-08-02T03:51:07.1054687Z   [1m[94m|[0m
+2026-08-02T03:51:07.1055329Z [1m[94m5[0m [1m[94m|[0m pub use sync::*;
+2026-08-02T03:51:07.1056017Z   [1m[94m|[0m         [1m[33m^^^^^^^[0m
+2026-08-02T03:51:07.1056471Z 
+2026-08-02T03:51:07.9804238Z [1m[33mwarning[0m[1m: unused variable: `sync`[0m
+2026-08-02T03:51:07.9805232Z   [1m[94m--> [0msrc/commands/sync.rs:49:57
+2026-08-02T03:51:07.9805828Z    [1m[94m|[0m
+2026-08-02T03:51:07.9807737Z [1m[94m49[0m [1m[94m|[0m pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngine>) -> Result<i64, String> {
+2026-08-02T03:51:07.9809802Z    [1m[94m|[0m                                                         [1m[33m^^^^[0m [1m[33mhelp: if this is intentional, prefix it with an underscore: `_sync`[0m
+2026-08-02T03:51:07.9810782Z    [1m[94m|[0m
+2026-08-02T03:51:07.9811859Z    [1m[94m= [0m[1mnote[0m: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:51:07.9812436Z 
+2026-08-02T03:51:08.3615266Z [1m[33mwarning[0m[1m: struct `NotionBlock` is never constructed[0m
+2026-08-02T03:51:08.3615979Z   [1m[94m--> [0msrc/notion/mod.rs:19:12
+2026-08-02T03:51:08.3616770Z    [1m[94m|[0m
+2026-08-02T03:51:08.3617450Z [1m[94m19[0m [1m[94m|[0m pub struct NotionBlock {
+2026-08-02T03:51:08.3618142Z    [1m[94m|[0m            [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:51:08.3618615Z    [1m[94m|[0m
+2026-08-02T03:51:08.3619455Z    [1m[94m= [0m[1mnote[0m: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:51:08.3619932Z 
+2026-08-02T03:51:08.3620821Z [1m[33mwarning[0m[1m: methods `is_configured`, `list_pages`, and `delete_page` are never used[0m
+2026-08-02T03:51:08.3621709Z    [1m[94m--> [0msrc/notion/mod.rs:39:12
+2026-08-02T03:51:08.3622187Z     [1m[94m|[0m
+2026-08-02T03:51:08.3622786Z [1m[94m 31[0m [1m[94m|[0m impl NotionClient {
+2026-08-02T03:51:08.3623735Z     [1m[94m|[0m [1m[94m-----------------[0m [1m[94mmethods in this implementation[0m
+2026-08-02T03:51:08.3624378Z [1m[94m...[0m
+2026-08-02T03:51:08.3625111Z [1m[94m 39[0m [1m[94m|[0m     pub fn is_configured(&self) -> bool {
+2026-08-02T03:51:08.3625861Z     [1m[94m|[0m            [1m[33m^^^^^^^^^^^^^[0m
+2026-08-02T03:51:08.3626486Z [1m[94m...[0m
+2026-08-02T03:51:08.3627472Z [1m[94m 44[0m [1m[94m|[0m     pub async fn list_pages(&self) -> Result<Vec<NotionPage>, String> {
+2026-08-02T03:51:08.3628362Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^[0m
+2026-08-02T03:51:08.3628818Z [1m[94m...[0m
+2026-08-02T03:51:08.3629809Z [1m[94m196[0m [1m[94m|[0m     pub async fn delete_page(&self, page_id: &str) -> Result<(), String> {
+2026-08-02T03:51:08.3630721Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:51:08.3631025Z 
+2026-08-02T03:52:06.9502720Z [1m[33mwarning[0m: `wps-note-clone` (lib) generated 5 warnings (run `cargo fix --lib -p wps-note-clone` to apply 3 suggestions)
+2026-08-02T03:52:06.9504585Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 5m 13s
+2026-08-02T03:52:07.1222493Z         Info symlinking lib "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" in jniLibs dir "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a"
+2026-08-02T03:52:08.0605997Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libandroid.so"
+2026-08-02T03:52:08.0607784Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libdl.so"
+2026-08-02T03:52:08.0609136Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "liblog.so"
+2026-08-02T03:52:08.0610468Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libm.so"
+2026-08-02T03:52:08.0611732Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libc.so"
+2026-08-02T03:52:08.0803780Z         Info symlink at "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a/libwps_note_clone_lib.so" points to "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so"
+2026-08-02T03:52:08.1842417Z Downloading https://services.gradle.org/distributions/gradle-8.14.3-bin.zip
+2026-08-02T03:52:09.7461692Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+2026-08-02T03:53:00.2433055Z e: The daemon has terminated unexpectedly on startup attempt #1 with error code: 0. The daemon process output:
+2026-08-02T03:53:00.2434534Z     1. Kotlin compile daemon is ready
+2026-08-02T03:53:06.7429941Z w: file:///home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/buildSrc/src/main/java/com/wpsnote/clone/kotlin/BuildTask.kt:53:17 'exec(Action<in ExecSpec!>): ExecResult' is deprecated. Deprecated in Java
+2026-08-02T03:53:44.4176260Z         Info connection; remote_addr=127.0.0.1:40682 conn_id=0
+2026-08-02T03:53:44.4392398Z $ tauri android android-studio-script --release --target aarch64
+2026-08-02T03:53:44.5393517Z [1m[32m        Info[0m Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T03:53:44.8416970Z [1m[92m   Compiling[0m cfg-if v1.0.4
+2026-08-02T03:53:44.8443915Z [1m[92m   Compiling[0m libc v0.2.189
+2026-08-02T03:53:44.8466270Z [1m[92m   Compiling[0m serde_core v1.0.229
+2026-08-02T03:53:44.9401148Z [1m[92m   Compiling[0m smallvec v1.15.2
+2026-08-02T03:53:44.9428070Z [1m[92m   Compiling[0m stable_deref_trait v1.2.1
+2026-08-02T03:53:44.9457453Z [1m[92m   Compiling[0m memchr v2.8.3
+2026-08-02T03:53:45.1428992Z [1m[92m   Compiling[0m zerofrom v0.1.8
+2026-08-02T03:53:45.1449201Z [1m[92m   Compiling[0m itoa v1.0.18
+2026-08-02T03:53:45.4406061Z [1m[92m   Compiling[0m yoke v0.8.3
+2026-08-02T03:53:45.5428407Z [1m[92m   Compiling[0m scopeguard v1.2.0
+2026-08-02T03:53:45.5477909Z [1m[92m   Compiling[0m lock_api v0.4.14
+2026-08-02T03:53:45.6400643Z [1m[92m   Compiling[0m zerovec v0.11.6
+2026-08-02T03:53:45.7398258Z [1m[92m   Compiling[0m parking_lot_core v0.9.12
+2026-08-02T03:53:45.9407955Z [1m[92m   Compiling[0m log v0.4.33
+2026-08-02T03:53:46.0398869Z [1m[92m   Compiling[0m once_cell v1.21.4
+2026-08-02T03:53:46.1398262Z [1m[92m   Compiling[0m parking_lot v0.12.5
+2026-08-02T03:53:46.2398706Z [1m[92m   Compiling[0m litemap v0.8.2
+2026-08-02T03:53:46.3398170Z [1m[92m   Compiling[0m tinystr v0.8.3
+2026-08-02T03:53:46.4391578Z [1m[92m   Compiling[0m writeable v0.6.3
+2026-08-02T03:53:46.5400659Z [1m[92m   Compiling[0m potential_utf v0.1.5
+2026-08-02T03:53:46.6408047Z [1m[92m   Compiling[0m icu_locale_core v2.2.0
+2026-08-02T03:53:46.6409726Z [1m[92m   Compiling[0m crossbeam-utils v0.8.22
+2026-08-02T03:53:47.1391791Z [1m[92m   Compiling[0m zerotrie v0.2.4
+2026-08-02T03:53:47.3398345Z [1m[92m   Compiling[0m utf8_iter v1.0.4
+2026-08-02T03:53:47.4428349Z [1m[92m   Compiling[0m serde v1.0.229
+2026-08-02T03:53:47.5430302Z [1m[92m   Compiling[0m icu_collections v2.2.0
+2026-08-02T03:53:47.6398080Z [1m[92m   Compiling[0m percent-encoding v2.3.2
+2026-08-02T03:53:47.8391744Z [1m[92m   Compiling[0m icu_provider v2.2.0
+2026-08-02T03:53:48.2509786Z [1m[92m   Compiling[0m bytes v1.12.1
+2026-08-02T03:53:48.3418429Z [1m[92m   Compiling[0m pin-project-lite v0.2.17
+2026-08-02T03:53:48.3477916Z [1m[92m   Compiling[0m siphasher v1.0.3
+2026-08-02T03:53:48.4448094Z [1m[92m   Compiling[0m bitflags v2.13.1
+2026-08-02T03:53:48.5423596Z [1m[92m   Compiling[0m phf_shared v0.13.1
+2026-08-02T03:53:48.8408413Z [1m[92m   Compiling[0m icu_properties_data v2.2.0
+2026-08-02T03:53:48.8429133Z [1m[92m   Compiling[0m http v1.5.0
+2026-08-02T03:53:48.9409953Z [1m[92m   Compiling[0m icu_normalizer_data v2.2.0
+2026-08-02T03:53:48.9427899Z [1m[92m   Compiling[0m futures-core v0.3.33
+2026-08-02T03:53:49.0448320Z [1m[92m   Compiling[0m new_debug_unreachable v1.0.6
+2026-08-02T03:53:49.0487864Z [1m[92m   Compiling[0m icu_normalizer v2.2.0
+2026-08-02T03:53:49.2395333Z [1m[92m   Compiling[0m icu_properties v2.2.0
+2026-08-02T03:53:50.0400685Z [1m[92m   Compiling[0m errno v0.3.14
+2026-08-02T03:53:50.1391769Z [1m[92m   Compiling[0m signal-hook-registry v1.4.8
+2026-08-02T03:53:50.5418248Z [1m[92m   Compiling[0m idna_adapter v1.2.2
+2026-08-02T03:53:50.5447670Z [1m[92m   Compiling[0m phf v0.13.1
+2026-08-02T03:53:50.6408941Z [1m[92m   Compiling[0m form_urlencoded v1.2.2
+2026-08-02T03:53:50.6421949Z [1m[92m   Compiling[0m socket2 v0.6.5
+2026-08-02T03:53:50.8398192Z [1m[92m   Compiling[0m mio v1.2.2
+2026-08-02T03:53:50.9408305Z [1m[92m   Compiling[0m zmij v1.0.23
+2026-08-02T03:53:51.1398183Z [1m[92m   Compiling[0m idna v1.1.0
+2026-08-02T03:53:51.4398102Z [1m[92m   Compiling[0m tokio v1.53.1
+2026-08-02T03:53:51.5398418Z [1m[92m   Compiling[0m num-traits v0.2.19
+2026-08-02T03:53:51.7398130Z [1m[92m   Compiling[0m base64 v0.22.1
+2026-08-02T03:53:52.2398217Z [1m[92m   Compiling[0m jni-sys v0.4.1
+2026-08-02T03:53:52.4400471Z [1m[92m   Compiling[0m thiserror v2.0.19
+2026-08-02T03:53:52.4407572Z [1m[92m   Compiling[0m thiserror v1.0.69
+2026-08-02T03:53:52.4408708Z [1m[92m   Compiling[0m anyhow v1.0.104
+2026-08-02T03:53:52.5398242Z [1m[92m   Compiling[0m url v2.5.8
+2026-08-02T03:53:53.1398225Z [1m[92m   Compiling[0m serde_json v1.0.151
+2026-08-02T03:53:53.7398117Z [1m[92m   Compiling[0m precomputed-hash v0.1.1
+2026-08-02T03:53:53.7446106Z [1m[92m   Compiling[0m zerocopy v0.8.55
+2026-08-02T03:53:55.5391707Z [1m[92m   Compiling[0m jni-sys v0.3.1
+2026-08-02T03:53:55.6392012Z [1m[92m   Compiling[0m http-body v1.1.0
+2026-08-02T03:53:55.7391826Z [1m[92m   Compiling[0m deranged v0.5.8
+2026-08-02T03:53:56.6417998Z [1m[92m   Compiling[0m slab v0.4.12
+2026-08-02T03:53:56.7391587Z [1m[92m   Compiling[0m futures-task v0.3.33
+2026-08-02T03:53:56.8408222Z [1m[92m   Compiling[0m powerfmt v0.2.0
+2026-08-02T03:53:57.0398630Z [1m[92m   Compiling[0m num-conv v0.2.2
+2026-08-02T03:53:57.1404002Z [1m[92m   Compiling[0m typenum v1.20.1
+2026-08-02T03:53:57.2398425Z [1m[92m   Compiling[0m time-core v0.1.9
+2026-08-02T03:53:57.3391469Z [1m[92m   Compiling[0m time v0.3.55
+2026-08-02T03:53:57.9391225Z [1m[92m   Compiling[0m generic-array v0.14.7
+2026-08-02T03:53:58.1400345Z [1m[92m   Compiling[0m futures-util v0.3.33
+2026-08-02T03:53:58.6408344Z [1m[92m   Compiling[0m getrandom v0.4.3
+2026-08-02T03:53:58.7398372Z [1m[92m   Compiling[0m string_cache v0.9.0
+2026-08-02T03:53:58.9428283Z [1m[92m   Compiling[0m aho-corasick v1.1.4
+2026-08-02T03:54:00.1408399Z [1m[92m   Compiling[0m try-lock v0.2.5
+2026-08-02T03:54:00.2391355Z [1m[92m   Compiling[0m unic-common v0.9.0
+2026-08-02T03:54:00.2417814Z [1m[92m   Compiling[0m regex-syntax v0.8.11
+2026-08-02T03:54:01.4398257Z [1m[92m   Compiling[0m unic-char-range v0.9.0
+2026-08-02T03:54:01.5408269Z [1m[92m   Compiling[0m tower-service v0.3.3
+2026-08-02T03:54:01.5437899Z [1m[92m   Compiling[0m dtoa v1.0.11
+2026-08-02T03:54:01.6408128Z [1m[92m   Compiling[0m alloc-no-stdlib v2.0.4
+2026-08-02T03:54:01.7398208Z [1m[92m   Compiling[0m alloc-stdlib v0.2.4
+2026-08-02T03:54:01.8398504Z [1m[92m   Compiling[0m dtoa-short v0.3.5
+2026-08-02T03:54:01.9428606Z [1m[92m   Compiling[0m unic-char-property v0.9.0
+2026-08-02T03:54:02.0398207Z [1m[92m   Compiling[0m unic-ucd-version v0.9.0
+2026-08-02T03:54:02.0427694Z [1m[92m   Compiling[0m want v0.3.1
+2026-08-02T03:54:02.1428338Z [1m[92m   Compiling[0m web_atoms v0.2.5
+2026-08-02T03:54:02.9418176Z [1m[92m   Compiling[0m regex-automata v0.4.16
+2026-08-02T03:54:04.3418415Z [1m[92m   Compiling[0m typeid v1.0.3
+2026-08-02T03:54:04.4398115Z [1m[92m   Compiling[0m tauri v2.11.5
+2026-08-02T03:54:04.4457874Z [1m[92m   Compiling[0m uuid v1.24.0
+2026-08-02T03:54:05.0408254Z [1m[92m   Compiling[0m httparse v1.10.1
+2026-08-02T03:54:05.5408163Z [1m[92m   Compiling[0m tendril v0.5.1
+2026-08-02T03:54:05.8391687Z [1m[92m   Compiling[0m futures-channel v0.3.33
+2026-08-02T03:54:06.0391606Z [1m[92m   Compiling[0m combine v4.6.7
+2026-08-02T03:54:06.8418352Z [1m[92m   Compiling[0m tracing-core v0.1.36
+2026-08-02T03:54:07.9398825Z [1m[92m   Compiling[0m fnv v1.0.7
+2026-08-02T03:54:08.0411991Z [1m[92m   Compiling[0m atomic-waker v1.1.2
+2026-08-02T03:54:08.1428201Z [1m[92m   Compiling[0m hashbrown v0.17.1
+2026-08-02T03:54:08.8418162Z [1m[92m   Compiling[0m equivalent v1.0.2
+2026-08-02T03:54:08.8427506Z [1m[92m   Compiling[0m cesu8 v1.1.0
+2026-08-02T03:54:09.0398140Z [1m[92m   Compiling[0m byteorder v1.5.0
+2026-08-02T03:54:09.3395026Z [1m[92m   Compiling[0m winnow v1.0.4
+2026-08-02T03:54:09.7418438Z [1m[92m   Compiling[0m raw-window-handle v0.6.2
+2026-08-02T03:54:09.7419747Z [1m[92m   Compiling[0m toml_parser v1.1.3+spec-1.1.0
+2026-08-02T03:54:09.9419545Z [1m[92m   Compiling[0m cfb v0.7.3
+2026-08-02T03:54:10.8391355Z [1m[92m   Compiling[0m jni v0.21.1
+2026-08-02T03:54:11.4428324Z [1m[92m   Compiling[0m indexmap v2.14.0
+2026-08-02T03:54:11.7407334Z [1m[92m   Compiling[0m hyper v1.11.0
+2026-08-02T03:54:12.2391399Z [1m[92m   Compiling[0m erased-serde v0.4.10
+2026-08-02T03:54:12.9391417Z [1m[92m   Compiling[0m tracing v0.1.44
+2026-08-02T03:54:13.2408625Z [1m[92m   Compiling[0m markup5ever v0.38.0
+2026-08-02T03:54:13.5408251Z [1m[92m   Compiling[0m regex v1.13.1
+2026-08-02T03:54:15.1428930Z [1m[92m   Compiling[0m num_enum v0.7.6
+2026-08-02T03:54:15.2398606Z [1m[92m   Compiling[0m unic-ucd-ident v0.9.0
+2026-08-02T03:54:15.4391401Z [1m[92m   Compiling[0m cssparser v0.36.0
+2026-08-02T03:54:15.5399429Z [1m[92m   Compiling[0m brotli-decompressor v5.0.3
+2026-08-02T03:54:16.7392233Z [1m[92m   Compiling[0m crossbeam-epoch v0.9.20
+2026-08-02T03:54:17.0398265Z [1m[92m   Compiling[0m crypto-common v0.1.7
+2026-08-02T03:54:17.1391453Z [1m[92m   Compiling[0m block-buffer v0.10.4
+2026-08-02T03:54:17.2408319Z [1m[92m   Compiling[0m ndk-sys v0.6.0+11769913
+2026-08-02T03:54:17.2427560Z [1m[92m   Compiling[0m jsonptr v0.6.3
+2026-08-02T03:54:17.8408409Z [1m[92m   Compiling[0m sync_wrapper v1.0.2
+2026-08-02T03:54:17.9391393Z [1m[92m   Compiling[0m dpi v0.1.2
+2026-08-02T03:54:18.0395218Z [1m[92m   Compiling[0m toml_datetime v1.1.1+spec-1.1.0
+2026-08-02T03:54:18.3406189Z [1m[92m   Compiling[0m serde_spanned v1.1.1
+2026-08-02T03:54:18.4408203Z [1m[92m   Compiling[0m quick-xml v0.41.0
+2026-08-02T03:54:18.4437440Z [1m[92m   Compiling[0m derive_more v2.1.1
+2026-08-02T03:54:18.5398195Z [1m[92m   Compiling[0m servo_arc v0.4.3
+2026-08-02T03:54:18.6418037Z [1m[92m   Compiling[0m bit-vec v0.8.0
+2026-08-02T03:54:18.6447996Z [1m[92m   Compiling[0m tower-layer v0.3.3
+2026-08-02T03:54:18.8392032Z [1m[92m   Compiling[0m same-file v1.0.6
+2026-08-02T03:54:18.8427733Z [1m[92m   Compiling[0m ipnet v2.12.1
+2026-08-02T03:54:18.9398266Z [1m[92m   Compiling[0m toml_writer v1.1.2+spec-1.1.0
+2026-08-02T03:54:19.1418101Z [1m[92m   Compiling[0m rustc-hash v2.1.3
+2026-08-02T03:54:19.2400241Z [1m[92m   Compiling[0m selectors v0.36.1
+2026-08-02T03:54:20.3398434Z [1m[92m   Compiling[0m plist v1.10.0
+2026-08-02T03:54:21.1398026Z [1m[92m   Compiling[0m hyper-util v0.1.20
+2026-08-02T03:54:21.2398240Z [1m[92m   Compiling[0m toml v1.1.4+spec-1.1.0
+2026-08-02T03:54:21.7408025Z [1m[92m   Compiling[0m walkdir v2.5.0
+2026-08-02T03:54:22.1391103Z [1m[92m   Compiling[0m bit-set v0.8.0
+2026-08-02T03:54:22.2419860Z [1m[92m   Compiling[0m tower v0.5.3
+2026-08-02T03:54:22.4391145Z [1m[92m   Compiling[0m ndk v0.9.0
+2026-08-02T03:54:22.8398320Z [1m[92m   Compiling[0m json-patch v3.0.1
+2026-08-02T03:54:23.7417944Z [1m[92m   Compiling[0m digest v0.10.7
+2026-08-02T03:54:23.9391193Z [1m[92m   Compiling[0m crossbeam-deque v0.8.7
+2026-08-02T03:54:24.0390880Z [1m[92m   Compiling[0m brotli v8.0.4
+2026-08-02T03:54:24.2398401Z [1m[92m   Compiling[0m urlpattern v0.3.0
+2026-08-02T03:54:24.8390997Z [1m[92m   Compiling[0m html5ever v0.38.0
+2026-08-02T03:54:26.4398543Z [1m[92m   Compiling[0m serde-untagged v0.1.9
+2026-08-02T03:54:26.7408169Z [1m[92m   Compiling[0m cookie v0.18.1
+2026-08-02T03:54:26.7437699Z [1m[92m   Compiling[0m getrandom v0.3.4
+2026-08-02T03:54:26.9391095Z [1m[92m   Compiling[0m infer v0.19.0
+2026-08-02T03:54:28.4398120Z [1m[92m   Compiling[0m serde_with v3.21.0
+2026-08-02T03:54:29.1394320Z [1m[92m   Compiling[0m crossbeam-channel v0.5.16
+2026-08-02T03:54:29.2391102Z [1m[92m   Compiling[0m cpufeatures v0.2.17
+2026-08-02T03:54:29.3408027Z [1m[92m   Compiling[0m ctor v0.8.0
+2026-08-02T03:54:29.3429955Z [1m[92m   Compiling[0m foldhash v0.2.0
+2026-08-02T03:54:29.5398284Z [1m[92m   Compiling[0m simd-adler32 v0.3.10
+2026-08-02T03:54:29.6391278Z [1m[92m   Compiling[0m semver v1.0.28
+2026-08-02T03:54:29.7428232Z [1m[92m   Compiling[0m dunce v1.0.5
+2026-08-02T03:54:29.8400506Z [1m[92m   Compiling[0m glob v0.3.4
+2026-08-02T03:54:29.8427958Z [1m[92m   Compiling[0m dom_query v0.27.0
+2026-08-02T03:54:30.3391247Z [1m[92m   Compiling[0m wry v0.55.1
+2026-08-02T03:54:30.3427700Z [1m[92m   Compiling[0m equator v0.4.2
+2026-08-02T03:54:30.5392093Z [1m[92m   Compiling[0m sha2 v0.10.9
+2026-08-02T03:54:30.8391140Z [1m[92m   Compiling[0m tauri-utils v2.9.3
+2026-08-02T03:54:30.9398181Z [1m[92m   Compiling[0m rayon-core v1.13.0
+2026-08-02T03:54:31.8398209Z [1m[92m   Compiling[0m tower-http v0.6.11
+2026-08-02T03:54:32.4402803Z [1m[92m   Compiling[0m http-body-util v0.1.4
+2026-08-02T03:54:32.7408271Z [1m[92m   Compiling[0m num-integer v0.1.46
+2026-08-02T03:54:32.7437856Z [1m[92m   Compiling[0m either v1.17.0
+2026-08-02T03:54:32.9391518Z [1m[92m   Compiling[0m zeroize v1.9.0
+2026-08-02T03:54:33.1418407Z [1m[92m   Compiling[0m futures-sink v0.3.33
+2026-08-02T03:54:33.1448013Z [1m[92m   Compiling[0m option-ext v0.2.0
+2026-08-02T03:54:33.2409276Z [1m[92m   Compiling[0m dirs-sys v0.5.0
+2026-08-02T03:54:33.2438054Z [1m[92m   Compiling[0m tokio-util v0.7.19
+2026-08-02T03:54:33.7391208Z [1m[92m   Compiling[0m rustls-pki-types v1.15.1
+2026-08-02T03:54:34.1390944Z [1m[92m   Compiling[0m num-bigint v0.4.8
+2026-08-02T03:54:38.3408283Z [1m[92m   Compiling[0m tauri-runtime v2.11.3
+2026-08-02T03:54:38.8391443Z [1m[92m   Compiling[0m aligned-vec v0.6.4
+2026-08-02T03:54:39.0421839Z [1m[92m   Compiling[0m tao v0.35.3
+2026-08-02T03:54:39.3418073Z [1m[92m   Compiling[0m getrandom v0.2.17
+2026-08-02T03:54:39.5418109Z [1m[92m   Compiling[0m untrusted v0.9.0
+2026-08-02T03:54:39.5467731Z [1m[92m   Compiling[0m arrayvec v0.7.8
+2026-08-02T03:54:39.7408311Z [1m[92m   Compiling[0m adler2 v2.0.1
+2026-08-02T03:54:39.9418163Z [1m[92m   Compiling[0m miniz_oxide v0.8.9
+2026-08-02T03:54:41.7391744Z [1m[92m   Compiling[0m tauri-runtime-wry v2.11.4
+2026-08-02T03:54:43.4398218Z [1m[92m   Compiling[0m ring v0.17.14
+2026-08-02T03:54:46.9391307Z [1m[92m   Compiling[0m serialize-to-javascript v0.1.2
+2026-08-02T03:54:47.0409930Z [1m[92m   Compiling[0m v_frame v0.3.9
+2026-08-02T03:54:47.2408260Z [1m[92m   Compiling[0m num-rational v0.4.2
+2026-08-02T03:54:48.4391322Z [1m[92m   Compiling[0m reqwest v0.13.4
+2026-08-02T03:54:48.5417995Z [1m[92m   Compiling[0m dirs v6.0.0
+2026-08-02T03:54:48.7395942Z [1m[92m   Compiling[0m rayon v1.12.0
+2026-08-02T03:54:48.7407758Z [1m[92m   Compiling[0m as-slice v0.2.1
+2026-08-02T03:54:48.8399990Z [1m[92m   Compiling[0m heck v0.5.0
+2026-08-02T03:54:50.0418027Z [1m[92m   Compiling[0m mime v0.3.17
+2026-08-02T03:54:50.5418280Z [1m[92m   Compiling[0m bytemuck v1.25.2
+2026-08-02T03:54:51.3418171Z [1m[92m   Compiling[0m aligned v0.4.3
+2026-08-02T03:54:51.4428212Z [1m[92m   Compiling[0m crc32fast v1.5.0
+2026-08-02T03:54:51.6408358Z [1m[92m   Compiling[0m tauri-plugin-fs v2.5.1
+2026-08-02T03:54:51.7398269Z [1m[92m   Compiling[0m rustls-webpki v0.103.13
+2026-08-02T03:54:54.6390855Z [1m[92m   Compiling[0m nom v8.0.0
+2026-08-02T03:54:58.2390807Z [1m[92m   Compiling[0m no_std_io2 v0.9.4
+2026-08-02T03:54:58.3398196Z [1m[92m   Compiling[0m y4m v0.8.0
+2026-08-02T03:54:58.6391049Z [1m[92m   Compiling[0m subtle v2.6.1
+2026-08-02T03:54:58.7391173Z [1m[92m   Compiling[0m quick-error v2.0.1
+2026-08-02T03:54:58.8390677Z [1m[92m   Compiling[0m rustls v0.23.43
+2026-08-02T03:55:00.8391133Z [1m[92m   Compiling[0m av-scenechange v0.14.1
+2026-08-02T03:55:02.1408095Z [1m[92m   Compiling[0m profiling v1.0.18
+2026-08-02T03:55:02.2408280Z [1m[92m   Compiling[0m bitstream-io v4.10.0
+2026-08-02T03:55:02.9391173Z [1m[92m   Compiling[0m av1-grain v0.2.5
+2026-08-02T03:55:03.8390975Z [1m[92m   Compiling[0m flate2 v1.1.9
+2026-08-02T03:55:04.4391163Z [1m[92m   Compiling[0m ahash v0.8.12
+2026-08-02T03:55:04.5418354Z [1m[92m   Compiling[0m maybe-rayon v0.1.1
+2026-08-02T03:55:04.6418194Z [1m[92m   Compiling[0m libm v0.2.16
+2026-08-02T03:55:05.8399910Z [1m[92m   Compiling[0m num-complex v0.4.6
+2026-08-02T03:55:06.3390841Z [1m[92m   Compiling[0m itertools v0.14.0
+2026-08-02T03:55:06.6398135Z [1m[92m   Compiling[0m rand_core v0.9.5
+2026-08-02T03:55:06.8428403Z [1m[92m   Compiling[0m ppv-lite86 v0.2.21
+2026-08-02T03:55:07.1408193Z [1m[92m   Compiling[0m half v2.7.1
+2026-08-02T03:55:07.6393311Z [1m[92m   Compiling[0m is-docker v0.2.0
+2026-08-02T03:55:07.8391260Z [1m[92m   Compiling[0m reborrow v0.5.5
+2026-08-02T03:55:07.8447993Z [1m[92m   Compiling[0m zune-core v0.5.1
+2026-08-02T03:55:08.1391146Z [1m[92m   Compiling[0m weezl v0.1.12
+2026-08-02T03:55:08.1417784Z [1m[92m   Compiling[0m pulp-wasm-simd-flag v0.1.1
+2026-08-02T03:55:08.1427958Z [1m[92m   Compiling[0m imgref v1.12.2
+2026-08-02T03:55:08.3390701Z [1m[92m   Compiling[0m loop9 v0.1.5
+2026-08-02T03:55:08.4408330Z [1m[92m   Compiling[0m pulp v0.22.3
+2026-08-02T03:55:09.4407903Z [1m[92m   Compiling[0m zune-jpeg v0.5.15
+2026-08-02T03:55:11.2398655Z [1m[92m   Compiling[0m rav1e v0.8.1
+2026-08-02T03:55:13.1418231Z [1m[92m   Compiling[0m is-wsl v0.4.0
+2026-08-02T03:55:13.3398304Z [1m[92m   Compiling[0m tauri-plugin-dialog v2.7.2
+2026-08-02T03:55:13.3425052Z [1m[92m   Compiling[0m tauri-plugin-notification v2.3.3
+2026-08-02T03:55:13.3447664Z [1m[92m   Compiling[0m tauri-plugin-opener v2.5.4
+2026-08-02T03:55:13.3477692Z [1m[92m   Compiling[0m rand_chacha v0.9.0
+2026-08-02T03:55:15.0390828Z [1m[92m   Compiling[0m hashbrown v0.14.5
+2026-08-02T03:55:15.7418025Z [1m[92m   Compiling[0m tokio-rustls v0.26.4
+2026-08-02T03:55:16.0398222Z [1m[92m   Compiling[0m avif-serialize v0.8.9
+2026-08-02T03:55:16.8390953Z [1m[92m   Compiling[0m webpki-roots v1.0.9
+2026-08-02T03:55:16.9391175Z [1m[92m   Compiling[0m fdeflate v0.3.7
+2026-08-02T03:55:17.9408214Z [1m[92m   Compiling[0m zune-inflate v0.2.54
+2026-08-02T03:55:18.3404679Z [1m[92m   Compiling[0m android_system_properties v0.1.5
+2026-08-02T03:55:18.4390404Z [1m[92m   Compiling[0m pxfm v0.1.30
+2026-08-02T03:55:18.5391403Z [1m[92m   Compiling[0m foreign-types-shared v0.1.1
+2026-08-02T03:55:18.5407671Z [1m[92m   Compiling[0m fax v0.2.7
+2026-08-02T03:55:18.9408011Z [1m[92m   Compiling[0m ryu v1.0.23
+2026-08-02T03:55:19.1398308Z [1m[92m   Compiling[0m color_quant v1.1.0
+2026-08-02T03:55:19.4398431Z [1m[92m   Compiling[0m rgb v0.8.53
+2026-08-02T03:55:19.7401023Z [1m[92m   Compiling[0m lebe v0.5.3
+2026-08-02T03:55:19.9418158Z [1m[92m   Compiling[0m bit_field v0.10.3
+2026-08-02T03:55:20.0418331Z [1m[92m   Compiling[0m byteorder-lite v0.1.0
+2026-08-02T03:55:20.3401781Z [1m[92m   Compiling[0m image-webp v0.2.4
+2026-08-02T03:55:21.4398145Z [1m[92m   Compiling[0m moxcms v0.8.1
+2026-08-02T03:55:23.2397940Z [1m[92m   Compiling[0m exr v1.74.2
+2026-08-02T03:55:24.0390597Z [1m[92m   Compiling[0m ravif v0.13.0
+2026-08-02T03:55:29.3390478Z [1m[92m   Compiling[0m gif v0.14.2
+2026-08-02T03:55:31.4391036Z [1m[92m   Compiling[0m serde_urlencoded v0.7.1
+2026-08-02T03:55:31.6390835Z [1m[92m   Compiling[0m tiff v0.11.3
+2026-08-02T03:55:33.3390797Z [1m[92m   Compiling[0m foreign-types v0.3.2
+2026-08-02T03:55:33.4411267Z [1m[92m   Compiling[0m iana-time-zone v0.1.65
+2026-08-02T03:55:33.5398234Z [1m[92m   Compiling[0m png v0.18.1
+2026-08-02T03:55:35.8398169Z [1m[92m   Compiling[0m hyper-rustls v0.27.9
+2026-08-02T03:55:36.3398220Z [1m[92m   Compiling[0m hashlink v0.9.1
+2026-08-02T03:55:36.6392438Z [1m[92m   Compiling[0m libsqlite3-sys v0.30.1
+2026-08-02T03:55:36.7419068Z [1m[92m   Compiling[0m rand v0.9.5
+2026-08-02T03:55:36.8398165Z [1m[92m   Compiling[0m open v5.4.0
+2026-08-02T03:55:37.1390536Z [1m[92m   Compiling[0m openssl-sys v0.9.117
+2026-08-02T03:55:37.6390583Z [1m[92m   Compiling[0m qoi v0.4.1
+2026-08-02T03:55:37.8398360Z [1m[92m   Compiling[0m fallible-streaming-iterator v0.1.9
+2026-08-02T03:55:37.9418478Z [1m[92m   Compiling[0m fallible-iterator v0.3.0
+2026-08-02T03:55:38.3390570Z [1m[92m   Compiling[0m rusqlite v0.32.1
+2026-08-02T03:55:39.5390713Z [1m[92m   Compiling[0m openssl v0.10.81
+2026-08-02T03:55:40.8409149Z [1m[92m   Compiling[0m wps-note-clone v0.1.0 (/home/runner/work/wps-note-clone/wps-note-clone/src-tauri)
+2026-08-02T03:55:40.9390345Z [1m[92m   Compiling[0m image v0.25.10
+2026-08-02T03:55:43.5390541Z [1m[92m   Compiling[0m reqwest v0.12.28
+2026-08-02T03:55:46.8390839Z [1m[92m   Compiling[0m chrono v0.4.45
+2026-08-02T03:56:07.8391308Z [1m[33mwarning[0m[1m: unused import: `image::*`[0m
+2026-08-02T03:56:07.8392144Z  [1m[94m--> [0msrc/commands/mod.rs:4:9
+2026-08-02T03:56:07.8392685Z   [1m[94m|[0m
+2026-08-02T03:56:07.8393397Z [1m[94m4[0m [1m[94m|[0m pub use image::*;
+2026-08-02T03:56:07.8394119Z   [1m[94m|[0m         [1m[33m^^^^^^^^[0m
+2026-08-02T03:56:07.8394601Z   [1m[94m|[0m
+2026-08-02T03:56:07.8395541Z   [1m[94m= [0m[1mnote[0m: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:56:07.8396093Z 
+2026-08-02T03:56:07.8396913Z [1m[33mwarning[0m[1m: unused import: `sync::*`[0m
+2026-08-02T03:56:07.8397626Z  [1m[94m--> [0msrc/commands/mod.rs:5:9
+2026-08-02T03:56:07.8398101Z   [1m[94m|[0m
+2026-08-02T03:56:07.8398561Z [1m[94m5[0m [1m[94m|[0m pub use sync::*;
+2026-08-02T03:56:07.8398978Z   [1m[94m|[0m         [1m[33m^^^^^^^[0m
+2026-08-02T03:56:07.8399172Z 
+2026-08-02T03:56:08.7391048Z [1m[33mwarning[0m[1m: unused variable: `sync`[0m
+2026-08-02T03:56:08.7391800Z   [1m[94m--> [0msrc/commands/sync.rs:49:57
+2026-08-02T03:56:08.7392154Z    [1m[94m|[0m
+2026-08-02T03:56:08.7393051Z [1m[94m49[0m [1m[94m|[0m pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngine>) -> Result<i64, String> {
+2026-08-02T03:56:08.7394738Z    [1m[94m|[0m                                                         [1m[33m^^^^[0m [1m[33mhelp: if this is intentional, prefix it with an underscore: `_sync`[0m
+2026-08-02T03:56:08.7395304Z    [1m[94m|[0m
+2026-08-02T03:56:08.7396118Z    [1m[94m= [0m[1mnote[0m: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:56:08.7396772Z 
+2026-08-02T03:56:09.0391241Z [1m[33mwarning[0m[1m: struct `NotionBlock` is never constructed[0m
+2026-08-02T03:56:09.0392407Z   [1m[94m--> [0msrc/notion/mod.rs:19:12
+2026-08-02T03:56:09.0392995Z    [1m[94m|[0m
+2026-08-02T03:56:09.0393674Z [1m[94m19[0m [1m[94m|[0m pub struct NotionBlock {
+2026-08-02T03:56:09.0394413Z    [1m[94m|[0m            [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:56:09.0394897Z    [1m[94m|[0m
+2026-08-02T03:56:09.0395763Z    [1m[94m= [0m[1mnote[0m: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:56:09.0396262Z 
+2026-08-02T03:56:09.0397432Z [1m[33mwarning[0m[1m: methods `is_configured`, `list_pages`, and `delete_page` are never used[0m
+2026-08-02T03:56:09.0398276Z    [1m[94m--> [0msrc/notion/mod.rs:39:12
+2026-08-02T03:56:09.0398740Z     [1m[94m|[0m
+2026-08-02T03:56:09.0399335Z [1m[94m 31[0m [1m[94m|[0m impl NotionClient {
+2026-08-02T03:56:09.0400330Z     [1m[94m|[0m [1m[94m-----------------[0m [1m[94mmethods in this implementation[0m
+2026-08-02T03:56:09.0400991Z [1m[94m...[0m
+2026-08-02T03:56:09.0401828Z [1m[94m 39[0m [1m[94m|[0m     pub fn is_configured(&self) -> bool {
+2026-08-02T03:56:09.0402710Z     [1m[94m|[0m            [1m[33m^^^^^^^^^^^^^[0m
+2026-08-02T03:56:09.0403233Z [1m[94m...[0m
+2026-08-02T03:56:09.0404205Z [1m[94m 44[0m [1m[94m|[0m     pub async fn list_pages(&self) -> Result<Vec<NotionPage>, String> {
+2026-08-02T03:56:09.0405102Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^[0m
+2026-08-02T03:56:09.0405590Z [1m[94m...[0m
+2026-08-02T03:56:09.0406822Z [1m[94m196[0m [1m[94m|[0m     pub async fn delete_page(&self, page_id: &str) -> Result<(), String> {
+2026-08-02T03:56:09.0407816Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:56:09.0408144Z 
+2026-08-02T03:57:04.1391258Z [1m[33mwarning[0m: `wps-note-clone` (lib) generated 5 warnings (run `cargo fix --lib -p wps-note-clone` to apply 3 suggestions)
+2026-08-02T03:57:04.1392912Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 3m 19s
+2026-08-02T03:57:04.1396218Z [1m[32m        Info[0m symlinking lib "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" in jniLibs dir "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a"
+2026-08-02T03:57:04.1399882Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libandroid.so"
+2026-08-02T03:57:04.1402705Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libdl.so"
+2026-08-02T03:57:04.1405473Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "liblog.so"
+2026-08-02T03:57:04.1407668Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libm.so"
+2026-08-02T03:57:04.1410117Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libc.so"
+2026-08-02T03:57:32.6392997Z w: file:///home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.11.5/mobile/android/src/main/java/app/tauri/AppPlugin.kt:35:37 'onBackPressed(): Unit' is deprecated. Deprecated in Java
+2026-08-02T03:57:32.6399985Z w: file:///home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.11.5/mobile/android/src/main/java/app/tauri/plugin/Plugin.kt:107:5 'onDestroy(): Unit' is deprecated. use onDestroy(activity: AppCompatActivity) instead
+2026-08-02T03:57:32.6404357Z w: file:///home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.11.5/mobile/android/src/main/java/app/tauri/plugin/Plugin.kt:112:5 'onRestart(): Unit' is deprecated. use onRestart(activity: AppCompatActivity) instead
+2026-08-02T03:57:32.6408358Z w: file:///home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-2.11.5/mobile/android/src/main/java/app/tauri/plugin/PluginMethodData.kt:11:23 Parameter 'methodDecorator' is never used
+2026-08-02T03:57:45.7391031Z w: file:///home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-notification-2.3.3/android/src/main/java/NotificationSchedule.kt:99:7 'when' is exhaustive so 'else' is redundant here
+2026-08-02T03:57:49.0419442Z Supplied consumer proguard configuration does not exist: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-dialog-2.7.2/android/consumer-rules.pro
+2026-08-02T03:57:49.0459587Z Supplied consumer proguard configuration does not exist: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-fs-2.5.1/android/consumer-rules.pro
+2026-08-02T03:57:49.0519089Z Supplied consumer proguard configuration does not exist: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-notification-2.3.3/android/consumer-rules.pro
+2026-08-02T03:57:49.3404199Z Supplied consumer proguard configuration does not exist: /home/runner/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tauri-plugin-opener-2.5.4/android/consumer-rules.pro
+2026-08-02T03:57:52.5412003Z w: file:///home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/java/com/wpsnote/clone/generated/RustWebView.kt:26:18 'setter for databaseEnabled: Boolean' is deprecated. Deprecated in Java
+2026-08-02T03:57:52.5419009Z w: file:///home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/java/com/wpsnote/clone/generated/WryActivity.kt:69:46 'onBackPressed(): Unit' is deprecated. This method has been deprecated in favor of using the
+2026-08-02T03:57:52.5447684Z       {@link OnBackPressedDispatcher} via {@link #getOnBackPressedDispatcher()}.
+2026-08-02T03:57:52.5462270Z       The OnBackPressedDispatcher controls how back button events are dispatched
+2026-08-02T03:57:52.5465916Z       to one or more {@link OnBackPressedCallback} objects.
+2026-08-02T03:59:01.7389292Z 
+2026-08-02T03:59:01.7392582Z [Incubating] Problems report is available at: file:///home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/build/reports/problems/problems-report.html
+2026-08-02T03:59:01.7393916Z 
+2026-08-02T03:59:01.7394906Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-08-02T03:59:01.7395761Z 
+2026-08-02T03:59:01.7397326Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-08-02T03:59:01.7398407Z 
+2026-08-02T03:59:01.7400014Z For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-08-02T03:59:05.6350947Z $ tauri android android-studio-script --release --target aarch64
+2026-08-02T03:59:05.7034883Z         Info connection; remote_addr=127.0.0.1:44072 conn_id=1
+2026-08-02T03:59:05.8342776Z [1m[32m        Info[0m Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T03:59:06.1340662Z [1m[33mwarning[0m[1m: unused import: `image::*`[0m
+2026-08-02T03:59:06.1341881Z  [1m[94m--> [0msrc/commands/mod.rs:4:9
+2026-08-02T03:59:06.1342896Z   [1m[94m|[0m
+2026-08-02T03:59:06.1343847Z [1m[94m4[0m [1m[94m|[0m pub use image::*;
+2026-08-02T03:59:06.1345363Z   [1m[94m|[0m         [1m[33m^^^^^^^^[0m
+2026-08-02T03:59:06.1346069Z   [1m[94m|[0m
+2026-08-02T03:59:06.1347504Z   [1m[94m= [0m[1mnote[0m: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:59:06.1348291Z 
+2026-08-02T03:59:06.1349399Z [1m[33mwarning[0m[1m: unused import: `sync::*`[0m
+2026-08-02T03:59:06.1350366Z  [1m[94m--> [0msrc/commands/mod.rs:5:9
+2026-08-02T03:59:06.1351100Z   [1m[94m|[0m
+2026-08-02T03:59:06.1351993Z [1m[94m5[0m [1m[94m|[0m pub use sync::*;
+2026-08-02T03:59:06.1352879Z   [1m[94m|[0m         [1m[33m^^^^^^^[0m
+2026-08-02T03:59:06.1353384Z 
+2026-08-02T03:59:06.1354110Z [1m[33mwarning[0m[1m: unused variable: `sync`[0m
+2026-08-02T03:59:06.1355059Z   [1m[94m--> [0msrc/commands/sync.rs:49:57
+2026-08-02T03:59:06.1355816Z    [1m[94m|[0m
+2026-08-02T03:59:06.1386569Z [1m[94m49[0m [1m[94m|[0m pub async fn notion_sync_notes(db: State<'_, Database>, sync: State<'_, SyncEngine>) -> Result<i64, String> {
+2026-08-02T03:59:06.1388991Z    [1m[94m|[0m                                                         [1m[33m^^^^[0m [1m[33mhelp: if this is intentional, prefix it with an underscore: `_sync`[0m
+2026-08-02T03:59:06.1390262Z    [1m[94m|[0m
+2026-08-02T03:59:06.1391574Z    [1m[94m= [0m[1mnote[0m: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:59:06.1392408Z 
+2026-08-02T03:59:06.1393301Z [1m[33mwarning[0m[1m: struct `NotionBlock` is never constructed[0m
+2026-08-02T03:59:06.1394369Z   [1m[94m--> [0msrc/notion/mod.rs:19:12
+2026-08-02T03:59:06.1395090Z    [1m[94m|[0m
+2026-08-02T03:59:06.1395992Z [1m[94m19[0m [1m[94m|[0m pub struct NotionBlock {
+2026-08-02T03:59:06.1397170Z    [1m[94m|[0m            [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:59:06.1397944Z    [1m[94m|[0m
+2026-08-02T03:59:06.1399094Z    [1m[94m= [0m[1mnote[0m: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-08-02T03:59:06.1399856Z 
+2026-08-02T03:59:06.1401035Z [1m[33mwarning[0m[1m: methods `is_configured`, `list_pages`, and `delete_page` are never used[0m
+2026-08-02T03:59:06.1402255Z    [1m[94m--> [0msrc/notion/mod.rs:39:12
+2026-08-02T03:59:06.1403020Z     [1m[94m|[0m
+2026-08-02T03:59:06.1403883Z [1m[94m 31[0m [1m[94m|[0m impl NotionClient {
+2026-08-02T03:59:06.1405149Z     [1m[94m|[0m [1m[94m-----------------[0m [1m[94mmethods in this implementation[0m
+2026-08-02T03:59:06.1406058Z [1m[94m...[0m
+2026-08-02T03:59:06.1407419Z [1m[94m 39[0m [1m[94m|[0m     pub fn is_configured(&self) -> bool {
+2026-08-02T03:59:06.1408470Z     [1m[94m|[0m            [1m[33m^^^^^^^^^^^^^[0m
+2026-08-02T03:59:06.1409186Z [1m[94m...[0m
+2026-08-02T03:59:06.1410519Z [1m[94m 44[0m [1m[94m|[0m     pub async fn list_pages(&self) -> Result<Vec<NotionPage>, String> {
+2026-08-02T03:59:06.1411746Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^[0m
+2026-08-02T03:59:06.1412476Z [1m[94m...[0m
+2026-08-02T03:59:06.1413844Z [1m[94m196[0m [1m[94m|[0m     pub async fn delete_page(&self, page_id: &str) -> Result<(), String> {
+2026-08-02T03:59:06.1415102Z     [1m[94m|[0m                  [1m[33m^^^^^^^^^^^[0m
+2026-08-02T03:59:06.1415643Z 
+2026-08-02T03:59:06.1417329Z [1m[33mwarning[0m: `wps-note-clone` (lib) generated 5 warnings (run `cargo fix --lib -p wps-note-clone` to apply 3 suggestions)
+2026-08-02T03:59:06.1419096Z [1m[92m    Finished[0m `release` profile [optimized] target(s) in 0.32s
+2026-08-02T03:59:06.2343496Z [1m[32m        Info[0m symlinking lib "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" in jniLibs dir "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/src/main/jniLibs/arm64-v8a"
+2026-08-02T03:59:06.2361625Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libandroid.so"
+2026-08-02T03:59:06.2389145Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libdl.so"
+2026-08-02T03:59:06.2409122Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "liblog.so"
+2026-08-02T03:59:06.2428839Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libm.so"
+2026-08-02T03:59:06.2448937Z [1m[32m        Info[0m "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/target/aarch64-linux-android/release/libwps_note_clone_lib.so" requires shared lib "libc.so"
+2026-08-02T03:59:08.9338464Z 
+2026-08-02T03:59:08.9340514Z [Incubating] Problems report is available at: file:///home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/build/reports/problems/problems-report.html
+2026-08-02T03:59:08.9341639Z 
+2026-08-02T03:59:08.9342287Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+2026-08-02T03:59:08.9342675Z 
+2026-08-02T03:59:08.9343371Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+2026-08-02T03:59:08.9343885Z 
+2026-08-02T03:59:08.9344680Z For more on this, please refer to https://docs.gradle.org/8.14.3/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+2026-08-02T03:59:08.9562209Z     Finished 1 APK at:
+2026-08-02T03:59:08.9563550Z         /home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk
+2026-08-02T03:59:08.9564153Z 
+2026-08-02T03:59:08.9564301Z     Finished 1 AAB at:
+2026-08-02T03:59:08.9565141Z         /home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/app/build/outputs/bundle/universalRelease/app-universal-release.aab
+2026-08-02T03:59:08.9565724Z 

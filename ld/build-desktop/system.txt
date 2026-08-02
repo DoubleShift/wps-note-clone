@@ -1,0 +1,8 @@
+2026-08-02T03:45:30.7400000Z Evaluating build-desktop.if
+2026-08-02T03:45:30.7400000Z Evaluating: success()
+2026-08-02T03:45:30.7400000Z Result: true
+2026-08-02T03:45:31.2420000Z Job is about to start running on the hosted runner: GitHub Actions 1000000338
+2026-08-02T03:45:31.2410000Z Job is waiting for a hosted runner to come online.
+2026-08-02T03:45:31.2310000Z Requested labels: ubuntu-latest
+2026-08-02T03:45:31.2310000Z Job defined at: DoubleShift/wps-note-clone/.github/workflows/build.yml@refs/heads/main
+2026-08-02T03:45:31.2310000Z Waiting for a runner to pick up this job...

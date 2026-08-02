@@ -1,0 +1,38 @@
+﻿2026-08-02T04:37:49.9424984Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T04:37:49.9426296Z ##[group]Run actions/upload-artifact@v4
+2026-08-02T04:37:49.9426561Z with:
+2026-08-02T04:37:49.9426765Z   name: wps-note-clone-android
+2026-08-02T04:37:49.9427058Z   path: src-tauri/gen/android/app/build/outputs/apk/
+2026-08-02T04:37:49.9427366Z   if-no-files-found: warn
+2026-08-02T04:37:49.9427602Z   compression-level: 6
+2026-08-02T04:37:49.9427817Z   overwrite: false
+2026-08-02T04:37:49.9428027Z   include-hidden-files: false
+2026-08-02T04:37:49.9428251Z env:
+2026-08-02T04:37:49.9428430Z   CARGO_TERM_COLOR: always
+2026-08-02T04:37:49.9428657Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:37:49.9428875Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:37:49.9429166Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:37:49.9429601Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:37:49.9430091Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:37:49.9430499Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T04:37:49.9430807Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T04:37:49.9431438Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:37:49.9432321Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T04:37:49.9433668Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:37:49.9434618Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T04:37:49.9435177Z ##[endgroup]
+2026-08-02T04:37:50.1136154Z (node:28017) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T04:37:50.1137199Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T04:37:50.1237088Z With the provided path, there will be 5 files uploaded
+2026-08-02T04:37:50.1238144Z Artifact name is valid!
+2026-08-02T04:37:50.1238727Z Root directory input is valid!
+2026-08-02T04:37:50.2532026Z Beginning upload of artifact content to blob storage
+2026-08-02T04:37:50.7742842Z (node:28017) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T04:37:50.9556316Z Uploaded bytes 8388608
+2026-08-02T04:37:51.0133515Z Uploaded bytes 10305254
+2026-08-02T04:37:51.0277709Z Finished uploading artifact content to blob storage!
+2026-08-02T04:37:51.0279749Z SHA256 digest of uploaded artifact zip is 43769c5f77c4101106adee691ed557e8585e16861f811669fd767d5e688da39e
+2026-08-02T04:37:51.0281501Z Finalizing artifact upload
+2026-08-02T04:37:51.1755351Z Artifact wps-note-clone-android.zip successfully finalized. Artifact ID 8828486140
+2026-08-02T04:37:51.1756833Z Artifact wps-note-clone-android has been successfully uploaded! Final size is 10305254 bytes. Artifact ID is 8828486140
+2026-08-02T04:37:51.1763845Z Artifact download URL: https://github.com/DoubleShift/wps-note-clone/actions/runs/30732318673/artifacts/8828486140

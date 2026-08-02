@@ -1,0 +1,37 @@
+﻿2026-08-02T04:19:28.2795443Z ##[group]Run APKSIGNER=$(find /usr/local/lib/android/sdk/build-tools -name apksigner | head -1)
+2026-08-02T04:19:28.2796132Z [36;1mAPKSIGNER=$(find /usr/local/lib/android/sdk/build-tools -name apksigner | head -1)[0m
+2026-08-02T04:19:28.2796593Z [36;1mecho "Using apksigner: $APKSIGNER"[0m
+2026-08-02T04:19:28.2796944Z [36;1m$APKSIGNER sign --ks ~/.android/debug.keystore \[0m
+2026-08-02T04:19:28.2797292Z [36;1m  --ks-key-alias androiddebugkey \[0m
+2026-08-02T04:19:28.2797601Z [36;1m  --ks-pass pass:android \[0m
+2026-08-02T04:19:28.2797877Z [36;1m  --key-pass pass:android \[0m
+2026-08-02T04:19:28.2798366Z [36;1m  src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk[0m
+2026-08-02T04:19:28.2857019Z shell: /usr/bin/bash -e {0}
+2026-08-02T04:19:28.2857328Z env:
+2026-08-02T04:19:28.2857553Z   CARGO_TERM_COLOR: always
+2026-08-02T04:19:28.2857812Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:19:28.2858058Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:19:28.2858396Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:19:28.2858872Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:19:28.2859350Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T04:19:28.2859745Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T04:19:28.2860048Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T04:19:28.2860671Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:19:28.2861494Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T04:19:28.2862363Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T04:19:28.2863264Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T04:19:28.2863913Z ##[endgroup]
+2026-08-02T04:19:28.3672487Z Using apksigner: /usr/local/lib/android/sdk/build-tools/37.0.0/apksigner
+2026-08-02T04:19:28.5531523Z Failed to load signer "signer #1"
+2026-08-02T04:19:28.5532798Z java.io.FileNotFoundException: /home/runner/.android/debug.keystore (No such file or directory)
+2026-08-02T04:19:28.5535346Z 	at java.base/java.io.FileInputStream.open0(Native Method)
+2026-08-02T04:19:28.5536268Z 	at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+2026-08-02T04:19:28.5537194Z 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:157)
+2026-08-02T04:19:28.5538017Z 	at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
+2026-08-02T04:19:28.5538848Z 	at com.android.apksigner.SignerParams.loadKeyStoreFromFile(SignerParams.java:446)
+2026-08-02T04:19:28.5539666Z 	at com.android.apksigner.SignerParams.loadPrivateKeyAndCertsFromKeyStore(SignerParams.java:333)
+2026-08-02T04:19:28.5540575Z 	at com.android.apksigner.SignerParams.loadPrivateKeyAndCerts(SignerParams.java:261)
+2026-08-02T04:19:28.5541426Z 	at com.android.apksigner.ApkSignerTool.getSignerConfig(ApkSignerTool.java:523)
+2026-08-02T04:19:28.5542046Z 	at com.android.apksigner.ApkSignerTool.sign(ApkSignerTool.java:407)
+2026-08-02T04:19:28.5542603Z 	at com.android.apksigner.ApkSignerTool.main(ApkSignerTool.java:94)
+2026-08-02T04:19:28.5593578Z ##[error]Process completed with exit code 2.

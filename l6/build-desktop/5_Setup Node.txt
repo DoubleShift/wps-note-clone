@@ -1,0 +1,25 @@
+﻿2026-08-02T00:49:13.4967505Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T00:49:13.4968864Z ##[group]Run actions/setup-node@v4
+2026-08-02T00:49:13.4969173Z with:
+2026-08-02T00:49:13.4969408Z   node-version: 22
+2026-08-02T00:49:13.4969662Z   cache: pnpm
+2026-08-02T00:49:13.4969905Z   always-auth: false
+2026-08-02T00:49:13.4970168Z   check-latest: false
+2026-08-02T00:49:13.4972529Z   token: ***
+2026-08-02T00:49:13.4972792Z env:
+2026-08-02T00:49:13.4973031Z   CARGO_TERM_COLOR: always
+2026-08-02T00:49:13.4973311Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:49:13.4973593Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:49:13.4973945Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:49:13.4974298Z ##[endgroup]
+2026-08-02T00:49:13.6385362Z Found in cache @ /opt/hostedtoolcache/node/22.23.1/x64
+2026-08-02T00:49:13.6390491Z (node:2282) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T00:49:13.6392337Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T00:49:13.6397730Z ##[group]Environment details
+2026-08-02T00:49:14.0902299Z node: v22.23.1
+2026-08-02T00:49:14.0902802Z npm: 10.9.8
+2026-08-02T00:49:14.0903023Z yarn: 1.22.22
+2026-08-02T00:49:14.0914402Z ##[endgroup]
+2026-08-02T00:49:14.0949904Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-08-02T00:49:14.7053655Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T00:49:14.9841747Z pnpm cache is not found

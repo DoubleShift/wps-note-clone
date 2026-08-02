@@ -1,0 +1,31 @@
+﻿2026-08-02T04:06:12.4014091Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T04:06:12.4019476Z ##[group]Run actions/setup-node@v4
+2026-08-02T04:06:12.4020601Z with:
+2026-08-02T04:06:12.4021423Z   node-version: 22
+2026-08-02T04:06:12.4022622Z   cache: pnpm
+2026-08-02T04:06:12.4023526Z   always-auth: false
+2026-08-02T04:06:12.4024483Z   check-latest: false
+2026-08-02T04:06:12.4033854Z   token: ***
+2026-08-02T04:06:12.4034773Z env:
+2026-08-02T04:06:12.4035585Z   CARGO_TERM_COLOR: always
+2026-08-02T04:06:12.4036593Z   CARGO_INCREMENTAL: 0
+2026-08-02T04:06:12.4037575Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T04:06:12.4038877Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T04:06:12.4040230Z ##[endgroup]
+2026-08-02T04:06:12.5475029Z Found in cache @ /opt/hostedtoolcache/node/22.23.1/x64
+2026-08-02T04:06:12.5479579Z (node:2331) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-08-02T04:06:12.5484230Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T04:06:12.5486817Z ##[group]Environment details
+2026-08-02T04:06:12.9779911Z node: v22.23.1
+2026-08-02T04:06:12.9780958Z npm: 10.9.8
+2026-08-02T04:06:12.9781792Z yarn: 1.22.22
+2026-08-02T04:06:12.9784023Z ##[endgroup]
+2026-08-02T04:06:12.9827153Z [command]/home/runner/setup-pnpm/node_modules/.bin/pnpm store path --silent
+2026-08-02T04:06:13.6241856Z /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T04:06:13.7158684Z Cache hit for: node-cache-Linux-x64-pnpm-784896dd967f0d10af75a02f01ae0d85009bf46e4acefa2f92396b36e9421104
+2026-08-02T04:06:13.7265979Z (node:2331) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T04:06:14.0568277Z Received 35321564 of 35321564 (100.0%), 118.6 MBs/sec
+2026-08-02T04:06:14.0569104Z Cache Size: ~34 MB (35321564 B)
+2026-08-02T04:06:14.0596450Z [command]/usr/bin/tar -xf /home/runner/work/_temp/5be3aba1-1cb0-4e0a-83c3-b13fff3771b1/cache.tzst -P -C /home/runner/work/wps-note-clone/wps-note-clone --use-compress-program unzstd
+2026-08-02T04:06:14.4268060Z Cache restored successfully
+2026-08-02T04:06:14.4288471Z Cache restored from key: node-cache-Linux-x64-pnpm-784896dd967f0d10af75a02f01ae0d85009bf46e4acefa2f92396b36e9421104

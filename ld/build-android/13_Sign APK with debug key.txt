@@ -1,0 +1,23 @@
+﻿2026-08-02T03:59:08.9789993Z ##[group]Run apksigner sign --ks ~/.android/debug.keystore \
+2026-08-02T03:59:08.9790480Z [36;1mapksigner sign --ks ~/.android/debug.keystore \[0m
+2026-08-02T03:59:08.9790833Z [36;1m  --ks-key-alias androiddebugkey \[0m
+2026-08-02T03:59:08.9791138Z [36;1m  --ks-pass pass:android \[0m
+2026-08-02T03:59:08.9791417Z [36;1m  --key-pass pass:android \[0m
+2026-08-02T03:59:08.9791930Z [36;1m  src-tauri/gen/android/app/build/outputs/apk/universal/release/app-universal-release-unsigned.apk[0m
+2026-08-02T03:59:08.9843273Z shell: /usr/bin/bash -e {0}
+2026-08-02T03:59:08.9843548Z env:
+2026-08-02T03:59:08.9843803Z   CARGO_TERM_COLOR: always
+2026-08-02T03:59:08.9844152Z   CARGO_INCREMENTAL: 0
+2026-08-02T03:59:08.9844408Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T03:59:08.9844717Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T03:59:08.9845151Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:59:08.9845658Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T03:59:08.9846096Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T03:59:08.9846598Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T03:59:08.9847252Z   CC_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:59:08.9848120Z   AR_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+2026-08-02T03:59:08.9849002Z   CARGO_TARGET_AARCH64_LINUX_ANDROID_LINKER: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+2026-08-02T03:59:08.9849903Z   RANLIB_aarch64_linux_android: /usr/local/lib/android/sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+2026-08-02T03:59:08.9850433Z ##[endgroup]
+2026-08-02T03:59:08.9934647Z /home/runner/work/_temp/199bf333-b235-4558-ba41-9ae780b9a894.sh: line 1: apksigner: command not found
+2026-08-02T03:59:08.9949591Z ##[error]Process completed with exit code 127.

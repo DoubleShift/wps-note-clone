@@ -1,0 +1,50 @@
+﻿2026-08-02T00:02:50.3867431Z ##[group]Run pnpm install
+2026-08-02T00:02:50.3867730Z [36;1mpnpm install[0m
+2026-08-02T00:02:50.3893349Z shell: /usr/bin/bash -e {0}
+2026-08-02T00:02:50.3893604Z env:
+2026-08-02T00:02:50.3893805Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:02:50.3894050Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:02:50.3894260Z   CARGO_TERM_COLOR: always
+2026-08-02T00:02:50.3894525Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T00:02:50.3894814Z ##[endgroup]
+2026-08-02T00:02:50.8911256Z ? Verifying lockfile against supply-chain policies (207 entries)...
+2026-08-02T00:02:50.9013086Z Lockfile is up to date, resolution step is skipped
+2026-08-02T00:02:50.9986562Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T00:02:51.0226550Z Packages: +126
+2026-08-02T00:02:51.0227613Z ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-08-02T00:02:51.4286803Z Packages are hard linked from the content-addressable store to the virtual store.
+2026-08-02T00:02:51.4316723Z   Content-addressable store is at: /home/runner/setup-pnpm/node_modules/.bin/store/v11
+2026-08-02T00:02:51.4321872Z   Virtual store is at:             node_modules/.pnpm
+2026-08-02T00:02:51.9995872Z Progress: resolved 126, reused 0, downloaded 119, added 13
+2026-08-02T00:02:52.4560293Z Progress: resolved 126, reused 0, downloaded 126, added 126, done
+2026-08-02T00:02:53.5386891Z ✓ Lockfile passes supply-chain policies (207 entries in 2.6s)
+2026-08-02T00:02:53.5897817Z 
+2026-08-02T00:02:53.5898319Z dependencies:
+2026-08-02T00:02:53.5898610Z + @lexical/code 0.49.0
+2026-08-02T00:02:53.5898863Z + @lexical/history 0.49.0
+2026-08-02T00:02:53.5899113Z + @lexical/link 0.49.0
+2026-08-02T00:02:53.5899330Z + @lexical/list 0.49.0
+2026-08-02T00:02:53.5899552Z + @lexical/react 0.49.0
+2026-08-02T00:02:53.5899820Z + @lexical/rich-text 0.49.0
+2026-08-02T00:02:53.5900068Z + @tailwindcss/vite 4.3.3
+2026-08-02T00:02:53.5900339Z + @tanstack/react-virtual 3.14.9
+2026-08-02T00:02:53.5900600Z + @tauri-apps/api 2.11.1
+2026-08-02T00:02:53.5900881Z + @tauri-apps/plugin-opener 2.5.4
+2026-08-02T00:02:53.5901122Z + lexical 0.49.0
+2026-08-02T00:02:53.5901317Z + react 19.2.8
+2026-08-02T00:02:53.5901524Z + react-dom 19.2.8
+2026-08-02T00:02:53.5901726Z + tailwindcss 4.3.3
+2026-08-02T00:02:53.5901923Z + zustand 5.0.14
+2026-08-02T00:02:53.5902031Z 
+2026-08-02T00:02:53.5902120Z devDependencies:
+2026-08-02T00:02:53.5902326Z + @tauri-apps/cli 2.11.4
+2026-08-02T00:02:53.5902595Z + @types/react 19.2.18
+2026-08-02T00:02:53.5902856Z + @types/react-dom 19.2.4
+2026-08-02T00:02:53.5903141Z + @vitejs/plugin-react 4.7.0
+2026-08-02T00:02:53.5903423Z + typescript 5.8.3
+2026-08-02T00:02:53.5903653Z + vite 7.3.6
+2026-08-02T00:02:53.5903781Z 
+2026-08-02T00:02:53.6147753Z [ERR_PNPM_IGNORED_BUILDS] Ignored build scripts: esbuild@0.28.1
+2026-08-02T00:02:53.6148355Z 
+2026-08-02T00:02:53.6148687Z Run "pnpm approve-builds" to pick which dependencies should be allowed to run scripts.
+2026-08-02T00:02:53.6601362Z ##[error]Process completed with exit code 1.

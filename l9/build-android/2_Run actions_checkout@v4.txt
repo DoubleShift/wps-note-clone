@@ -1,0 +1,77 @@
+﻿2026-08-02T01:11:07.2478038Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T01:11:07.2486082Z ##[group]Run actions/checkout@v4
+2026-08-02T01:11:07.2486575Z with:
+2026-08-02T01:11:07.2486891Z   repository: DoubleShift/wps-note-clone
+2026-08-02T01:11:07.2489710Z   token: ***
+2026-08-02T01:11:07.2489986Z   ssh-strict: true
+2026-08-02T01:11:07.2490265Z   ssh-user: git
+2026-08-02T01:11:07.2490551Z   persist-credentials: true
+2026-08-02T01:11:07.2490864Z   clean: true
+2026-08-02T01:11:07.2491136Z   sparse-checkout-cone-mode: true
+2026-08-02T01:11:07.2491446Z   fetch-depth: 1
+2026-08-02T01:11:07.2491703Z   fetch-tags: false
+2026-08-02T01:11:07.2492158Z   show-progress: true
+2026-08-02T01:11:07.2492424Z   lfs: false
+2026-08-02T01:11:07.2492670Z   submodules: false
+2026-08-02T01:11:07.2492976Z   set-safe-directory: true
+2026-08-02T01:11:07.2493282Z   allow-unsafe-pr-checkout: false
+2026-08-02T01:11:07.2493782Z env:
+2026-08-02T01:11:07.2494035Z   CARGO_TERM_COLOR: always
+2026-08-02T01:11:07.2494322Z   CARGO_INCREMENTAL: 0
+2026-08-02T01:11:07.2494589Z ##[endgroup]
+2026-08-02T01:11:07.3531727Z Syncing repository: DoubleShift/wps-note-clone
+2026-08-02T01:11:07.3533886Z ##[group]Getting Git version info
+2026-08-02T01:11:07.3534859Z Working directory is '/home/runner/work/wps-note-clone/wps-note-clone'
+2026-08-02T01:11:07.3535580Z [command]/usr/bin/git version
+2026-08-02T01:11:07.3562651Z git version 2.54.0
+2026-08-02T01:11:07.3582128Z ##[endgroup]
+2026-08-02T01:11:07.3597023Z Temporarily overriding HOME='/home/runner/work/_temp/9379871a-22ab-482b-a99b-c51d5b5d5354' before making global git config changes
+2026-08-02T01:11:07.3598575Z Adding repository directory to the temporary git global config as a safe directory
+2026-08-02T01:11:07.3602659Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/wps-note-clone/wps-note-clone
+2026-08-02T01:11:07.3651611Z Deleting the contents of '/home/runner/work/wps-note-clone/wps-note-clone'
+2026-08-02T01:11:07.3663007Z ##[group]Initializing the repository
+2026-08-02T01:11:07.3665224Z [command]/usr/bin/git init /home/runner/work/wps-note-clone/wps-note-clone
+2026-08-02T01:11:07.3738238Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-08-02T01:11:07.3739462Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-08-02T01:11:07.3740708Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-08-02T01:11:07.3741471Z hint: call:
+2026-08-02T01:11:07.3742016Z hint:
+2026-08-02T01:11:07.3742539Z hint: 	git config --global init.defaultBranch <name>
+2026-08-02T01:11:07.3743111Z hint:
+2026-08-02T01:11:07.3743690Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-08-02T01:11:07.3744621Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-08-02T01:11:07.3745364Z hint:
+2026-08-02T01:11:07.3745756Z hint: 	git branch -m <name>
+2026-08-02T01:11:07.3746209Z hint:
+2026-08-02T01:11:07.3746815Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-08-02T01:11:07.3748081Z Initialized empty Git repository in /home/runner/work/wps-note-clone/wps-note-clone/.git/
+2026-08-02T01:11:07.3753617Z [command]/usr/bin/git remote add origin https://github.com/DoubleShift/wps-note-clone
+2026-08-02T01:11:07.3827240Z ##[endgroup]
+2026-08-02T01:11:07.3828005Z ##[group]Disabling automatic garbage collection
+2026-08-02T01:11:07.3831016Z [command]/usr/bin/git config --local gc.auto 0
+2026-08-02T01:11:07.3865493Z ##[endgroup]
+2026-08-02T01:11:07.3866300Z ##[group]Setting up auth
+2026-08-02T01:11:07.3873286Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-08-02T01:11:07.3909006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-08-02T01:11:07.4255965Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-08-02T01:11:07.4296916Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-08-02T01:11:07.4565727Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-08-02T01:11:07.4605051Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-08-02T01:11:07.4846471Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-08-02T01:11:07.4887614Z ##[endgroup]
+2026-08-02T01:11:07.4888321Z ##[group]Fetching the repository
+2026-08-02T01:11:07.4897411Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d1d743d0814cdaa6ea4e8fa0f07fc2c8bb2e3a9c:refs/remotes/origin/main
+2026-08-02T01:11:07.7028392Z From https://github.com/DoubleShift/wps-note-clone
+2026-08-02T01:11:07.7029275Z  * [new ref]         d1d743d0814cdaa6ea4e8fa0f07fc2c8bb2e3a9c -> origin/main
+2026-08-02T01:11:07.7060799Z ##[endgroup]
+2026-08-02T01:11:07.7062115Z ##[group]Determining the checkout info
+2026-08-02T01:11:07.7064057Z ##[endgroup]
+2026-08-02T01:11:07.7070681Z [command]/usr/bin/git sparse-checkout disable
+2026-08-02T01:11:07.7122498Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-08-02T01:11:07.7155992Z ##[group]Checking out the ref
+2026-08-02T01:11:07.7162587Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-08-02T01:11:07.7277809Z Switched to a new branch 'main'
+2026-08-02T01:11:07.7280414Z branch 'main' set up to track 'origin/main'.
+2026-08-02T01:11:07.7286374Z ##[endgroup]
+2026-08-02T01:11:07.7334921Z [command]/usr/bin/git log -1 --format=%H
+2026-08-02T01:11:07.7365216Z d1d743d0814cdaa6ea4e8fa0f07fc2c8bb2e3a9c

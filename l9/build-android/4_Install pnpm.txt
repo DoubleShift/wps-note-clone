@@ -1,0 +1,29 @@
+﻿2026-08-02T01:11:16.3270339Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T01:11:16.3272093Z ##[group]Run pnpm/action-setup@v4
+2026-08-02T01:11:16.3272365Z with:
+2026-08-02T01:11:16.3272554Z   version: 11
+2026-08-02T01:11:16.3272758Z   dest: ~/setup-pnpm
+2026-08-02T01:11:16.3272976Z   run_install: null
+2026-08-02T01:11:16.3273186Z   cache: false
+2026-08-02T01:11:16.3273405Z   cache_dependency_path: pnpm-lock.yaml
+2026-08-02T01:11:16.3273689Z   package_json_file: package.json
+2026-08-02T01:11:16.3273945Z   standalone: false
+2026-08-02T01:11:16.3274143Z env:
+2026-08-02T01:11:16.3274337Z   CARGO_TERM_COLOR: always
+2026-08-02T01:11:16.3274572Z   CARGO_INCREMENTAL: 0
+2026-08-02T01:11:16.3274812Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T01:11:16.3275066Z ##[endgroup]
+2026-08-02T01:11:16.4746614Z ##[group]Running self-installer...
+2026-08-02T01:11:16.8840105Z (node:2367) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T01:11:16.8841751Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T01:11:17.0440163Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T01:11:17.0533865Z Packages: +1
+2026-08-02T01:11:17.0534829Z +
+2026-08-02T01:11:17.4992294Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-08-02T01:11:17.5232210Z 
+2026-08-02T01:11:17.5232585Z dependencies:
+2026-08-02T01:11:17.5232905Z + pnpm 11.18.0
+2026-08-02T01:11:17.5233045Z 
+2026-08-02T01:11:17.5258646Z Done in 855ms
+2026-08-02T01:11:17.6466230Z ##[endgroup]
+2026-08-02T01:11:17.6466647Z Installation Completed!

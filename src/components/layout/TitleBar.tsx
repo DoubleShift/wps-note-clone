@@ -15,13 +15,15 @@ export function TitleBar({ title, onSearch, onBack, rightActions }: TitleBarProp
     <header className="flex items-center h-12 px-4 border-b border-border dark:border-border-dark bg-surface dark:bg-surface-dark">
       <div className="flex items-center gap-2 flex-1 min-w-0">
         {onBack && (
-          <button onClick={onBack} className="text-text-secondary hover:text-text p-1 -ml-1">
+          <button onClick={onBack} className="text-text-secondary hover:text-text dark:hover:text-text-dark p-1 -ml-1">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </button>
         )}
-        <h1 className="text-base font-semibold text-text dark:text-text-dark truncate">{title}</h1>
+        <h1 className="text-lg font-bold text-text dark:text-text-dark truncate" style={{ fontSize: "20px" }}>
+          {title}
+        </h1>
       </div>
       <div className="flex items-center gap-1">
         {onSearch && (

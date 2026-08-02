@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
-import { useNoteStore } from "../../stores/noteStore";
 import { useUiStore } from "../../stores/uiStore";
+import * as api from "../../lib/tauri";
 
 export function SearchDialog() {
   const { searchOpen, setSearchOpen, setEditingNoteId } = useUiStore();
-  const { notes, loadNotes } = useNoteStore();
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<any[]>([]);
+  const [loading, setLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -22,12 +22,25 @@ export function SearchDialog() {
       setResults([]);
       return;
     }
-    const q = query.toLowerCase();
-    const filtered = notes.filter(
-      (n) => n.title.toLowerCase().includes(q) || n.content_preview.toLowerCase().includes(q)
-    );
-    setResults(filtered);
-  }, [query, notes]);
+    const timer = setTimeout(async () => {
+      setLoading(true);
+      try {
+        // Use Rust FTS5 backend for search
+        const notes = await api.listNotes({
+          search: query.trim(),
+          sort_field: "updated_at",
+          sort_order: "desc",
+          limit: 20,
+        });
+        setResults(notes);
+      } catch (e) {
+        console.error("Search failed:", e);
+      } finally {
+        setLoading(false);
+      }
+    }, 200); // debounce
+    return () => clearTimeout(timer);
+  }, [query]);
 
   const handleSelect = (id: string) => {
     setSearchOpen(false);
@@ -41,7 +54,7 @@ export function SearchDialog() {
       className="fixed inset-0 z-50 flex items-start justify-center pt-20 bg-black/30"
       onClick={(e) => { if (e.target === e.currentTarget) setSearchOpen(false); }}
     >
-      <div className="bg-surface dark:bg-surface-dark rounded-xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden">
+      <div className="bg-surface dark:bg-surface-dark rounded-xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden animate-fade-in">
         <div className="flex items-center px-4 border-b border-border dark:border-border-dark">
           <svg className="w-5 h-5 text-text-secondary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.35-4.35" />
@@ -58,10 +71,13 @@ export function SearchDialog() {
         </div>
 
         <div className="max-h-80 overflow-y-auto">
-          {query && results.length === 0 && (
-            <div className="px-4 py-8 text-center text-sm text-text-secondary">
-              没有找到匹配的笔记
+          {loading && (
+            <div className="flex items-center justify-center py-8">
+              <div className="animate-spin w-5 h-5 border-2 border-primary border-t-transparent rounded-full" />
             </div>
+          )}
+          {!loading && query && results.length === 0 && (
+            <div className="px-4 py-8 text-center text-sm text-text-secondary">没有找到匹配的笔记</div>
           )}
           {results.map((note) => (
             <div

@@ -1,0 +1,19 @@
+﻿2026-08-02T01:12:03.1723625Z ##[group]Run pnpm tauri android init
+2026-08-02T01:12:03.1723987Z [36;1mpnpm tauri android init[0m
+2026-08-02T01:12:03.1779316Z shell: /usr/bin/bash -e {0}
+2026-08-02T01:12:03.1779601Z env:
+2026-08-02T01:12:03.1779804Z   CARGO_TERM_COLOR: always
+2026-08-02T01:12:03.1780056Z   CARGO_INCREMENTAL: 0
+2026-08-02T01:12:03.1780298Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T01:12:03.1780619Z   PNPM_HOME: /home/runner/setup-pnpm/node_modules/.bin
+2026-08-02T01:12:03.1781079Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T01:12:03.1781577Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.19-10/x64
+2026-08-02T01:12:03.1782203Z   ANDROID_HOME: /usr/local/lib/android/sdk
+2026-08-02T01:12:03.1782513Z   ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
+2026-08-02T01:12:03.1782804Z ##[endgroup]
+2026-08-02T01:12:03.6354717Z $ tauri android init
+2026-08-02T01:12:05.6030099Z         Info Using installed NDK: /usr/local/lib/android/sdk/ndk/29.0.14206865
+2026-08-02T01:12:05.8437804Z         Info "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri" relative to "/home/runner/work/wps-note-clone/wps-note-clone/src-tauri/gen/android/wps_note_clone" is "../../../"
+2026-08-02T01:12:05.8439499Z Generating Android Studio project...
+2026-08-02T01:12:05.8475761Z victory: Project generated successfully!
+2026-08-02T01:12:05.8476746Z     Make cool apps! 🌻 🐕 🎉

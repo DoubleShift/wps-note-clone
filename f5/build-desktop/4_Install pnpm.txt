@@ -1,0 +1,29 @@
+﻿2026-08-02T00:41:01.3245353Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-08-02T00:41:01.3246785Z ##[group]Run pnpm/action-setup@v4
+2026-08-02T00:41:01.3247037Z with:
+2026-08-02T00:41:01.3247233Z   version: 11
+2026-08-02T00:41:01.3247439Z   dest: ~/setup-pnpm
+2026-08-02T00:41:01.3247652Z   run_install: null
+2026-08-02T00:41:01.3247856Z   cache: false
+2026-08-02T00:41:01.3248074Z   cache_dependency_path: pnpm-lock.yaml
+2026-08-02T00:41:01.3248466Z   package_json_file: package.json
+2026-08-02T00:41:01.3248708Z   standalone: false
+2026-08-02T00:41:01.3248908Z env:
+2026-08-02T00:41:01.3249104Z   CARGO_TERM_COLOR: always
+2026-08-02T00:41:01.3249330Z   CARGO_INCREMENTAL: 0
+2026-08-02T00:41:01.3249558Z   CARGO_HOME: /home/runner/.cargo
+2026-08-02T00:41:01.3249793Z ##[endgroup]
+2026-08-02T00:41:01.4599270Z ##[group]Running self-installer...
+2026-08-02T00:41:01.8464760Z (node:2126) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-08-02T00:41:02.1203872Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-08-02T00:41:02.1204894Z Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-08-02T00:41:02.1297142Z Packages: +1
+2026-08-02T00:41:02.1298247Z +
+2026-08-02T00:41:02.6353870Z Progress: resolved 1, reused 0, downloaded 1, added 1, done
+2026-08-02T00:41:02.6593059Z 
+2026-08-02T00:41:02.6593969Z dependencies:
+2026-08-02T00:41:02.6594561Z + pnpm 11.18.0
+2026-08-02T00:41:02.6594788Z 
+2026-08-02T00:41:02.6623496Z Done in 1s
+2026-08-02T00:41:02.7333463Z ##[endgroup]
+2026-08-02T00:41:02.7334065Z Installation Completed!
